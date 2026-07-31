@@ -1,0 +1,54 @@
+// =============================================================================
+// SPO Copilot - jednorazowe zaladowanie historii operacyjnej do Eventhouse
+//
+// Zrodlo: pliki JSONL/CSV wgrane do Lakehouse (Files/raw, Files/derived).
+// Dane trafiaja do tabel surowych; zasady aktualizacji z 02_update_policies.kql
+// automatycznie wypelniaja tabele typowane.
+//
+// Podmien identyfikatory workspace i lakehouse na wlasne (patrz config.json).
+// Skrypt uruchamia takze deploy_fabric.py --step history.
+// Dane sa w 100% syntetyczne (demo).
+// =============================================================================
+
+//------------------------------------------------------------------------------
+// 1. Strumienie zdarzen -> tabele surowe
+//------------------------------------------------------------------------------
+.ingest into table activation_raw ('https://onelake.blob.fabric.microsoft.com/<workspace-id>/<lakehouse-id>/Files/raw/fact_activation.jsonl;impersonate')
+    with (format='json', ingestionMappingReference='activation_raw_mapping')
+
+.ingest into table step_execution_raw ('https://onelake.blob.fabric.microsoft.com/<workspace-id>/<lakehouse-id>/Files/raw/fact_step_execution.jsonl;impersonate')
+    with (format='json', ingestionMappingReference='step_execution_raw_mapping')
+
+.ingest into table decision_log_raw ('https://onelake.blob.fabric.microsoft.com/<workspace-id>/<lakehouse-id>/Files/raw/fact_decision_log.jsonl;impersonate')
+    with (format='json', ingestionMappingReference='decision_log_raw_mapping')
+
+.ingest into table assistant_query_raw ('https://onelake.blob.fabric.microsoft.com/<workspace-id>/<lakehouse-id>/Files/raw/fact_assistant_query.jsonl;impersonate')
+    with (format='json', ingestionMappingReference='assistant_query_raw_mapping')
+
+//------------------------------------------------------------------------------
+// 2. Wymiary i korpus -> tabele typowane (CSV z naglowkiem)
+//------------------------------------------------------------------------------
+.ingest into table dim_procedure ('https://onelake.blob.fabric.microsoft.com/<workspace-id>/<lakehouse-id>/Files/raw/dim_procedure.csv;impersonate')
+    with (format='csv', ignoreFirstRecord=true)
+
+.ingest into table dim_step ('https://onelake.blob.fabric.microsoft.com/<workspace-id>/<lakehouse-id>/Files/raw/dim_step.csv;impersonate')
+    with (format='csv', ignoreFirstRecord=true)
+
+.ingest into table dim_role ('https://onelake.blob.fabric.microsoft.com/<workspace-id>/<lakehouse-id>/Files/raw/dim_role.csv;impersonate')
+    with (format='csv', ignoreFirstRecord=true)
+
+.ingest into table dim_hazard ('https://onelake.blob.fabric.microsoft.com/<workspace-id>/<lakehouse-id>/Files/raw/dim_hazard.csv;impersonate')
+    with (format='csv', ignoreFirstRecord=true)
+
+.ingest into table dim_document ('https://onelake.blob.fabric.microsoft.com/<workspace-id>/<lakehouse-id>/Files/raw/dim_document.csv;impersonate')
+    with (format='csv', ignoreFirstRecord=true)
+
+.ingest into table corpus_chunk ('https://onelake.blob.fabric.microsoft.com/<workspace-id>/<lakehouse-id>/Files/raw/corpus_chunks.jsonl;impersonate')
+    with (format='json', ingestionMappingReference='corpus_chunk_mapping')
+
+//------------------------------------------------------------------------------
+// 3. Weryfikacja
+//------------------------------------------------------------------------------
+// union withsource=T activation, step_execution, decision_log, assistant_query,
+//       dim_procedure, dim_step, dim_role, dim_hazard, dim_document, corpus_chunk
+// | summarize wierszy = count() by T

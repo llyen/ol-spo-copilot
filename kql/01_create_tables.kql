@@ -135,10 +135,24 @@
     role_codes: string, char_count: int, doc_title: string
 )
 
+.create-or-alter table corpus_chunk ingestion json mapping "corpus_chunk_mapping"
+'[{"column":"chunk_id","Properties":{"Path":"$.chunk_id"}},'
+'{"column":"document_id","Properties":{"Path":"$.document_id"}},'
+'{"column":"doc_type","Properties":{"Path":"$.doc_type"}},'
+'{"column":"procedure_code","Properties":{"Path":"$.procedure_code"}},'
+'{"column":"section","Properties":{"Path":"$.section"}},'
+'{"column":"chunk_title","Properties":{"Path":"$.chunk_title"}},'
+'{"column":"text","Properties":{"Path":"$.text"}},'
+'{"column":"hazard_codes","Properties":{"Path":"$.hazard_codes"}},'
+'{"column":"role_codes","Properties":{"Path":"$.role_codes"}},'
+'{"column":"char_count","Properties":{"Path":"$.char_count"}},'
+'{"column":"doc_title","Properties":{"Path":"$.doc_title"}}]'
+
 //------------------------------------------------------------------------------
 // 4. Retencja i cache (demo)
 //------------------------------------------------------------------------------
-.alter table step_execution policy retention softdelete = 365d
-.alter table decision_log policy retention softdelete = 3650d   // dziennik decyzji - dlugi slad audytowy
-.alter table assistant_query policy retention softdelete = 365d
-.alter table activation policy retention softdelete = 3650d
+// dziennik decyzji i uruchomienia - dlugi slad audytowy (10 lat); strumienie operacyjne - 1 rok
+.alter table step_execution policy retention '{"SoftDeletePeriod": "365.00:00:00", "Recoverability": "Enabled"}'
+.alter table decision_log policy retention '{"SoftDeletePeriod": "3650.00:00:00", "Recoverability": "Enabled"}'
+.alter table assistant_query policy retention '{"SoftDeletePeriod": "365.00:00:00", "Recoverability": "Enabled"}'
+.alter table activation policy retention '{"SoftDeletePeriod": "3650.00:00:00", "Recoverability": "Enabled"}'

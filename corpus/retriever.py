@@ -88,9 +88,9 @@ class Retriever:
         (out_dir / "vector_vocab.json").write_text(json.dumps(self.vocab, ensure_ascii=False), encoding="utf-8")
 
     @classmethod
-    def load(cls, data_dir: Path) -> "Retriever":
-        chunks = pd.read_json(data_dir / "corpus_chunks.jsonl", lines=True)
-        derived = data_dir / "derived"
+    def load(cls, data_dir: Path, derived_dir: Path | None = None) -> "Retriever":
+        chunks = pd.read_json(Path(data_dir) / "corpus_chunks.jsonl", lines=True)
+        derived = Path(derived_dir) if derived_dir else Path(data_dir) / "derived"
         blob = np.load(derived / "vector_index.npz")
         vocab = json.loads((derived / "vector_vocab.json").read_text(encoding="utf-8"))
         return cls(chunks, vocab, blob["idf"], blob["matrix"])

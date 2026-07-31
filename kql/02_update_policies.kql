@@ -149,14 +149,21 @@
       by blocker_reason
 }
 
-// Jakosc asystenta w ujeciu godzinowym
-.create-or-alter materialized-view AssistantQualityHourly on table assistant_query
-{
+// Jakosc asystenta w ujeciu godzinowym.
+// Uwaga: na pojemnosci demo (F8) dostepne sa 3 sloty materializacji widokow, zajete przez
+// widoki nad step_execution. Telemetria asystenta jest wolumenowo najmniejsza, wiec zostaje
+// wystawiona jako funkcja - wynik identyczny, bez kosztu materializacji.
+// Na pojemnosci produkcyjnej wystarczy zamienic naglowek na:
+//   .create-or-alter materialized-view AssistantQualityHourly on table assistant_query { ... }
+.create-or-alter function AssistantQualityHourly(lookback: timespan = 30d) {
     assistant_query
-    | summarize queries = count(), correct = countif(is_correct),
-                p50_latency = percentile(latency_ms, 50), p95_latency = percentile(latency_ms, 95),
+    | where event_time > ago(lookback)
+    | summarize query_count = count(), correct = countif(is_correct),
+                p50_latency_ms = percentile(latency_ms, 50),
+                p95_latency_ms = percentile(latency_ms, 95),
                 unhelpful = countif(feedback == "niepomocne")
       by bin(event_time, 1h), channel
+    | extend accuracy_pct = round(100.0 * correct / query_count, 1)
 }
 
 //------------------------------------------------------------------------------

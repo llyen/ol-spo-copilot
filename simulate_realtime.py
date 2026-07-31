@@ -15,6 +15,7 @@ STREAM_FILES = {
 }
 BASE = Path(__file__).resolve().parent
 DATA = BASE / "datasets"
+FLUSH_EVERY = 200
 
 
 def parse_time(value: str | None):
@@ -44,12 +45,15 @@ def main() -> None:
     parser.add_argument("--speed", type=float, default=120.0, help="Mnoznik przyspieszenia symulacji.")
     parser.add_argument("--from", dest="from_time", help="Filtr czasu ISO od.")
     parser.add_argument("--to", dest="to_time", help="Filtr czasu ISO do.")
+    parser.add_argument("--limit", type=int, help="Maksymalna liczba zdarzen do wyslania.")
     parser.add_argument("--dry-run", action="store_true", help="Tryb offline, bez zaleznosci i poswiadczen.")
     args = parser.parse_args()
 
     streams = args.stream or list(STREAM_FILES)
     events = sorted(iter_events(streams, parse_time(args.from_time), parse_time(args.to_time)),
                     key=lambda e: e["event_time"])
+    if args.limit:
+        events = events[: args.limit]
     if args.dry_run:
         out = DATA / "derived" / ("dry_run_" + datetime.now().strftime("%Y%m%d_%H%M%S") + ".jsonl")
         out.parent.mkdir(exist_ok=True)
@@ -68,23 +72,38 @@ def main() -> None:
         eventhub_name=os.environ.get("EVENTHUB_NAME"),
     )
     prev = None
+    sent = 0
     with producer:
         batch = producer.create_batch()
+        pending = 0
         for event in events:
             ts = parse_time(event["event_time"])
             if prev:
                 time.sleep(max(0, (ts - prev).total_seconds() / args.speed))
             prev = ts
-            payload = json.dumps(event, ensure_ascii=False)
+            # Eventstream (ProcessedIngestion) mapuje pola po nazwach kolumn tabeli
+            # docelowej - tabele *_raw maja pojedyncza kolumne dynamic "payload".
+            envelope = {"_stream": event["_stream"], "payload": event}
+            payload = json.dumps(envelope, ensure_ascii=False)
             try:
                 batch.add(EventData(payload))
+                pending += 1
             except ValueError:
                 producer.send_batch(batch)
+                sent += pending
                 batch = producer.create_batch()
                 batch.add(EventData(payload))
-        if len(batch) > 0:
+                pending = 1
+            if pending >= FLUSH_EVERY:
+                producer.send_batch(batch)
+                sent += pending
+                print(f"... wyslano {sent} zdarzen", flush=True)
+                batch = producer.create_batch()
+                pending = 0
+        if pending > 0:
             producer.send_batch(batch)
-    print(f"SENT OK: {len(events)} zdarzen")
+            sent += pending
+    print(f"SENT OK: {sent} zdarzen")
 
 
 if __name__ == "__main__":
