@@ -100,7 +100,9 @@ Szczegóły: [`ARCHITECTURE.md`](ARCHITECTURE.md) i [`architecture.mmd`](archite
 | `generate_datasets.py` | generator wszystkich zbiorów (`seed=42`) |
 | `simulate_realtime.py` | symulator czterech strumieni do Eventstream (`--dry-run` offline) |
 | `notebooks/01`–`05` | ładowanie korpusu, budowa indeksu, karty odpowiedzi, ewaluacja, analityka |
-| `kql/01`–`05` | tabele, zasady aktualizacji, zapytania dashboardu, alerty, wyszukiwanie w korpusie |
+| `notebooks/06_semantic_prep.py` | warstwa semantyczna w Lakehouse (kolumny czasu, kolumny wyliczane, `dim_date`) — tylko Fabric |
+| `kql/01`–`06` | tabele, zasady aktualizacji, zapytania dashboardu, alerty, wyszukiwanie w korpusie, ingest historii |
+| `deploy_fabric.py`, `fabric/` | automatyczne wdrożenie w Fabric (OneLake, notatniki, KQL, model semantyczny, raport) |
 | `semantic-model/` | opis modelu gwiazdy i 28 miar DAX |
 | `report/REPORT_SPEC.md` | specyfikacja raportu (6 stron) |
 | `fabric-app/` | specyfikacja aplikacji + prompt do generatora UI |

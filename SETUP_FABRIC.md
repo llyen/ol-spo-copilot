@@ -2,8 +2,25 @@
 
 > ⚠️ Instrukcja dotyczy środowiska demonstracyjnego z danymi syntetycznymi.
 
-Czas wdrożenia: ok. 60–75 minut. Wymagana pojemność Fabric (F2+ lub Trial)
-oraz uprawnienia do tworzenia elementów w workspace.
+Wdrożenie jest zautomatyzowane skryptami z katalogu [`fabric/`](fabric/README.md)
+oraz [`deploy_fabric.py`](deploy_fabric.py) (REST API Fabric + `az` CLI). Czas: ok. 35–45 minut,
+z czego większość to wykonanie notatników.
+Wymagana pojemność Fabric (F2+ lub Trial) i uprawnienia do tworzenia elementów.
+
+Wdrożenie referencyjne (stan zweryfikowany):
+
+| Element | Nazwa |
+|---|---|
+| Workspace | `OL-ZK-Demo-SPO-Copilot` (pojemność `fcdemo`, F8) |
+| Lakehouse | `OL_SPO_Lakehouse` |
+| Eventhouse / baza KQL | `OL_SPO_Eventhouse` |
+| Eventstream | `OL_SPO_Eventstream` |
+| Model semantyczny | `OL_SPO_SemanticModel` (Direct Lake) |
+| Raport | `OL_SPO_Raport` |
+| Activator | `OL_SPO_Activator` |
+| Data Agent | `OL_SPO_DataAgent` |
+
+---
 
 ## 0. Przygotowanie lokalne
 
@@ -18,99 +35,182 @@ python notebooks\04_retrieval_eval.py
 python notebooks\05_step_analytics.py
 ```
 
-Skopiuj `config.example.json` → `config.json` i uzupełnij identyfikatory workspace,
-Lakehouse oraz endpoint Eventstream. `config.json` i `.env` są w `.gitignore`.
+Oczekiwany wynik `04`: top-1 ≈ 0,906, top-3 ≈ 0,938, MRR ≈ 0,932.
 
-## 1. Workspace
+Zaloguj się do Azure (`az login`) — skrypt wdrożeniowy pobiera tokeny przez `az account
+get-access-token` dla trzech zasobów: `https://api.fabric.microsoft.com` (API Fabric),
+`https://storage.azure.com` (OneLake) oraz URI klastra Kusto (polecenia KQL).
 
-1. Utwórz workspace `OL - SPO Copilot`, przypisz pojemność Fabric.
-2. Ustaw język i strefę czasową na polską (`Europe/Warsaw`) — dane mają offset `+02:00`.
+## 1. Workspace i elementy bazowe
 
-## 2. Lakehouse
+W portalu Fabric utwórz workspace i przypisz pojemność, następnie utwórz Lakehouse
+i Eventhouse (oba przez UI — kilka kliknięć, API nie daje tu przewagi).
+Ustaw strefę czasową workspace na `Europe/Warsaw` — dane mają offset `+02:00`.
 
-1. Nowy Lakehouse: **`spo_copilot_lh`**.
-2. Wgraj do `Files/raw`:
-   - `datasets/dim_*.csv`, `datasets/eval_questions.csv`
-   - `datasets/corpus_chunks.jsonl`
-   - `datasets/fact_*.jsonl` (ładunek historyczny)
-3. Wgraj do `Files/derived` zawartość `datasets/derived/`
-   (indeks TF-IDF, karty odpowiedzi, wyniki analityki).
+Skopiuj `config.example.json` → `config.json` i uzupełnij identyfikatory
+(`workspace_id`, `lakehouse_id`, `eventhouse_id`, `kql_database`, `kql_cluster_uri`).
+`config.json` jest w `.gitignore` — nie trafia do repozytorium.
 
-## 3. Notatniki
+## 2. Wdrożenie automatyczne
 
-1. Zaimportuj pliki z `notebooks/` jako notatniki Fabric.
-   Pliki mają znaczniki `# CELL` — dzielą się na komórki przy imporcie.
-2. Przypnij `spo_copilot_lh` jako domyślny Lakehouse.
-3. Uruchom kolejno `01` → `05`. Notatnik `01` tworzy tabele delta z plików raw
-   oraz mostek `bridge_procedure_hazard`.
-4. Oczekiwany wynik `04`: top-1 ≈ 0,906, top-3 ≈ 0,938, MRR ≈ 0,932.
-   Rozbieżność oznacza, że korpus lub indeks nie są zsynchronizowane.
+```powershell
+python deploy_fabric.py --config config.json --step all
+```
 
-## 4. Eventhouse i baza KQL
+Kroki wykonywane przez skrypt:
 
-1. Utwórz Eventhouse **`spo_copilot_eh`** z bazą **`spo_copilot_kql`**.
-2. Uruchom w kolejności:
-   - `kql/01_create_tables.kql` — tabele strumieniowe i mapowania ingest
-   - `kql/02_update_policies.kql` — zasady aktualizacji i widoki materializowane
-3. Sprawdź `kql/03_dashboard_queries.kql` — każde zapytanie powinno zwrócić wynik
-   po pierwszym ingest (patrz krok 5).
-4. `kql/05_corpus_search.kql` wymaga wgrania `corpus_chunks` do bazy KQL
-   (jednorazowy ingest z pliku — służy do wyszukiwania pełnotekstowego w dashboardzie).
+| Krok | Co robi |
+|---|---|
+| `upload` | wgrywa `datasets/`, `datasets/derived/` i moduły `corpus/*.py` do OneLake (`Files/raw`, `Files/derived`, `Files/code/corpus`) |
+| `notebooks` | konwertuje `notebooks/*.py` na `.ipynb`, przepisuje ścieżki na `/lakehouse/default/Files` i publikuje notatniki z przypiętym Lakehouse |
+| `kql` | wykonuje `kql/01_create_tables.kql` i `kql/02_update_policies.kql` |
+| `history` | jednorazowy ingest historii z OneLake (`kql/06_ingest_history.kql`) |
 
-## 5. Eventstream
+Pojedynczy krok: `--step upload` / `notebooks` / `kql` / `history`.
 
-1. Utwórz Eventstream **`es-spo-copilot`**.
-2. Źródło: **Custom endpoint** (Event Hub compatible). Skopiuj connection string
-   do `config.json` (`eventstream.connection_string`).
-3. Cztery destynacje w bazie KQL:
+> **`--step history` nie jest idempotentny.** Ponowne uruchomienie zduplikuje dane.
+> Przed powtórzeniem wyczyść tabele: `.clear table <nazwa> data` dla tabeli surowej
+> i docelowej, a dopiero potem ponów ingest.
 
-   | Strumień | Tabela docelowa |
-   |---|---|
-   | `activation` | `activation_stream` |
-   | `step_execution` | `step_execution_stream` |
-   | `decision_log` | `decision_log_stream` |
-   | `assistant_query` | `assistant_query_stream` |
+## 3. Uruchomienie notatników
 
-4. Test bez Fabric: `python simulate_realtime.py --dry-run`
-   (zapisuje próbkę do `datasets/derived/dry_run_*.jsonl`).
-5. Ingest na żywo: `python simulate_realtime.py --speed 60` (1 sekunda = 60 sekund demo).
-   Zawężenie okna: `--from 2026-09-15T06:00 --to 2026-09-16T00:00`,
-   pojedynczy strumień: `--stream step_execution`.
+W portalu uruchom kolejno `01` → `05` (albo przez API, `POST /items/{id}/jobs/instances?jobType=RunNotebook`).
+Notatnik `01` tworzy 12 tabel Delta w Lakehouse, w tym mostek `bridge_procedure_hazard`.
 
-## 6. Model semantyczny
+Następnie uruchom **`06_semantic_prep`** — notatnik działa wyłącznie w Fabric.
+Materializuje kolumny, których Direct Lake nie potrafi policzyć po stronie modelu
+(kolumny wyliczane DAX są w tym trybie niedostępne):
 
-1. Z Lakehouse utwórz model semantyczny **`spo_copilot_sm`** (Direct Lake).
-2. Dodaj tabele zgodnie z [`semantic-model/MODEL.md`](semantic-model/MODEL.md):
-   wymiary + fakty + `bridge_procedure_hazard`.
-3. Ustaw relacje i kierunki filtrowania dokładnie jak w `MODEL.md`
-   (mostek `dim_procedure` ↔ `dim_hazard` ma filtrowanie dwukierunkowe).
-4. Wklej 28 miar DAX z [`semantic-model/MEASURES.md`](semantic-model/MEASURES.md).
-5. Oznacz `dim_date` jako tabelę dat (jeśli tworzysz ją po stronie modelu).
+- kolumny czasu: `started_ts`/`started_date`, `event_ts`/`event_date`/`completed_ts`,
+  `decided_ts`/`decided_date`, `asked_ts`/`asked_date`
+- kolumny wyliczane z `MODEL.md`: `overdue_minutes`, `sla_bucket`, `is_flood_scenario`,
+  `duration_hours`, `sla_path_hours`
+- wymiar czasu `dim_date` (polskie nazwy miesięcy i dni)
 
-## 7. Raport
+## 4. Eventstream
 
-1. Zbuduj raport wg [`report/REPORT_SPEC.md`](report/REPORT_SPEC.md) — 6 stron:
-   przegląd, procedura w szczegółach, dotrzymanie czasów, blokady i lessons learned,
-   asystent (telemetria), dziennik decyzji.
-2. Ustaw stronę startową na „Przegląd".
-3. Wyłącz zbędne wizualizacje mapowe — w demo liczy się czas ładowania.
+Topologia (jeden custom endpoint, cztery filtry, cztery destynacje Eventhouse):
 
-## 8. Activator
+```
+spo_endpoint (CustomEndpoint) → spo_stream (DefaultStream)
+   ├─ filter_activation      (_stream = "activation")      → activation_raw
+   ├─ filter_step_execution  (_stream = "step_execution")  → step_execution_raw
+   ├─ filter_decision_log    (_stream = "decision_log")    → decision_log_raw
+   └─ filter_assistant_query (_stream = "assistant_query") → assistant_query_raw
+```
 
-1. Utwórz element Activator na strumieniu `step_execution_stream`.
-2. Zaimplementuj 9 reguł z [`activator/RULES.md`](activator/RULES.md) (`A1`–`A9`).
-3. Na potrzeby demo włącz `A1` (przekroczenie normy na kroku krytycznym)
-   i `A4` (blokada powtarzająca się w tym samym zdarzeniu) — reszta generuje szum.
+Ograniczenia, na które trzeba uważać:
 
-## 9. Data Agent
+- w topologii może istnieć **tylko jeden** węzeł `DefaultStream`; cztery osobne źródła
+  są odrzucane komunikatem *„There are more than one default stream in the topology"*;
+- nazwy węzłów mogą zawierać wyłącznie litery, cyfry i podkreślenia (bez myślników);
+- destynacja poprzedzona operatorem musi mieć `dataIngestionMode: ProcessedIngestion`
+  (`DirectIngestion` kończy się błędem *„The given key was not present in the dictionary"*);
+- po każdej zmianie definicji węzły przechodzą w stan `Creating` — kolejna aktualizacja
+  przed ich ustabilizowaniem zostanie odrzucona (odczekaj 2–3 minuty).
 
-1. Utwórz Data Agent **`spo-copilot-agent`**, podłącz `spo_copilot_sm`
-   oraz bazę `spo_copilot_kql`.
+`ProcessedIngestion` mapuje pola zdarzenia **po nazwach kolumn tabeli docelowej**.
+Tabele `*_raw` mają jedną kolumnę `payload` typu `dynamic`, dlatego
+`simulate_realtime.py` wysyła kopertę `{"_stream": "...", "payload": {...}}`.
+
+Uruchomienie symulacji:
+
+```powershell
+$env:EVENTHUB_CONNECTION_STR = "<connection string custom endpointu>"
+python simulate_realtime.py --dry-run                      # plan B, bez Fabric
+python simulate_realtime.py --speed 60                     # 1 s = 60 s demo
+python simulate_realtime.py --stream step_execution --limit 300
+```
+
+Connection string pobierzesz z UI Eventstreamu albo z API:
+`GET /workspaces/{ws}/eventstreams/{es}/sources/{sourceId}/connection`.
+
+Zdarzenia pojawiają się w tabelach docelowych po 1–3 minutach (batch ingestion).
+
+## 5. Model semantyczny
+
+Model `OL_SPO_SemanticModel` działa w trybie **Direct Lake** nad SQL analytics endpoint
+Lakehouse’u i zawiera 13 tabel oraz 28 miar z [`semantic-model/MEASURES.md`](semantic-model/MEASURES.md)
+w folderze `_Miary`.
+
+```powershell
+python fabric\get_schemas.py            # odczyt schematow tabel Delta
+python fabric\create_semantic_model.py  # generacja TMDL i publikacja
+```
+
+Relacje ustawiono zgodnie z [`MODEL.md`](semantic-model/MODEL.md), z czterema
+**nieaktywnymi** relacjami — silnik odrzuca model z niejednoznacznymi ścieżkami filtrowania:
+
+| Relacja | Dlaczego nieaktywna |
+|---|---|
+| `fact_activation` → `fact_step_execution` | konflikt z `dim_date`/`dim_procedure` → `fact_step_execution` |
+| `fact_activation` → `fact_decision_log` | jw. |
+| `dim_procedure` → `fact_step_execution` | kroki filtrowane przez `dim_step` → `dim_procedure` |
+| `dim_role` → `fact_step_execution` | kroki filtrowane przez `dim_step` → `dim_role` |
+
+Filtrowanie po procedurze i roli działa poprzez `dim_step`; kontekst pojedynczego
+uruchomienia uzyskujesz filtrem po `fact_step_execution[activation_id]`
+albo funkcją `USERELATIONSHIP`.
+
+Po każdej zmianie schematu tabel Delta odśwież metadane SQL endpointu, inaczej model
+zgłosi *„Invalid object name"*:
+
+```
+POST /workspaces/{ws}/sqlEndpoints/{sqlEndpointId}/refreshMetadata?preview=true
+```
+
+Weryfikacja modelu (Power BI REST `executeQueries`, zasób
+`https://analysis.windows.net/powerbi/api`):
+
+| Miara | Wartość oczekiwana |
+|---|---|
+| `Uruchomienia procedur` | 986 |
+| `Wykonania krokow` | 9 420 |
+| `Dotrzymanie SLA %` | 76,1% |
+| `Dotrzymanie SLA - powodz %` | 70,5% |
+| `Trafnosc routingu %` | 93,5% |
+| `Mediana / P95 czasu odpowiedzi` | 1 443 ms / 2 142 ms |
+| `Czas do 1. kroku krytycznego (min)` | 19 |
+
+## 6. Raport
+
+Raport `OL_SPO_Raport` (format PBIR, 6 stron wg [`report/REPORT_SPEC.md`](report/REPORT_SPEC.md))
+jest publikowany przez API na modelu semantycznym w trybie live connection:
+
+```powershell
+python fabric\create_report.py
+```
+
+Ciemny motyw operacyjny (`#1B1F23`) z akcentami: bursztyn `#F2A900` (przekroczenia),
+czerwień `#D13438` (blokady), zieleń `#0F7B0F` (norma).
+
+Pułapki formatu PBIR:
+
+- `definition/version.json` wymaga wersji trzyczłonowej (`4.0.0`, nie `4.0`);
+- `themeCollection.customTheme` wymaga pola `reportVersionAtImport`;
+- `settings` nie akceptuje `useNewFilterPaneExperience`.
+
+## 7. Activator
+
+Element `OL_SPO_Activator` jest tworzony jako pusty (schemat `ReflexEntities.json`
+nie jest udokumentowany — reguł nie da się dziś wiarygodnie wygenerować przez API).
+Reguły konfiguruje się w UI na strumieniu `step_execution` Eventstreamu,
+zgodnie z [`activator/RULES.md`](activator/RULES.md).
+
+Na demo wystarczą **A1** (krok krytyczny po terminie) i **A4** (zdarzenie złożone
+w województwie) — pozostałe reguły generują szum przy przyspieszonej symulacji.
+
+## 8. Data Agent
+
+Element `OL_SPO_DataAgent` również powstaje pusty; źródła danych i instrukcję systemową
+dodaje się w UI:
+
+1. Podłącz `OL_SPO_SemanticModel` oraz bazę KQL `OL_SPO_Eventhouse`.
 2. Wklej instrukcję systemową z [`ai/DATA_AGENT.md`](ai/DATA_AGENT.md).
-3. Przetestuj 24 pytania akceptacyjne z tego samego pliku — przed demo muszą przechodzić
-   co najmniej te trzy z Aktu 5 scenariusza pokazu.
+3. Przetestuj 24 pytania akceptacyjne — przed demo muszą przechodzić co najmniej
+   te trzy z Aktu 5 scenariusza pokazu.
 
-## 10. Fabric App
+## 9. Fabric App
 
 1. Utwórz aplikację wg [`fabric-app/APP_SPEC.md`](fabric-app/APP_SPEC.md).
 2. Jeśli korzystasz z generatora UI, użyj promptu z
@@ -120,20 +220,29 @@ Lakehouse oraz endpoint Eventstream. `config.json` i `.env` są w `.gitignore`.
 
 ## Checklista przed demo
 
-- [ ] Wszystkie tabele delta w Lakehouse mają oczekiwaną liczbę wierszy (`record_counts.json`)
+- [ ] Lakehouse: 12 tabel Delta + `dim_date` (po `06_semantic_prep`)
+- [ ] Eventhouse: `activation` 986, `step_execution` 9 420, `decision_log` 2 002,
+      `assistant_query` 4 200, `corpus_chunk` 513
 - [ ] Notatnik `04` zwraca top-1 ≈ 0,906
 - [ ] Zapytania z `kql/03` zwracają dane (nie pustki)
+- [ ] Model semantyczny: wszystkie 28 miar liczy się bez błędu
 - [ ] Raport otwiera się w mniej niż 5 sekund
 - [ ] Activator: co najmniej jeden alert wygenerowany w trakcie próbnego ingest
 - [ ] Data Agent odpowiada na 3 pytania z Aktu 5
 - [ ] Fabric App: pytanie o wał przeciwpowodziowy zwraca SPO-3
 - [ ] Plan B przetestowany (`simulate_realtime.py --dry-run`)
+
 ## Rozwiązywanie problemów
 
 | Objaw | Przyczyna | Rozwiązanie |
 |---|---|---|
 | `04` zwraca top-1 poniżej 0,85 | indeks zbudowany na starym korpusie | uruchom `02_build_vector_index.py` ponownie |
-| Puste tabele strumieniowe | brak mapowania ingest | sprawdź nazwy mapowań z `kql/01_create_tables.kql` |
+| `.alter table ... policy retention` zwraca 400 | forma skrócona nie działa w Eventhouse | użyj formy JSON: `'{"SoftDeletePeriod":"365.00:00:00","Recoverability":"Enabled"}'` |
+| Nie da się utworzyć czwartego widoku materializowanego | limit pojemności (F8: 1 równoległa operacja) | `AssistantQualityHourly` jest funkcją, nie MV; sprawdź `.show capacity` |
+| `General_BadRequest` bez szczegółów w zapytaniu KQL | alias kolumny to nazwa zarezerwowana (np. `queries`) | zmień alias (w repozytorium: `query_count`) |
+| Puste tabele strumieniowe | zdarzenia bez pola `payload` albo brak filtra `_stream` | sprawdź kopertę wysyłaną przez `simulate_realtime.py` |
+| `Invalid object name` w modelu semantycznym | SQL endpoint nie zsynchronizował nowych tabel | wywołaj `sqlEndpoints/{id}/refreshMetadata` |
+| `Failed to resolve name 'SYNTAXERROR'` po imporcie modelu | wielolinijkowe wyrażenie miary w TMDL na złym poziomie wcięcia | wyrażenie musi być wcięte **głębiej** niż właściwości miary |
+| `There are ambiguous paths between ...` | dwie ścieżki filtrowania między tabelami | oznacz jedną relację jako nieaktywną (patrz rozdział 5) |
 | Daty przesunięte o 2 h | strefa czasowa workspace | ustaw `Europe/Warsaw`, dane mają offset `+02:00` |
-| Model semantyczny nie liczy miar per zagrożenie | brak dwukierunkowego filtrowania na mostku | popraw relację wg `MODEL.md` |
 | Krzaczki w polskich tekstach | kodowanie przy uploadzie | wymuś UTF-8; korpus celowo nie zawiera znaków diakrytycznych |

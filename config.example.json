@@ -10,8 +10,12 @@
     "eventhouse_name": "spo_copilot_eh",
     "kql_database": "spo_copilot_kql",
     "kql_cluster_uri": "https://<cluster>.kusto.fabric.microsoft.com",
-    "semantic_model": "spo_copilot_sm",
-    "data_agent": "spo-copilot-agent"
+    "semantic_model": "OL_SPO_SemanticModel",
+    "data_agent": "spo-copilot-agent",
+    "sql_endpoint": "<id>.datawarehouse.fabric.microsoft.com",
+    "sql_endpoint_id": "00000000-0000-0000-0000-000000000000",
+    "semantic_model_id": "00000000-0000-0000-0000-000000000000",
+    "report": "OL_SPO_Raport"
   },
   "eventstream": {
     "name": "es-spo-copilot",
