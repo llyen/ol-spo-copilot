@@ -162,22 +162,27 @@ def visual_options(visual: str, title: str) -> dict:
             "xColumnTitle": "", "xAxisScale": "linear", "verticalLine": ""}
 
 
-def build(cluster_uri: str, database: str, title: str) -> dict:
+def build(cluster_uri: str, database: str, title: str,
+          workspace_id: str, database_id: str) -> dict:
     ds_id = guid("datasource")
     dashboard = {
-        "$schema": "https://raw.githubusercontent.com/Azure/azure-kusto-dashboards/master/schema/52/dashboard.json",
+        "$schema": "https://dataexplorer.azure.com/static/d/schema/52/dashboard.json",
         "id": guid("dashboard"),
         "schema_version": "52",
         "title": title,
         "autoRefresh": {"enabled": True, "defaultDuration": "5m", "minimumDuration": "1m"},
         "baseQueries": [],
+        # Fabric wymaga typu "kusto-trident": database i workspace to GUID-y elementow,
+        # nie nazwy. Przy "manual-kusto" portal zglasza "bad id format in database property".
         "dataSources": [{"id": ds_id, "name": database, "clusterUri": cluster_uri,
-                         "database": database, "kind": "manual-kusto", "scopeId": "kusto"}],
+                         "database": database_id, "workspace": workspace_id,
+                         "kind": "kusto-trident", "scopeId": "kusto-trident"}],
         "pages": [{"id": guid(pid), "name": name} for pid, name in PAGES],
         "parameters": [{
             "kind": "duration", "id": guid("param-time"), "displayName": "Zakres czasu",
             "description": "", "beginVariableName": "_startTime", "endVariableName": "_endTime",
-            "defaultValue": {"kind": "dynamic", "count": 5, "unit": "years"},
+            # schemat dopuszcza tylko months/weeks/days/hours/minutes - "years" psuje caly parametr
+            "defaultValue": {"kind": "dynamic", "count": 60, "unit": "months"},
             "showOnPages": {"kind": "all"},
         }],
         "queries": [],
@@ -204,21 +209,76 @@ def build(cluster_uri: str, database: str, title: str) -> dict:
     return dashboard
 
 
+SCHEMA_BASE = "https://dataexplorer.azure.com/static/d/schema/52/"
+
+
+def validate(dashboard: dict) -> None:
+    """Waliduje definicje wzgledem oficjalnego schematu ADX. Fabric przyjmuje
+    niepoprawny plik bez bledu i dopiero UI nie otwiera dashboardu, wiec lepiej
+    zlapac to lokalnie. Pomijane, gdy brak jsonschema albo dostepu do sieci."""
+    try:
+        import re
+        import urllib.request
+        import jsonschema
+        from referencing import Registry, Resource
+        from referencing.jsonschema import DRAFT202012
+    except ImportError:
+        print("validate: pominieto (brak jsonschema/referencing)")
+        return
+
+    res, todo, seen = {}, ["dashboard.json"], set()
+    try:
+        while todo:
+            fname = todo.pop()
+            if fname in seen:
+                continue
+            seen.add(fname)
+            raw = urllib.request.urlopen(SCHEMA_BASE + fname, timeout=30).read().decode("utf-8")
+            r = Resource(contents=json.loads(raw), specification=DRAFT202012)
+            res[fname] = r
+            res[f"/static/d/schema/52/{fname}"] = r
+            todo += [m.split("/")[-1] for m in re.findall(r'"\$ref"\s*:\s*"([^"#]+)', raw)
+                     if m.endswith(".json")]
+    except Exception as exc:
+        print(f"validate: pominieto ({exc})")
+        return
+
+    validator = jsonschema.Draft202012Validator(
+        res["dashboard.json"].contents, registry=Registry().with_resources(res.items()))
+    errors = list(validator.iter_errors(dashboard))
+    for err in errors:
+        print("  ! " + "/".join(str(p) for p in err.absolute_path) + ": " + err.message[:300])
+    if errors:
+        raise SystemExit(f"validate: {len(errors)} bledow schematu - przerwano")
+    print("validate: OK")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--config", default=str(BASE / "config.json"))
+    ap.add_argument("--skip-validate", action="store_true")
     args = ap.parse_args()
 
     cfg = json.load(open(args.config, encoding="utf-8"))["fabric"]
     ws = cfg["workspace_id"]
     name = cfg.get("dashboard", "OL_SPO_Dashboard")
-    dashboard = build(cfg["kql_cluster_uri"], cfg["kql_database"], "SPO Copilot - obraz operacyjny")
 
     tok = subprocess.run(
         ["az", "account", "get-access-token", "--resource", "https://api.fabric.microsoft.com",
          "--query", "accessToken", "-o", "tsv"],
         capture_output=True, text=True, shell=True).stdout.strip()
     headers = {"Authorization": f"Bearer {tok}", "Content-Type": "application/json"}
+
+    db_id = cfg.get("kql_database_id")
+    if not db_id:
+        dbs = requests.get(f"{API}/workspaces/{ws}/kqlDatabases", headers=headers).json()["value"]
+        db_id = next(d["id"] for d in dbs if d["displayName"] == cfg["kql_database"])
+        print(f"kql_database_id: {db_id}")
+
+    dashboard = build(cfg["kql_cluster_uri"], cfg["kql_database"],
+                      "SPO Copilot - obraz operacyjny", ws, db_id)
+    if not args.skip_validate:
+        validate(dashboard)
 
     definition = {"parts": [{
         "path": "RealTimeDashboard.json",
