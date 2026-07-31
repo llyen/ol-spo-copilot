@@ -1,0 +1,72 @@
+// =============================================================================
+// SPO Copilot - wyszukiwanie w korpusie procedur (grounding dla Data Agenta)
+// Warstwa KQL uzupelnia indeks wektorowy: daje szybkie, tanie dopasowanie
+// leksykalne i filtrowanie po metadanych (zagrozenie, rola, typ dokumentu).
+// =============================================================================
+
+// --- Q1: Ktora procedura dotyczy podanego zagrozenia -------------------------
+let hazard = "Z13";
+dim_procedure
+| where hazard_codes has hazard
+| project procedure_code, procedure_name, owner_institution, phase, step_count, total_sla_minutes
+| order by procedure_code asc
+
+// --- Q2: Wyszukiwanie fragmentow korpusu po slowach kluczowych ---------------
+let terms = dynamic(["skazenie", "poszkodowanych", "szpital"]);
+corpus_chunk
+| extend hits = array_length(set_intersect(
+      terms, extract_all(@"[a-zA-Zа-я0-9]+", tolower(text))))
+| where hits > 0
+| project chunk_id, procedure_code, doc_type, chunk_title, hits,
+          snippet = substring(text, 0, 320)
+| order by hits desc
+| take 10
+
+// --- Q3: Pelna checklista procedury (odpowiedz asystenta) -------------------
+let proc = "SPO-15";
+dim_step
+| where procedure_code == proc
+| project step_no, step_title, role_name, institution,
+          czas_normatywny_min = sla_minutes, output_document, is_critical
+| order by step_no asc
+
+// --- Q4: Lista kontaktowa dla procedury -------------------------------------
+let proc = "SPO-15";
+dim_step
+| where procedure_code == proc
+| distinct role_code
+| join kind=inner dim_role on role_code
+| project role_name, institution, level
+
+// --- Q5: Jak nam szlo z ta procedura do tej pory ----------------------------
+let proc = "SPO-15";
+step_execution
+| where procedure_code == proc
+| summarize uruchomienia = dcount(activation_id), wykonania = count(),
+            sla_pct = round(100.0 * countif(sla_met) / count(), 1),
+            mediana_min = round(percentile(elapsed_minutes, 50), 1),
+            blokady = countif(status == "zablokowany")
+
+// --- Q6: Krok, ktory w tej procedurze najczesciej sie sypie -----------------
+let proc = "SPO-15";
+step_execution
+| where procedure_code == proc
+| summarize wykonania = count(), przekroczenia_pct = round(100.0 * countif(not(sla_met)) / count(), 1)
+  by step_no, step_title
+| order by przekroczenia_pct desc
+| take 5
+
+// --- Q7: Dziennik decyzji dla uruchomienia ----------------------------------
+let activation_id_param = "ACT-00975";
+decision_log
+| where activation_id == activation_id_param
+| project decided_at, step_no, decision_type, decided_by_name, subject, rationale, classification
+| order by decided_at asc
+
+// --- Q8: Procedury powiazane z procedura wskazana ---------------------------
+let proc = "SPO-15";
+let hz = toscalar(dim_procedure | where procedure_code == proc | project hazard_codes);
+dim_procedure
+| where procedure_code != proc
+| where hazard_codes has_any (split(hz, "|"))
+| project procedure_code, procedure_name, owner_institution

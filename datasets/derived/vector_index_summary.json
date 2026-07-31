@@ -1,0 +1,12 @@
+{
+  "chunks": 513,
+  "vocabulary_terms": 1816,
+  "avg_chunk_chars": 387,
+  "corpus_chars": 198746,
+  "index_bytes": 145504,
+  "demo_question": "Mamy skazenie chemiczne w porcie i wielu poszkodowanych. Co robimy?",
+  "demo_top_chunk": "C00504",
+  "demo_top_procedure": "SPO-15",
+  "demo_top_score": 0.8247,
+  "method": "TF-IDF (pelny wyraz + prefiks 5 znakow) + cosine, routing z agregacja chunk -> SPO"
+}

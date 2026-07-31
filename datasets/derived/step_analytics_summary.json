@@ -1,0 +1,21 @@
+{
+  "activations_total": 986,
+  "activations_flood_scenario": 26,
+  "step_executions": 9420,
+  "decisions_logged": 2002,
+  "overall_sla_compliance_pct": 76.1,
+  "flood_sla_compliance_pct": 70.5,
+  "history_sla_compliance_pct": 76.2,
+  "worst_procedure": "SPO-2",
+  "worst_procedure_sla_pct": 70.7,
+  "worst_step": "SPO-3 krok 4",
+  "worst_step_title": "Przygotowanie wersji obcojezycznych i dostepnych dla osob z niepelnosprawnosciami",
+  "worst_step_breach_pct": 89.9,
+  "top_blocker": "Nieaktualna lista punktow kontaktowych operatorow infrastruktury krytycznej",
+  "top_blocker_count": 201,
+  "top_blocker_years": 4,
+  "median_time_to_first_critical_min": 19.3,
+  "median_activation_duration_h": 38.9,
+  "classified_decisions_pct": 28.4,
+  "history_activations": 960
+}

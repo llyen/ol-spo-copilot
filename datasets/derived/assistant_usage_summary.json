@@ -1,0 +1,9 @@
+{
+  "queries": 4200,
+  "accuracy": 0.9352,
+  "p50_latency_ms": 1443,
+  "p95_latency_ms": 2142,
+  "helpful_share": 0.4633,
+  "unhelpful_share": 0.0707,
+  "top_channel": "Fabric App"
+}

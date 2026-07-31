@@ -1,0 +1,33 @@
+question_id,question,expected_procedure
+EVQ-001,Mamy skazenie chemiczne w porcie i wielu poszkodowanych. Co robimy?,SPO-15
+EVQ-002,Ilu poszkodowanych mozemy przetransportowac lotniczo do szpitali oparzeniowych?,SPO-15
+EVQ-003,Kto zwoluje posiedzenie Rzadowego Zespolu Zarzadzania Kryzysowego?,SPO-1
+EVQ-004,W jakim trybie mozna zwolac RZZK poza posiedzeniem stacjonarnym?,SPO-1
+EVQ-005,Wojewoda potrzebuje pieniedzy na usuwanie skutkow powodzi. Jaka procedura?,SPO-2
+EVQ-006,Skad wziac srodki na zakup lozek polowych dla ewakuowanych?,SPO-2
+EVQ-007,Jak szybko musimy wyemitowac komunikat ostrzegawczy dla ludnosci?,SPO-3
+EVQ-008,Kto zatwierdza tresc komunikatu Alert RCB?,SPO-3
+EVQ-009,"W sieci krazy informacja, ze pekla tama. Jak reagujemy?",SPO-3
+EVQ-010,Czy mozemy tymczasowo przywrocic kontrole na granicy z powodu zagrozenia?,SPO-4
+EVQ-011,Kogo trzeba notyfikowac przed przywroceniem kontroli granicznej?,SPO-4
+EVQ-012,Kiedy wprowadza sie stan kleski zywiolowej i kto go oglasza?,SPO-5
+EVQ-013,Sily wojewody sa niewystarczajace przy powodzi. Jaki stan nadzwyczajny?,SPO-5
+EVQ-014,Jaka procedura dotyczy zagrozenia konstytucyjnego ustroju panstwa?,SPO-6
+EVQ-015,Kto wydaje rozporzadzenie o stanie wojennym?,SPO-7
+EVQ-016,Obywatel RP zostal uprowadzony za granica przez organizacje terrorystyczna. Co robimy?,SPO-8
+EVQ-017,Kto prowadzi sztab kryzysowy przy uprowadzeniu obywatela poza granicami kraju?,SPO-8
+EVQ-018,Gwaltownie rosnie liczba cudzoziemcow na granicy. Jaka procedura?,SPO-9
+EVQ-019,Gdzie uruchomic punkty recepcyjne przy masowym naplywie osob?,SPO-9
+EVQ-020,Awaria stacji energetycznej zagraza szpitalom i przepompowniom. Jak wspolpracowac z operatorem?,SPO-10
+EVQ-021,Kto ustala priorytety przywracania zasilania obiektow infrastruktury krytycznej?,SPO-10
+EVQ-022,Trzeba sprowadzic Polakow z kraju objetego konfliktem. Jaka procedura?,SPO-11
+EVQ-023,Jak zorganizowac punkty zborne dla ewakuowanych z zagranicy?,SPO-11
+EVQ-024,Jak ma wygladac obieg meldunkow miedzy WCZK a RCB?,SPO-12
+EVQ-025,W jakim czasie dyzurny rejestruje meldunek z centrum wojewodzkiego?,SPO-12
+EVQ-026,Wykryto obcy dron nad obiektem chronionym. Jak alarmujemy ludnosc?,SPO-13
+EVQ-027,Kto uruchamia syreny przy zagrozeniu uderzeniem z powietrza?,SPO-13
+EVQ-028,Panstwo sojusznicze chce przemiescic wojska przez terytorium RP. Co dalej?,SPO-14
+EVQ-029,Kto odpowiada za wsparcie panstwa gospodarza dla wojsk sojuszniczych?,SPO-14
+EVQ-030,Wystapil powazny incydent cyberbezpieczenstwa u operatora uslugi kluczowej. Kogo zwolac?,SPO-16
+EVQ-031,Kilka niezaleznych incydentow wyglada na dzialanie skoordynowane. Jaka procedura?,SPO-16
+EVQ-032,Kto rekomenduje wprowadzenie stopni alarmowych CRP?,SPO-16

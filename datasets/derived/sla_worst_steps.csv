@@ -1,0 +1,89 @@
+procedure_code,step_no,step_title,role_code,wykonania,sla_compliance,mediana_czasu_min,sla_minutes,przekroczenie_pct,stosunek_do_normy
+SPO-3,4,Przygotowanie wersji obcojezycznych i dostepnych dla osob z niepelnosprawnosciami,R_RZECZ,158,0.10126582278481013,113.95,60,89.9,1.9
+SPO-10,3,Nawiazanie kontaktu z operatorem i wyznaczenie punktu styku,R_OPER_IK,124,0.16129032258064516,107.1,60,83.9,1.78
+SPO-2,3,Ocena zasadnosci merytorycznej i zwiazku wydatku ze zdarzeniem,R_MSWIA,90,0.17777777777777778,442.0,240,82.2,1.84
+SPO-9,4,Wsparcie tlumaczy i informacji w jezykach obcych,R_MSWIA,47,0.3191489361702128,352.6,240,68.1,1.47
+SPO-15,3,Identyfikacja szpitali docelowych i wolnych miejsc specjalistycznych,R_MZ,29,0.4827586206896552,93.1,90,51.7,1.03
+SPO-13,7,Koordynacja z operatorami lotnisk i zarzadca przestrzeni powietrznej,R_MON,46,0.6521739130434783,21.0,30,34.8,0.7
+SPO-15,5,Wyznaczenie lotnisk i ladowisk operacyjnych,R_MON,29,0.6551724137931034,80.8,120,34.5,0.67
+SPO-1,2,Weryfikacja przeslanek ustawowych i zakresu przedmiotowego posiedzenia,R_DYR_RCB,78,0.6794871794871795,43.45,60,32.1,0.72
+SPO-15,4,Uruchomienie sil LPR i lotnictwa transportowego SZ RP,R_MON,29,0.6896551724137931,98.8,120,31.0,0.82
+SPO-2,1,Przyjecie wniosku wojewody lub ministra o uruchomienie srodkow,R_MF,90,0.7,49.15,60,30.0,0.82
+SPO-9,8,Ochrona osob maloletnich bez opieki i osob wrazliwych,R_MSWIA,47,0.7021276595744681,266.3,360,29.8,0.74
+SPO-10,8,Monitorowanie odtwarzania funkcji i raportowanie postepu,R_OPER_IK,124,0.7096774193548387,516.2,720,29.0,0.72
+SPO-2,4,Uzgodnienie zrodla finansowania i limitu z Ministrem Finansow,R_MF,90,0.7111111111111111,347.5,480,28.9,0.72
+SPO-16,1,Przyjecie zgloszenia incydentu i wstepna kwalifikacja,R_CSIRT,67,0.7164179104477612,20.0,30,28.4,0.67
+SPO-1,9,Sporzadzenie i dystrybucja ustalen oraz wykazu zadan,R_SEKR_RZZK,78,0.717948717948718,199.3,240,28.2,0.83
+SPO-15,9,Ewidencja pacjentow i informacja dla rodzin,R_MZ,29,0.7241379310344828,153.8,240,27.6,0.64
+SPO-15,2,Ustalenie liczby poszkodowanych i wynikow segregacji medycznej,R_MZ,29,0.7241379310344828,44.2,60,27.6,0.74
+SPO-3,7,Emisja komunikatu i potwierdzenie dystrybucji w kanalach,R_DYZ_RCB,158,0.7278481012658228,10.75,15,27.2,0.72
+SPO-16,4,Przygotowanie materialu sytuacyjnego o incydencie,R_CSIRT,67,0.7313432835820896,83.5,120,26.9,0.7
+SPO-3,1,Ocena sytuacji informacyjnej i identyfikacja grup odbiorcow,R_ANAL_RCB,158,0.740506329113924,20.35,30,25.9,0.68
+SPO-3,3,Przygotowanie komunikatu bazowego oraz wersji uproszczonej,R_RZECZ,158,0.740506329113924,30.5,45,25.9,0.68
+SPO-2,7,Wydanie decyzji i przekazanie jej dysponentowi czesci budzetowej,R_MF,90,0.7444444444444445,169.75,240,25.6,0.71
+SPO-2,5,Przygotowanie projektu decyzji o zmianie w budzecie panstwa,R_MF,90,0.7444444444444445,326.0,480,25.6,0.68
+SPO-9,5,Weryfikacja tozsamosci i kontrola bezpieczenstwa,R_ABW,47,0.7446808510638298,263.2,360,25.5,0.73
+SPO-12,2,Weryfikacja i uzupelnienie danych u zrodla,R_DYZ_RCB,260,0.7461538461538462,22.15,30,25.4,0.74
+SPO-10,2,Identyfikacja systemu IK i wlasciwego ministra odpowiedzialnego,R_ANAL_RCB,124,0.75,39.45,60,25.0,0.66
+SPO-3,2,Wyznaczenie rzecznika wiodacego i wdrozenie zasady jednego glosu,R_DYR_RCB,158,0.7531645569620253,22.5,30,24.7,0.75
+SPO-2,2,Weryfikacja formalna wniosku i kompletnosci kosztorysu,R_MF,90,0.7555555555555555,86.45,120,24.4,0.72
+SPO-15,7,Organizacja transportu naziemnego na obu koncach mostu,R_WOJ,29,0.7586206896551724,96.8,120,24.1,0.81
+SPO-3,6,Zatwierdzenie tresci przez ministra wiodacego lub Dyrektora RCB,R_MIN_WIOD,158,0.759493670886076,21.7,30,24.1,0.72
+SPO-12,3,Klasyfikacja zdarzenia wg katalogu zagrozen Z01-Z20,R_ANAL_RCB,260,0.7615384615384615,21.1,30,23.8,0.7
+SPO-9,3,"Zapewnienie zakwaterowania, wyzywienia i opieki medycznej",R_WOJ,47,0.7659574468085106,352.8,480,23.4,0.74
+SPO-3,8,Monitoring odbioru komunikatu oraz narracji dezinformacyjnych,R_ANAL_RCB,158,0.7658227848101266,80.95,120,23.4,0.67
+SPO-2,8,Uruchomienie transzy i powiadomienie beneficjenta,R_WOJ,90,0.7666666666666667,166.45,240,23.3,0.69
+SPO-1,10,Monitorowanie realizacji zadan i raport zwrotny do Przewodniczacego,R_ANAL_RCB,78,0.7692307692307693,984.95,1440,23.1,0.68
+SPO-3,5,"Dobor kanalow: Alert RCB, RSO, media, syreny, kanaly samorzadowe",R_DYR_RCB,158,0.7721518987341772,22.65,30,22.8,0.76
+SPO-10,6,Uzgodnienie wsparcia sil i srodkow administracji dla operatora,R_WOJ,124,0.7741935483870968,165.4,240,22.6,0.69
+SPO-1,3,"Uzgodnienie terminu i trybu posiedzenia: stacjonarny, zdalny lub obiegowy",R_SEKR_RZZK,78,0.782051282051282,40.25,60,21.8,0.67
+SPO-1,5,Przygotowanie raportu sytuacyjnego i projektu porzadku obrad,R_ANAL_RCB,78,0.782051282051282,87.1,120,21.8,0.73
+SPO-12,4,Sporzadzenie raportu sytuacyjnego dla kierownictwa,R_ANAL_RCB,260,0.7846153846153846,42.75,60,21.5,0.71
+SPO-9,2,Uruchomienie punktow recepcyjnych i rejestracji,R_WOJ,47,0.7872340425531915,180.3,240,21.3,0.75
+SPO-12,5,Dystrybucja raportu do adresatow zgodnie z lista rozdzielnika,R_DYZ_RCB,260,0.7884615384615384,20.200000000000003,30,21.2,0.67
+SPO-10,5,Ustalenie priorytetow zasilania i przywracania funkcji,R_MIN_WIOD,124,0.7903225806451613,164.95,240,21.0,0.69
+SPO-16,3,Zwolanie Zespolu do spraw Incydentow Krytycznych,R_ABW,67,0.7910447761194029,39.9,60,20.9,0.66
+SPO-12,1,Przyjecie meldunku z CZK i nadanie numeru ewidencyjnego,R_DYZ_RCB,260,0.7923076923076923,10.350000000000001,15,20.8,0.69
+SPO-15,1,Przyjecie informacji o zdarzeniu masowym i ocena skali,R_MZ,29,0.7931034482758621,25.2,30,20.7,0.84
+SPO-1,6,Uzgodnienie projektow rekomendacji z ministrem wiodacym,R_DYR_RCB,78,0.7948717948717948,82.19999999999999,120,20.5,0.68
+SPO-12,7,Sporzadzenie raportu dobowego,R_ANAL_RCB,260,0.7961538461538461,1041.9499999999998,1440,20.4,0.72
+SPO-3,11,Archiwizacja komunikatow i ocena skutecznosci dotarcia,R_ANAL_RCB,158,0.7974683544303798,1017.05,1440,20.3,0.71
+SPO-10,1,Przyjecie zgloszenia o zagrozeniu obiektu IK i jego rejestracja,R_DYZ_RCB,124,0.7983870967741935,20.75,30,20.2,0.69
+SPO-10,10,Wnioski i aktualizacja planu ochrony IK po zdarzeniu,R_DYR_RCB,124,0.7983870967741935,2983.25,4320,20.2,0.69
+SPO-10,4,Ocena skutkow wtornych i zaleznosci miedzysystemowych,R_ANAL_RCB,124,0.7983870967741935,122.55,180,20.2,0.68
+SPO-13,6,Emisja komunikatu do ludnosci w kanalach masowych,R_RZECZ,46,0.8043478260869565,11.0,15,19.6,0.73
+SPO-13,1,Przyjecie informacji o zagrozeniu z systemu obrony powietrznej,R_MON,46,0.8043478260869565,3.6,5,19.6,0.72
+SPO-13,8,Odwolanie alarmu i komunikat o zakonczeniu zagrozenia,R_MON,46,0.8043478260869565,9.649999999999999,15,19.6,0.64
+SPO-16,2,"Ocena, czy incydent spelnia kryteria incydentu krytycznego",R_ABW,67,0.8059701492537313,42.7,60,19.4,0.71
+SPO-1,4,Powiadomienie czlonkow RZZK oraz uczestnikow zaproszonych,R_SEKR_RZZK,78,0.8076923076923077,30.450000000000003,45,19.2,0.68
+SPO-1,1,Przyjecie i rejestracja wniosku o zwolanie posiedzenia RZZK,R_DYZ_RCB,78,0.8076923076923077,19.75,30,19.2,0.66
+SPO-9,10,Raportowanie dobowe i ocena wydolnosci systemu,R_MSWIA,47,0.8085106382978723,1091.6,1440,19.1,0.76
+SPO-3,9,Publikacja sprostowan i aktualizacji cyklicznych,R_RZECZ,158,0.810126582278481,119.85,180,19.0,0.67
+SPO-2,9,Monitoring wydatkowania i sprawozdawczosc okresowa,R_WOJ,90,0.8111111111111111,2072.9,2880,18.9,0.72
+SPO-16,7,Obsluga posiedzenia i protokolowanie ustalen,R_ABW,67,0.8208955223880597,112.8,180,17.9,0.63
+SPO-1,7,Zapewnienie warunkow organizacyjno-technicznych i lacznosci niejawnej,R_KPRM,78,0.8205128205128205,66.5,90,17.9,0.74
+SPO-2,10,Rozliczenie koncowe i kontrola wykorzystania srodkow,R_MF,90,0.8222222222222222,2488.8,4320,17.8,0.58
+SPO-12,6,Aktualizacja obrazu sytuacji i zasilenie COP,R_ANAL_RCB,260,0.823076923076923,42.1,60,17.7,0.7
+SPO-13,2,Weryfikacja i ocena wiarygodnosci sygnalu,R_MON,46,0.8260869565217391,6.7,10,17.4,0.67
+SPO-13,3,Okreslenie obszaru zagrozonego i sposobu alarmowania,R_MON,46,0.8260869565217391,7.199999999999999,10,17.4,0.72
+SPO-15,10,Raport z realizacji i rozliczenie kosztow,R_MZ,29,0.8275862068965517,2086.4,2880,17.2,0.72
+SPO-15,8,Zabezpieczenie medyczne w trakcie transportu,R_MZ,29,0.8275862068965517,38.8,60,17.2,0.65
+SPO-15,6,Koordynacja przestrzeni powietrznej i priorytetow lotow,R_MON,29,0.8275862068965517,41.4,60,17.2,0.69
+SPO-9,9,Komunikacja spoleczna i przeciwdzialanie dezinformacji,R_RZECZ,47,0.8297872340425532,118.9,180,17.0,0.66
+SPO-9,1,Monitoring i prognoza liczby osob przekraczajacych granice,R_KGSG,47,0.8297872340425532,70.8,120,17.0,0.59
+SPO-2,6,"Uzyskanie opinii RZZK, jesli wymagana zakresem zdarzenia",R_SEKR_RZZK,90,0.8333333333333334,494.35,720,16.7,0.69
+SPO-12,8,Archiwizacja i zapewnienie sladu audytowego,R_DYZ_RCB,260,0.8423076923076923,927.4000000000001,1440,15.8,0.64
+SPO-16,9,Komunikacja publiczna uzgodniona ze sluzbami,R_RZECZ,67,0.8507462686567164,122.0,180,14.9,0.68
+SPO-9,7,Uruchomienie srodkow finansowych w trybie SPO-2,R_MF,47,0.851063829787234,478.3,720,14.9,0.66
+SPO-9,6,Koordynacja z organizacjami pozarzadowymi i samorzadami,R_WOJ,47,0.851063829787234,200.8,360,14.9,0.56
+SPO-16,6,Koordynacja dzialan z operatorami uslug kluczowych,R_OPER_IK,67,0.8507462686567164,146.6,240,14.9,0.61
+SPO-3,10,Briefing prasowy lub konferencja z udzialem ministra wiodacego,R_RZECZ,158,0.8607594936708861,144.85,240,13.9,0.6
+SPO-16,10,Raport po incydencie i wnioski do procedur,R_CSIRT,67,0.8656716417910447,3195.1,4320,13.4,0.74
+SPO-13,4,Przekazanie sygnalu do wojewodzkich centrow zarzadzania kryzysowego,R_MON,46,0.8695652173913043,3.7,5,13.0,0.74
+SPO-10,7,"Wprowadzenie ograniczen lub reglamentacji, jesli konieczne",R_MIN_WIOD,124,0.8709677419354839,330.70000000000005,480,12.9,0.69
+SPO-10,9,Informowanie odbiorcow uslug o przewidywanym czasie przywrocenia,R_RZECZ,124,0.8790322580645161,81.30000000000001,120,12.1,0.68
+SPO-16,8,Przekazanie rekomendacji do RZZK lub Prezesa Rady Ministrow,R_SEKR_RZZK,67,0.8805970149253731,80.9,120,11.9,0.67
+SPO-1,8,Obsluga posiedzenia i protokolowanie przebiegu,R_SEKR_RZZK,78,0.8846153846153846,122.25,180,11.5,0.68
+SPO-13,5,Uruchomienie syren i systemow alarmowych na obszarze zagrozonym,R_WOJ,46,0.8913043478260869,6.5,10,10.9,0.65
+SPO-16,5,Uzgodnienie rekomendacji dotyczacych stopni alarmowych,R_ABW,67,0.9104477611940298,99.6,180,9.0,0.55
+SPO-13,9,Analiza przebiegu alarmowania i wnioski,R_MON,46,0.9130434782608695,928.95,1440,8.7,0.65

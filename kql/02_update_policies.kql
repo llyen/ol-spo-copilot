@@ -1,0 +1,185 @@
+// =============================================================================
+// SPO Copilot - funkcje transformujace, update policies i widoki zmaterializowane
+// =============================================================================
+
+//------------------------------------------------------------------------------
+// 1. Funkcje rozpakowujace payload JSON
+//------------------------------------------------------------------------------
+.create-or-alter function ParseStepExecution() {
+    step_execution_raw
+    | extend
+        execution_id     = tostring(payload.execution_id),
+        activation_id    = tostring(payload.activation_id),
+        procedure_code   = tostring(payload.procedure_code),
+        step_id          = tostring(payload.step_id),
+        step_no          = toint(payload.step_no),
+        step_title       = tostring(payload.step_title),
+        role_code        = tostring(payload.role_code),
+        institution      = tostring(payload.institution),
+        level            = tostring(payload.level),
+        voivodeship_code = tostring(payload.voivodeship_code),
+        event_name       = tostring(payload.event_name),
+        planned_start    = todatetime(payload.planned_start),
+        started_at       = todatetime(payload.started_at),
+        completed_at     = todatetime(payload.completed_at),
+        sla_minutes      = toint(payload.sla_minutes),
+        elapsed_minutes  = toreal(payload.elapsed_minutes),
+        sla_met          = tobool(toint(payload.sla_met) == 1),
+        is_critical      = tobool(toint(payload.is_critical) == 1),
+        status           = tostring(payload.status),
+        blocker_reason   = tostring(payload.blocker_reason),
+        output_document  = tostring(payload.output_document),
+        event_time       = todatetime(payload.event_time)
+    | project execution_id, activation_id, procedure_code, step_id, step_no, step_title,
+              role_code, institution, level, voivodeship_code, event_name, planned_start,
+              started_at, completed_at, sla_minutes, elapsed_minutes, sla_met, is_critical,
+              status, blocker_reason, output_document, event_time
+}
+
+.create-or-alter function ParseDecisionLog() {
+    decision_log_raw
+    | extend
+        decision_id     = tostring(payload.decision_id),
+        activation_id   = tostring(payload.activation_id),
+        procedure_code  = tostring(payload.procedure_code),
+        step_no         = toint(payload.step_no),
+        decided_at      = todatetime(payload.decided_at),
+        decision_type   = tostring(payload.decision_type),
+        decided_by_role = tostring(payload.decided_by_role),
+        decided_by_name = tostring(payload.decided_by_name),
+        subject         = tostring(payload.subject),
+        rationale       = tostring(payload.rationale),
+        classification  = tostring(payload.classification),
+        event_time      = todatetime(payload.event_time)
+    | project decision_id, activation_id, procedure_code, step_no, decided_at, decision_type,
+              decided_by_role, decided_by_name, subject, rationale, classification, event_time
+}
+
+.create-or-alter function ParseAssistantQuery() {
+    assistant_query_raw
+    | extend
+        query_id           = tostring(payload.query_id),
+        asked_at           = todatetime(payload.asked_at),
+        user_role          = tostring(payload.user_role),
+        channel            = tostring(payload.channel),
+        question           = tostring(payload.question),
+        expected_procedure = tostring(payload.expected_procedure),
+        top_procedure      = tostring(payload.top_procedure),
+        confidence         = toreal(payload.confidence),
+        is_correct         = tobool(toint(payload.is_correct) == 1),
+        cited_chunk_ids    = tostring(payload.cited_chunk_ids),
+        latency_ms         = toint(payload.latency_ms),
+        feedback           = tostring(payload.feedback),
+        event_time         = todatetime(payload.event_time)
+    | project query_id, asked_at, user_role, channel, question, expected_procedure,
+              top_procedure, confidence, is_correct, cited_chunk_ids, latency_ms, feedback, event_time
+}
+
+.create-or-alter function ParseActivation() {
+    activation_raw
+    | extend
+        activation_id            = tostring(payload.activation_id),
+        procedure_code           = tostring(payload.procedure_code),
+        procedure_name           = tostring(payload.procedure_name),
+        event_name               = tostring(payload.event_name),
+        hazard_code              = tostring(payload.hazard_code),
+        level                    = tostring(payload.level),
+        voivodeship_code         = tostring(payload.voivodeship_code),
+        voivodeship_name         = tostring(payload.voivodeship_name),
+        initiated_by_role        = tostring(payload.initiated_by_role),
+        initiated_by_institution = tostring(payload.initiated_by_institution),
+        trigger_text             = tostring(payload.trigger_text),
+        started_at               = todatetime(payload.started_at),
+        closed_at                = todatetime(payload.closed_at),
+        duration_minutes         = toreal(payload.duration_minutes),
+        steps_total              = toint(payload.steps_total),
+        steps_completed          = toint(payload.steps_completed),
+        steps_blocked            = toint(payload.steps_blocked),
+        steps_sla_breached       = toint(payload.steps_sla_breached),
+        sla_compliance_pct       = toreal(payload.sla_compliance_pct),
+        status                   = tostring(payload.status),
+        event_time               = todatetime(payload.event_time)
+    | project activation_id, procedure_code, procedure_name, event_name, hazard_code, level,
+              voivodeship_code, voivodeship_name, initiated_by_role, initiated_by_institution,
+              trigger_text, started_at, closed_at, duration_minutes, steps_total, steps_completed,
+              steps_blocked, steps_sla_breached, sla_compliance_pct, status, event_time
+}
+
+//------------------------------------------------------------------------------
+// 2. Update policies - transformacja przy ingescie
+//------------------------------------------------------------------------------
+.alter table step_execution policy update
+@'[{"IsEnabled":true,"Source":"step_execution_raw","Query":"ParseStepExecution()","IsTransactional":true}]'
+.alter table decision_log policy update
+@'[{"IsEnabled":true,"Source":"decision_log_raw","Query":"ParseDecisionLog()","IsTransactional":true}]'
+.alter table assistant_query policy update
+@'[{"IsEnabled":true,"Source":"assistant_query_raw","Query":"ParseAssistantQuery()","IsTransactional":true}]'
+.alter table activation policy update
+@'[{"IsEnabled":true,"Source":"activation_raw","Query":"ParseActivation()","IsTransactional":true}]'
+
+//------------------------------------------------------------------------------
+// 3. Widoki zmaterializowane - szybkie odpowiedzi dashboardu
+//------------------------------------------------------------------------------
+// Ostatni status kazdego kroku (idempotencja przy powtornym wyslaniu zdarzenia)
+.create-or-alter materialized-view LatestStepStatus on table step_execution
+{
+    step_execution
+    | summarize arg_max(event_time, *) by execution_id
+}
+
+// Dotrzymanie czasow normatywnych w ujeciu dobowym per procedura
+.create-or-alter materialized-view DailyProcedureSla on table step_execution
+{
+    step_execution
+    | summarize
+        executions = count(),
+        sla_met_count = countif(sla_met),
+        blocked_count = countif(status == "zablokowany"),
+        median_elapsed = percentile(elapsed_minutes, 50)
+      by bin(event_time, 1d), procedure_code
+}
+
+// Statystyka blokad - podstawa wnioskow "lessons learned"
+.create-or-alter materialized-view BlockerStats on table step_execution
+{
+    step_execution
+    | where isnotempty(blocker_reason)
+    | summarize occurrences = count(), procedures = dcount(procedure_code),
+                first_seen = min(event_time), last_seen = max(event_time)
+      by blocker_reason
+}
+
+// Jakosc asystenta w ujeciu godzinowym
+.create-or-alter materialized-view AssistantQualityHourly on table assistant_query
+{
+    assistant_query
+    | summarize queries = count(), correct = countif(is_correct),
+                p50_latency = percentile(latency_ms, 50), p95_latency = percentile(latency_ms, 95),
+                unhelpful = countif(feedback == "niepomocne")
+      by bin(event_time, 1h), channel
+}
+
+//------------------------------------------------------------------------------
+// 4. Funkcje uzytkowe wykorzystywane przez dashboard i Activator
+//------------------------------------------------------------------------------
+// Kroki otwarte po terminie: uruchomione, jeszcze nietrafione w norme
+.create-or-alter function OverdueSteps(lookback: timespan = 7d) {
+    step_execution
+    | where event_time > ago(lookback)
+    | where not(sla_met)
+    | join kind=leftouter (dim_procedure | project procedure_code, procedure_name) on procedure_code
+    | project event_time, activation_id, procedure_code, procedure_name, step_no, step_title,
+              institution, sla_minutes, elapsed_minutes,
+              overdue_minutes = round(elapsed_minutes - sla_minutes, 1), status, blocker_reason
+    | order by overdue_minutes desc
+}
+
+// Postep realizacji konkretnego uruchomienia procedury (widok checklisty)
+.create-or-alter function ActivationProgress(activation: string) {
+    step_execution
+    | where activation_id == activation
+    | summarize arg_max(event_time, *) by step_no
+    | project step_no, step_title, institution, status, sla_minutes,
+              elapsed_minutes, sla_met, is_critical, blocker_reason, output_document
+    | order by step_no asc
+}

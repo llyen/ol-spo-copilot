@@ -1,0 +1,76 @@
+// =============================================================================
+// SPO Copilot - zapytania dla Data Activator (Reflex) i alertow operacyjnych
+// Kazde zapytanie zwraca zbior zdarzen, na ktorym Activator ustawia warunek i akcje.
+// =============================================================================
+
+// --- A1: Krok krytyczny przekroczyl czas normatywny --------------------------
+// Akcja: powiadomienie do Teams zespolu wlasciwej instytucji + wpis do dziennika.
+step_execution
+| where event_time > ago(1h)
+| where is_critical and not(sla_met)
+| extend overdue_minutes = round(elapsed_minutes - sla_minutes, 1)
+| where overdue_minutes > 15
+| project event_time, activation_id, procedure_code, step_no, step_title,
+          institution, sla_minutes, elapsed_minutes, overdue_minutes
+
+// --- A2: Krok zablokowany dluzej niz 2x czas normatywny ----------------------
+// Akcja: eskalacja do wlasciciela procedury; przy 3 wystapieniach - do RCB.
+step_execution
+| where event_time > ago(6h)
+| where status == "zablokowany"
+| where elapsed_minutes > 2.0 * sla_minutes
+| project event_time, activation_id, procedure_code, step_no, step_title,
+          institution, blocker_reason, elapsed_minutes, sla_minutes
+
+// --- A3: Uruchomienie procedury wymagajacej decyzji szczebla rzadowego -------
+// Akcja: alert do sekretarza RZZK (SPO-1) i do dyzurnego RCB.
+activation
+| where event_time > ago(15m)
+| where procedure_code in ("SPO-1", "SPO-5", "SPO-6", "SPO-7", "SPO-16")
+| project event_time, activation_id, procedure_code, procedure_name, level,
+          voivodeship_name, trigger_text, initiated_by_institution
+
+// --- A4: Rownoczesne uruchomienie wielu procedur w jednym wojewodztwie -------
+// Sygnal zdarzenia zlozonego: pieciu procedur naraz nie obsluguje sie rutynowo.
+activation
+| where event_time > ago(6h)
+| summarize procedury = dcount(procedure_code), lista = make_set(procedure_code)
+  by voivodeship_name, bin(event_time, 6h)
+| where procedury >= 4
+
+// --- A5: Spadek dotrzymania czasow normatywnych ponizej progu ----------------
+// Akcja: alert do kierownictwa RCB; wskazuje przeciazenie systemu, nie pojedynczy blad.
+step_execution
+| where event_time > ago(4h)
+| summarize wykonania = count(), sla_pct = round(100.0 * countif(sla_met) / count(), 1)
+| where wykonania >= 20 and sla_pct < 60
+
+// --- A6: Ta sama blokada powtarza sie w wielu procedurach --------------------
+// Akcja: zadanie systemowe (wlasciciel danych), nie alert operacyjny.
+step_execution
+| where event_time > ago(30d)
+| where isnotempty(blocker_reason)
+| summarize wystapienia = count(), procedury = dcount(procedure_code) by blocker_reason
+| where wystapienia >= 10 and procedury >= 3
+
+// --- A7: Asystent odpowiada z niska pewnoscia lub dostaje ocene negatywna ----
+// Akcja: kolejka do przegladu przez wlasciciela korpusu procedur.
+assistant_query
+| where event_time > ago(1h)
+| where confidence < 0.45 or feedback == "niepomocne"
+| project event_time, user_role, channel, question, top_procedure, confidence, feedback
+
+// --- A8: Decyzja niejawna zarejestrowana w dzienniku ------------------------
+// Akcja: potwierdzenie etykiety wrazliwosci i ograniczenie widocznosci (RLS/Purview).
+decision_log
+| where event_time > ago(1h)
+| where classification != "jawne"
+| project event_time, activation_id, procedure_code, decision_type, decided_by_name, classification
+
+// --- A9: Procedura otwarta dluzej niz przewidziana sciezka normatywna --------
+activation
+| where status != "zamkniete"
+| join kind=inner (dim_procedure | project procedure_code, total_sla_minutes) on procedure_code
+| extend open_minutes = datetime_diff('minute', now(), started_at)
+| where open_minutes > 1.5 * total_sla_minutes
+| project activation_id, procedure_code, procedure_name, started_at, open_minutes, total_sla_minutes

@@ -1,0 +1,31 @@
+{
+  "scenario": "POWODZ WRZESIEN",
+  "d0": "2026-09-15T06:00:00+02:00",
+  "seed": 42,
+  "fabric": {
+    "workspace_name": "OL - SPO Copilot",
+    "workspace_id": "00000000-0000-0000-0000-000000000000",
+    "lakehouse_name": "spo_copilot_lh",
+    "lakehouse_id": "00000000-0000-0000-0000-000000000000",
+    "eventhouse_name": "spo_copilot_eh",
+    "kql_database": "spo_copilot_kql",
+    "kql_cluster_uri": "https://<cluster>.kusto.fabric.microsoft.com",
+    "semantic_model": "spo_copilot_sm",
+    "data_agent": "spo-copilot-agent"
+  },
+  "eventstream": {
+    "name": "es-spo-copilot",
+    "connection_string": "Endpoint=sb://<namespace>.servicebus.windows.net/;SharedAccessKeyName=<key-name>;SharedAccessKey=<key>;EntityPath=<hub>",
+    "streams": {
+      "activation": "activation_stream",
+      "step_execution": "step_execution_stream",
+      "decision_log": "decision_log_stream",
+      "assistant_query": "assistant_query_stream"
+    }
+  },
+  "simulation": {
+    "speed": 60,
+    "batch_size": 50,
+    "limit": 0
+  }
+}

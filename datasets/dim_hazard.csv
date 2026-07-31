@@ -1,0 +1,21 @@
+hazard_code,hazard_name,risk_matrix
+Z01,Epidemia,prawdopodobienstwo: mozliwe; skutki: katastrofalne
+Z02,Powodz,prawdopodobienstwo: prawdopodobne; skutki: duze
+Z03,Zaklocenie funkcjonowania systemow i sieci teleinformatycznych,prawdopodobienstwo: mozliwe; skutki: duze
+Z04,Dzialania hybrydowe,prawdopodobienstwo: mozliwe; skutki: duze
+Z05,Susza i upal,prawdopodobienstwo: prawdopodobne; skutki: srednie
+Z06,Epizootia,prawdopodobienstwo: prawdopodobne; skutki: srednie
+Z07,Zaklocenie w systemie energetycznym,prawdopodobienstwo: prawdopodobne; skutki: srednie
+Z08,Silny wiatr,prawdopodobienstwo: prawdopodobne; skutki: srednie
+Z09,Zaklocenie w systemie paliwowym,prawdopodobienstwo: mozliwe; skutki: srednie
+Z10,Pozar wielkopowierzchniowy,prawdopodobienstwo: mozliwe; skutki: srednie
+Z11,Epifitoza,prawdopodobienstwo: mozliwe; skutki: srednie
+Z12,Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,prawdopodobienstwo: mozliwe; skutki: srednie
+Z13,Skazenie chemiczne na ladzie,prawdopodobienstwo: rzadkie; skutki: male
+Z14,Zaklocenie w systemie gazowym,prawdopodobienstwo: rzadkie; skutki: srednie
+Z15,Katastrofa morska,prawdopodobienstwo: rzadkie; skutki: srednie
+Z16,Zdarzenie o charakterze terrorystycznym,prawdopodobienstwo: bardzo rzadkie; skutki: duze
+Z17,Skazenie promieniotworcze,prawdopodobienstwo: bardzo rzadkie; skutki: duze
+Z18,Zbiorowe zaklocenie porzadku publicznego,prawdopodobienstwo: prawdopodobne; skutki: male
+Z19,Silny mroz i intensywne opady sniegu,prawdopodobienstwo: mozliwe; skutki: male
+Z20,Dezinformacja,prawdopodobienstwo: nieujete w matrycy; skutki: nieujete w matrycy

@@ -1,0 +1,108 @@
+// =============================================================================
+// SPO Copilot - zapytania kafelkow Real-Time Dashboard
+// Kazdy blok = jeden kafelek. Parametr _startTime/_endTime pochodzi z dashboardu.
+// =============================================================================
+
+// --- KAFELEK 1: Aktywne uruchomienia procedur (stat) --------------------------
+activation
+| where event_time between (_startTime .. _endTime)
+| summarize ["Uruchomione procedury"] = dcount(activation_id)
+
+// --- KAFELEK 2: Dotrzymanie czasow normatywnych (stat, %) ---------------------
+step_execution
+| where event_time between (_startTime .. _endTime)
+| summarize ["Dotrzymanie SLA %"] = round(100.0 * countif(sla_met) / count(), 1)
+
+// --- KAFELEK 3: Kroki zablokowane (stat) --------------------------------------
+step_execution
+| where event_time between (_startTime .. _endTime)
+| where status == "zablokowany"
+| summarize ["Kroki zablokowane"] = count()
+
+// --- KAFELEK 4: Mediana czasu do pierwszego kroku krytycznego (stat, min) -----
+step_execution
+| where event_time between (_startTime .. _endTime)
+| where is_critical
+| summarize arg_min(step_no, *) by activation_id
+| join kind=inner (activation | project activation_id, started_at) on activation_id
+| extend ttfc = datetime_diff('minute', completed_at, started_at)
+| summarize ["Czas do 1. kroku krytycznego (min)"] = percentile(ttfc, 50)
+
+// --- KAFELEK 5: Postep realizacji procedur w czasie (time chart) --------------
+step_execution
+| where event_time between (_startTime .. _endTime)
+| summarize wykonane = countif(status == "wykonany"),
+            zablokowane = countif(status == "zablokowany"),
+            pominiete = countif(status == "pominiety")
+  by bin(event_time, 1h)
+| render timechart
+
+// --- KAFELEK 6: Dotrzymanie SLA wg procedury (bar chart) ----------------------
+step_execution
+| where event_time between (_startTime .. _endTime)
+| summarize wykonania = count(), sla_pct = round(100.0 * countif(sla_met) / count(), 1) by procedure_code
+| where wykonania >= 10
+| order by sla_pct asc
+| render barchart
+
+// --- KAFELEK 7: Kroki najczesciej przekraczajace norme (tabela) ---------------
+step_execution
+| where event_time between (_startTime .. _endTime)
+| summarize wykonania = count(),
+            przekroczenia_pct = round(100.0 * countif(not(sla_met)) / count(), 1),
+            mediana_min = round(percentile(elapsed_minutes, 50), 1),
+            norma_min = any(sla_minutes)
+  by procedure_code, step_no, step_title
+| where wykonania >= 10
+| extend stosunek_do_normy = round(mediana_min / norma_min, 2)
+| order by przekroczenia_pct desc
+| take 15
+
+// --- KAFELEK 8: Powtarzajace sie blokady (tabela) -----------------------------
+step_execution
+| where event_time between (_startTime .. _endTime)
+| where isnotempty(blocker_reason)
+| summarize wystapienia = count(), procedury = dcount(procedure_code),
+            pierwsze = min(event_time), ostatnie = max(event_time)
+  by blocker_reason
+| order by wystapienia desc
+
+// --- KAFELEK 9: Checklista biezacego uruchomienia (tabela, parametr) ----------
+// Parametr dashboardu: _activation (string), domyslnie najnowsze uruchomienie.
+ActivationProgress(_activation)
+
+// --- KAFELEK 10: Dziennik decyzji (tabela) ------------------------------------
+decision_log
+| where event_time between (_startTime .. _endTime)
+| project decided_at, procedure_code, step_no, decision_type, decided_by_name, subject, classification
+| order by decided_at desc
+| take 50
+
+// --- KAFELEK 11: Zapytania do asystenta - wolumen i trafnosc (time chart) -----
+assistant_query
+| where event_time between (_startTime .. _endTime)
+| summarize pytania = count(), trafnosc_pct = round(100.0 * countif(is_correct) / count(), 1)
+  by bin(event_time, 1h)
+| render timechart
+
+// --- KAFELEK 12: Najczestsze pytania oficerow (tabela) ------------------------
+assistant_query
+| where event_time between (_startTime .. _endTime)
+| summarize pytania = count(), trafnosc = round(avg(toreal(is_correct)) * 100, 1),
+            mediana_ms = percentile(latency_ms, 50)
+  by question, top_procedure
+| order by pytania desc
+| take 20
+
+// --- KAFELEK 13: Uruchomienia wg wojewodztwa (mapa/bar) -----------------------
+activation
+| where event_time between (_startTime .. _endTime)
+| summarize uruchomienia = count(), sredni_sla = round(avg(sla_compliance_pct), 1) by voivodeship_name
+| order by uruchomienia desc
+
+// --- KAFELEK 14: Scenariusz osiowy - przebieg POWODZ WRZESIEN (tabela) --------
+activation
+| where event_name == "POWODZ WRZESIEN"
+| project started_at, procedure_code, procedure_name, level, voivodeship_name,
+          steps_total, steps_blocked, sla_compliance_pct
+| order by started_at asc

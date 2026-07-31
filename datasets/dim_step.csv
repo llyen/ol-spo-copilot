@@ -1,0 +1,156 @@
+step_id,procedure_code,step_no,step_title,role_code,role_name,institution,sla_minutes,output_document,is_critical
+SPO-1-01,SPO-1,1,Przyjecie i rejestracja wniosku o zwolanie posiedzenia RZZK,R_DYZ_RCB,Oficer dyzurny RCB,Rzadowe Centrum Bezpieczenstwa,30,Karta rejestracji wniosku,1
+SPO-1-02,SPO-1,2,Weryfikacja przeslanek ustawowych i zakresu przedmiotowego posiedzenia,R_DYR_RCB,Dyrektor RCB,Rzadowe Centrum Bezpieczenstwa,60,,1
+SPO-1-03,SPO-1,3,"Uzgodnienie terminu i trybu posiedzenia: stacjonarny, zdalny lub obiegowy",R_SEKR_RZZK,Sekretarz RZZK,Rzadowe Centrum Bezpieczenstwa,60,Decyzja o trybie posiedzenia,1
+SPO-1-04,SPO-1,4,Powiadomienie czlonkow RZZK oraz uczestnikow zaproszonych,R_SEKR_RZZK,Sekretarz RZZK,Rzadowe Centrum Bezpieczenstwa,45,Lista powiadomien,1
+SPO-1-05,SPO-1,5,Przygotowanie raportu sytuacyjnego i projektu porzadku obrad,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,120,Raport sytuacyjny RCB,1
+SPO-1-06,SPO-1,6,Uzgodnienie projektow rekomendacji z ministrem wiodacym,R_DYR_RCB,Dyrektor RCB,Rzadowe Centrum Bezpieczenstwa,120,Projekt rekomendacji,0
+SPO-1-07,SPO-1,7,Zapewnienie warunkow organizacyjno-technicznych i lacznosci niejawnej,R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,90,,0
+SPO-1-08,SPO-1,8,Obsluga posiedzenia i protokolowanie przebiegu,R_SEKR_RZZK,Sekretarz RZZK,Rzadowe Centrum Bezpieczenstwa,180,Protokol posiedzenia,1
+SPO-1-09,SPO-1,9,Sporzadzenie i dystrybucja ustalen oraz wykazu zadan,R_SEKR_RZZK,Sekretarz RZZK,Rzadowe Centrum Bezpieczenstwa,240,Wykaz zadan po posiedzeniu,1
+SPO-1-10,SPO-1,10,Monitorowanie realizacji zadan i raport zwrotny do Przewodniczacego,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,1440,Raport z realizacji zadan,0
+SPO-2-01,SPO-2,1,Przyjecie wniosku wojewody lub ministra o uruchomienie srodkow,R_MF,Departament Budzetu MF,Ministerstwo Finansow,60,Wniosek o srodki,1
+SPO-2-02,SPO-2,2,Weryfikacja formalna wniosku i kompletnosci kosztorysu,R_MF,Departament Budzetu MF,Ministerstwo Finansow,120,Protokol weryfikacji,1
+SPO-2-03,SPO-2,3,Ocena zasadnosci merytorycznej i zwiazku wydatku ze zdarzeniem,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,240,Opinia merytoryczna,1
+SPO-2-04,SPO-2,4,Uzgodnienie zrodla finansowania i limitu z Ministrem Finansow,R_MF,Departament Budzetu MF,Ministerstwo Finansow,480,,1
+SPO-2-05,SPO-2,5,Przygotowanie projektu decyzji o zmianie w budzecie panstwa,R_MF,Departament Budzetu MF,Ministerstwo Finansow,480,Projekt decyzji budzetowej,1
+SPO-2-06,SPO-2,6,"Uzyskanie opinii RZZK, jesli wymagana zakresem zdarzenia",R_SEKR_RZZK,Sekretarz RZZK,Rzadowe Centrum Bezpieczenstwa,720,Opinia RZZK,0
+SPO-2-07,SPO-2,7,Wydanie decyzji i przekazanie jej dysponentowi czesci budzetowej,R_MF,Departament Budzetu MF,Ministerstwo Finansow,240,Decyzja o uruchomieniu srodkow,1
+SPO-2-08,SPO-2,8,Uruchomienie transzy i powiadomienie beneficjenta,R_WOJ,Wojewoda / WCZK,Urzad Wojewodzki,240,Zawiadomienie o transzy,0
+SPO-2-09,SPO-2,9,Monitoring wydatkowania i sprawozdawczosc okresowa,R_WOJ,Wojewoda / WCZK,Urzad Wojewodzki,2880,Sprawozdanie z wydatkowania,0
+SPO-2-10,SPO-2,10,Rozliczenie koncowe i kontrola wykorzystania srodkow,R_MF,Departament Budzetu MF,Ministerstwo Finansow,4320,Protokol rozliczenia,0
+SPO-3-01,SPO-3,1,Ocena sytuacji informacyjnej i identyfikacja grup odbiorcow,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,30,Analiza odbiorcow,1
+SPO-3-02,SPO-3,2,Wyznaczenie rzecznika wiodacego i wdrozenie zasady jednego glosu,R_DYR_RCB,Dyrektor RCB,Rzadowe Centrum Bezpieczenstwa,30,Decyzja o rzeczniku wiodacym,1
+SPO-3-03,SPO-3,3,Przygotowanie komunikatu bazowego oraz wersji uproszczonej,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,45,Komunikat ostrzegawczy,1
+SPO-3-04,SPO-3,4,Przygotowanie wersji obcojezycznych i dostepnych dla osob z niepelnosprawnosciami,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,60,Wersje jezykowe komunikatu,0
+SPO-3-05,SPO-3,5,"Dobor kanalow: Alert RCB, RSO, media, syreny, kanaly samorzadowe",R_DYR_RCB,Dyrektor RCB,Rzadowe Centrum Bezpieczenstwa,30,Plan dystrybucji,1
+SPO-3-06,SPO-3,6,Zatwierdzenie tresci przez ministra wiodacego lub Dyrektora RCB,R_MIN_WIOD,Minister wiodacy,Ministerstwo wiodace,30,Akceptacja tresci,1
+SPO-3-07,SPO-3,7,Emisja komunikatu i potwierdzenie dystrybucji w kanalach,R_DYZ_RCB,Oficer dyzurny RCB,Rzadowe Centrum Bezpieczenstwa,15,Potwierdzenie emisji,1
+SPO-3-08,SPO-3,8,Monitoring odbioru komunikatu oraz narracji dezinformacyjnych,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,120,Raport monitoringu,0
+SPO-3-09,SPO-3,9,Publikacja sprostowan i aktualizacji cyklicznych,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,180,Sprostowanie,0
+SPO-3-10,SPO-3,10,Briefing prasowy lub konferencja z udzialem ministra wiodacego,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,240,Notatka z briefingu,0
+SPO-3-11,SPO-3,11,Archiwizacja komunikatow i ocena skutecznosci dotarcia,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,1440,Raport skutecznosci,0
+SPO-4-01,SPO-4,1,Analiza przeslanek zagrozenia porzadku publicznego i bezpieczenstwa,R_ABW,Agencja Bezpieczenstwa Wewnetrznego,ABW,240,Ocena zagrozenia,1
+SPO-4-02,SPO-4,2,"Ocena skutkow dla ruchu granicznego, transportu i gospodarki",R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,480,Ocena skutkow,0
+SPO-4-03,SPO-4,3,"Uzgodnienie zakresu, odcinkow i czasu kontroli z KG SG",R_KGSG,Komenda Glowna Strazy Granicznej,Straz Graniczna,240,Plan rozwiniecia kontroli,1
+SPO-4-04,SPO-4,4,Notyfikacja Komisji Europejskiej i panstw czlonkowskich,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,480,Notyfikacja KE,1
+SPO-4-05,SPO-4,5,Opracowanie projektu rozporzadzenia MSWiA,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,480,Projekt rozporzadzenia,1
+SPO-4-06,SPO-4,6,Uzgodnienia miedzyresortowe i opinia RCL,R_RCL,Rzadowe Centrum Legislacji,RCL,720,Opinia RCL,0
+SPO-4-07,SPO-4,7,Przyjecie i publikacja rozporzadzenia,R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,240,Rozporzadzenie,1
+SPO-4-08,SPO-4,8,Rozwiniecie przejsc granicznych i sil Strazy Granicznej,R_KGSG,Komenda Glowna Strazy Granicznej,Straz Graniczna,720,Meldunek o gotowosci,1
+SPO-4-09,SPO-4,9,Komunikacja do podroznych i przewoznikow w trybie SPO-3,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,120,Komunikat dla podroznych,0
+SPO-4-10,SPO-4,10,Cykliczna ocena zasadnosci utrzymania lub przedluzenia kontroli,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,2880,Raport oceny,0
+SPO-5-01,SPO-5,1,Przyjecie wniosku wojewody lub ministra o wprowadzenie stanu,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,120,Wniosek o wprowadzenie stanu,1
+SPO-5-02,SPO-5,2,"Ocena, czy sily i srodki na nizszych poziomach sa niewystarczajace",R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,240,Analiza sil i srodkow,1
+SPO-5-03,SPO-5,3,Okreslenie obszaru obowiazywania i przewidywanego czasu trwania,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,240,Zalacznik terytorialny,1
+SPO-5-04,SPO-5,4,Opracowanie projektu rozporzadzenia Rady Ministrow,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,480,Projekt rozporzadzenia RM,1
+SPO-5-05,SPO-5,5,Okreslenie katalogu ograniczen wolnosci i praw czlowieka,R_RCL,Rzadowe Centrum Legislacji,RCL,240,Katalog ograniczen,1
+SPO-5-06,SPO-5,6,Rozpatrzenie projektu przez Rade Ministrow,R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,480,Rozporzadzenie RM,1
+SPO-5-07,SPO-5,7,Przekazanie rozporzadzenia Sejmowi RP,R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,120,Pismo przewodnie do Sejmu,1
+SPO-5-08,SPO-5,8,Publikacja i ogloszenie stanu w mediach w trybie SPO-3,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,60,Komunikat o stanie,1
+SPO-5-09,SPO-5,9,Wyznaczenie pelnomocnika i trybu kierowania dzialaniami,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,240,Decyzja o pelnomocniku,0
+SPO-5-10,SPO-5,10,Raportowanie okresowe i wniosek o zniesienie stanu,R_WOJ,Wojewoda / WCZK,Urzad Wojewodzki,2880,Raport okresowy,0
+SPO-6-01,SPO-6,1,Analiza zagrozenia i przeslanek konstytucyjnych,R_ABW,Agencja Bezpieczenstwa Wewnetrznego,ABW,240,Ocena zagrozenia,1
+SPO-6-02,SPO-6,2,Przygotowanie wniosku Rady Ministrow do Prezydenta RP,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,480,Wniosek RM,1
+SPO-6-03,SPO-6,3,"Okreslenie obszaru, czasu i zakresu ograniczen",R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,240,Zalacznik do wniosku,1
+SPO-6-04,SPO-6,4,Opinia RCL i uzgodnienia miedzyresortowe,R_RCL,Rzadowe Centrum Legislacji,RCL,480,Opinia RCL,0
+SPO-6-05,SPO-6,5,Rozpatrzenie wniosku przez Rade Ministrow,R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,480,Uchwala RM,1
+SPO-6-06,SPO-6,6,Wydanie rozporzadzenia przez Prezydenta RP,R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,720,Rozporzadzenie Prezydenta RP,1
+SPO-6-07,SPO-6,7,Przedstawienie rozporzadzenia Sejmowi RP,R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,120,Pismo do Sejmu,1
+SPO-6-08,SPO-6,8,Komunikacja spoleczna i informowanie ludnosci w trybie SPO-3,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,60,Komunikat,1
+SPO-6-09,SPO-6,9,Monitoring stosowania ograniczen i raportowanie,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,2880,Raport okresowy,0
+SPO-7-01,SPO-7,1,Ocena zagrozenia zewnetrznego i rekomendacja MON,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,180,Ocena zagrozenia,1
+SPO-7-02,SPO-7,2,Przygotowanie wniosku Rady Ministrow do Prezydenta RP,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,360,Wniosek RM,1
+SPO-7-03,SPO-7,3,Okreslenie obszaru objetego stanem wojennym,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,240,Zalacznik terytorialny,1
+SPO-7-04,SPO-7,4,"Uzgodnienia z MSWiA, MSZ i BBN",R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,360,Protokol uzgodnien,0
+SPO-7-05,SPO-7,5,Rozpatrzenie wniosku przez Rade Ministrow,R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,360,Uchwala RM,1
+SPO-7-06,SPO-7,6,Wydanie rozporzadzenia przez Prezydenta RP,R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,480,Rozporzadzenie Prezydenta RP,1
+SPO-7-07,SPO-7,7,Przedstawienie rozporzadzenia Sejmowi RP,R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,120,Pismo do Sejmu,1
+SPO-7-08,SPO-7,8,Uruchomienie systemu kierowania obrona panstwa,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,720,Meldunek o uruchomieniu,1
+SPO-7-09,SPO-7,9,Informowanie ludnosci i sojusznikow,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,120,Komunikat,1
+SPO-8-01,SPO-8,1,Weryfikacja informacji o uprowadzeniu i ustalenie tozsamosci,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,120,Notatka weryfikacyjna,1
+SPO-8-02,SPO-8,2,Powiadomienie Zespolu do spraw Incydentow Krytycznych,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,60,Zawiadomienie ZIK,1
+SPO-8-03,SPO-8,3,Powolanie sztabu kryzysowego MSZ i wyznaczenie koordynatora,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,120,Decyzja o powolaniu sztabu,1
+SPO-8-04,SPO-8,4,Nawiazanie wspolpracy z placowka dyplomatyczna i sluzbami panstwa pobytu,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,240,Protokol wspolpracy,1
+SPO-8-05,SPO-8,5,Ocena wiarygodnosci zadan i analiza zagrozenia,R_ABW,Agencja Bezpieczenstwa Wewnetrznego,ABW,240,Analiza zagrozenia,1
+SPO-8-06,SPO-8,6,Ustalenie strategii postepowania i zasad kontaktu,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,360,Strategia postepowania,1
+SPO-8-07,SPO-8,7,Opieka nad rodzina i zapewnienie wsparcia psychologicznego,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,240,Plan wsparcia rodziny,0
+SPO-8-08,SPO-8,8,Zarzadzanie informacja publiczna i ochrona danych osoby uprowadzonej,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,120,Zasady komunikacji,1
+SPO-8-09,SPO-8,9,Przygotowanie i realizacja operacji uwolnienia lub przekazania,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,1440,Plan operacji,0
+SPO-8-10,SPO-8,10,"Powrot, pomoc medyczna i psychologiczna oraz raport koncowy",R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,2880,Raport koncowy,0
+SPO-9-01,SPO-9,1,Monitoring i prognoza liczby osob przekraczajacych granice,R_KGSG,Komenda Glowna Strazy Granicznej,Straz Graniczna,120,Prognoza naplywu,1
+SPO-9-02,SPO-9,2,Uruchomienie punktow recepcyjnych i rejestracji,R_WOJ,Wojewoda / WCZK,Urzad Wojewodzki,240,Wykaz punktow recepcyjnych,1
+SPO-9-03,SPO-9,3,"Zapewnienie zakwaterowania, wyzywienia i opieki medycznej",R_WOJ,Wojewoda / WCZK,Urzad Wojewodzki,480,Plan zabezpieczenia socjalnego,1
+SPO-9-04,SPO-9,4,Wsparcie tlumaczy i informacji w jezykach obcych,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,240,Plan wsparcia jezykowego,0
+SPO-9-05,SPO-9,5,Weryfikacja tozsamosci i kontrola bezpieczenstwa,R_ABW,Agencja Bezpieczenstwa Wewnetrznego,ABW,360,Protokol weryfikacji,1
+SPO-9-06,SPO-9,6,Koordynacja z organizacjami pozarzadowymi i samorzadami,R_WOJ,Wojewoda / WCZK,Urzad Wojewodzki,360,Porozumienie o wspolpracy,0
+SPO-9-07,SPO-9,7,Uruchomienie srodkow finansowych w trybie SPO-2,R_MF,Departament Budzetu MF,Ministerstwo Finansow,720,Wniosek o srodki,0
+SPO-9-08,SPO-9,8,Ochrona osob maloletnich bez opieki i osob wrazliwych,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,360,Rejestr osob wrazliwych,1
+SPO-9-09,SPO-9,9,Komunikacja spoleczna i przeciwdzialanie dezinformacji,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,180,Komunikat,0
+SPO-9-10,SPO-9,10,Raportowanie dobowe i ocena wydolnosci systemu,R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,1440,Raport dobowy,0
+SPO-10-01,SPO-10,1,Przyjecie zgloszenia o zagrozeniu obiektu IK i jego rejestracja,R_DYZ_RCB,Oficer dyzurny RCB,Rzadowe Centrum Bezpieczenstwa,30,Karta zgloszenia IK,1
+SPO-10-02,SPO-10,2,Identyfikacja systemu IK i wlasciwego ministra odpowiedzialnego,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,60,Karta identyfikacji,1
+SPO-10-03,SPO-10,3,Nawiazanie kontaktu z operatorem i wyznaczenie punktu styku,R_OPER_IK,Operator infrastruktury krytycznej,Podmiot IK,60,Lista punktow kontaktowych,1
+SPO-10-04,SPO-10,4,Ocena skutkow wtornych i zaleznosci miedzysystemowych,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,180,Analiza wspolzaleznosci,1
+SPO-10-05,SPO-10,5,Ustalenie priorytetow zasilania i przywracania funkcji,R_MIN_WIOD,Minister wiodacy,Ministerstwo wiodace,240,Lista priorytetow,1
+SPO-10-06,SPO-10,6,Uzgodnienie wsparcia sil i srodkow administracji dla operatora,R_WOJ,Wojewoda / WCZK,Urzad Wojewodzki,240,Protokol uzgodnien,0
+SPO-10-07,SPO-10,7,"Wprowadzenie ograniczen lub reglamentacji, jesli konieczne",R_MIN_WIOD,Minister wiodacy,Ministerstwo wiodace,480,Decyzja o ograniczeniach,0
+SPO-10-08,SPO-10,8,Monitorowanie odtwarzania funkcji i raportowanie postepu,R_OPER_IK,Operator infrastruktury krytycznej,Podmiot IK,720,Raport odtworzenia,1
+SPO-10-09,SPO-10,9,Informowanie odbiorcow uslug o przewidywanym czasie przywrocenia,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,120,Komunikat dla odbiorcow,0
+SPO-10-10,SPO-10,10,Wnioski i aktualizacja planu ochrony IK po zdarzeniu,R_DYR_RCB,Dyrektor RCB,Rzadowe Centrum Bezpieczenstwa,4320,Raport po zdarzeniu,0
+SPO-11-01,SPO-11,1,Ocena zagrozenia w panstwie pobytu i decyzja o ewakuacji,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,240,Ocena zagrozenia,1
+SPO-11-02,SPO-11,2,Ustalenie liczby i lokalizacji obywateli RP,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,360,Wykaz osob do ewakuacji,1
+SPO-11-03,SPO-11,3,Uruchomienie infolinii i kanalow zgloszeniowych,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,120,Procedura infolinii,1
+SPO-11-04,SPO-11,4,Wybor wariantu transportu i tras ewakuacji,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,360,Plan transportu,1
+SPO-11-05,SPO-11,5,Uzgodnienia z panstwem pobytu i panstwami tranzytu,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,480,Zgody dyplomatyczne,1
+SPO-11-06,SPO-11,6,Koordynacja z mechanizmem ochrony ludnosci UE i sojusznikami,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,480,Wniosek do UCPM,0
+SPO-11-07,SPO-11,7,Organizacja punktow zbornych i eskorty,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,480,Plan punktow zbornych,1
+SPO-11-08,SPO-11,8,Realizacja przerzutu i odprawa po przylocie,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,1440,Meldunek z realizacji,1
+SPO-11-09,SPO-11,9,"Pomoc medyczna, socjalna i psychologiczna po powrocie",R_MZ,Centrum Zarzadzania Kryzysowego MZ,Ministerstwo Zdrowia,720,Plan pomocy,0
+SPO-11-10,SPO-11,10,Rozliczenie kosztow i raport koncowy,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,4320,Raport koncowy,0
+SPO-12-01,SPO-12,1,Przyjecie meldunku z CZK i nadanie numeru ewidencyjnego,R_DYZ_RCB,Oficer dyzurny RCB,Rzadowe Centrum Bezpieczenstwa,15,Meldunek wejsciowy,1
+SPO-12-02,SPO-12,2,Weryfikacja i uzupelnienie danych u zrodla,R_DYZ_RCB,Oficer dyzurny RCB,Rzadowe Centrum Bezpieczenstwa,30,,1
+SPO-12-03,SPO-12,3,Klasyfikacja zdarzenia wg katalogu zagrozen Z01-Z20,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,30,Karta klasyfikacji,1
+SPO-12-04,SPO-12,4,Sporzadzenie raportu sytuacyjnego dla kierownictwa,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,60,Raport sytuacyjny,1
+SPO-12-05,SPO-12,5,Dystrybucja raportu do adresatow zgodnie z lista rozdzielnika,R_DYZ_RCB,Oficer dyzurny RCB,Rzadowe Centrum Bezpieczenstwa,30,Rozdzielnik,1
+SPO-12-06,SPO-12,6,Aktualizacja obrazu sytuacji i zasilenie COP,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,60,Aktualizacja COP,0
+SPO-12-07,SPO-12,7,Sporzadzenie raportu dobowego,R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,1440,Raport dobowy,0
+SPO-12-08,SPO-12,8,Archiwizacja i zapewnienie sladu audytowego,R_DYZ_RCB,Oficer dyzurny RCB,Rzadowe Centrum Bezpieczenstwa,1440,,0
+SPO-13-01,SPO-13,1,Przyjecie informacji o zagrozeniu z systemu obrony powietrznej,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,5,Meldunek o zagrozeniu,1
+SPO-13-02,SPO-13,2,Weryfikacja i ocena wiarygodnosci sygnalu,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,10,,1
+SPO-13-03,SPO-13,3,Okreslenie obszaru zagrozonego i sposobu alarmowania,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,10,Decyzja o zasiegu alarmu,1
+SPO-13-04,SPO-13,4,Przekazanie sygnalu do wojewodzkich centrow zarzadzania kryzysowego,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,5,Sygnal alarmowy,1
+SPO-13-05,SPO-13,5,Uruchomienie syren i systemow alarmowych na obszarze zagrozonym,R_WOJ,Wojewoda / WCZK,Urzad Wojewodzki,10,Potwierdzenie uruchomienia,1
+SPO-13-06,SPO-13,6,Emisja komunikatu do ludnosci w kanalach masowych,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,15,Komunikat alarmowy,1
+SPO-13-07,SPO-13,7,Koordynacja z operatorami lotnisk i zarzadca przestrzeni powietrznej,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,30,Protokol koordynacji,0
+SPO-13-08,SPO-13,8,Odwolanie alarmu i komunikat o zakonczeniu zagrozenia,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,15,Sygnal odwolania alarmu,1
+SPO-13-09,SPO-13,9,Analiza przebiegu alarmowania i wnioski,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,1440,Raport z alarmowania,0
+SPO-14-01,SPO-14,1,Przyjecie i weryfikacja wniosku panstwa wysylajacego,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,480,Wniosek o zgode,1
+SPO-14-02,SPO-14,2,Uzgodnienia z MSZ i MSWiA w zakresie zgod i kontroli,R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,480,Protokol uzgodnien,1
+SPO-14-03,SPO-14,3,Przygotowanie projektu zgody wlasciwego organu,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,720,Projekt zgody,1
+SPO-14-04,SPO-14,4,Ustalenie tras przemieszczania i harmonogramu,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,480,Plan przemieszczenia,1
+SPO-14-05,SPO-14,5,Zapewnienie wsparcia panstwa gospodarza w zakresie HNS,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,720,Plan HNS,1
+SPO-14-06,SPO-14,6,Koordynacja z zarzadcami drog i kolei oraz Policja,R_KGP,Komenda Glowna Policji,Policja,480,Plan zabezpieczenia ruchu,0
+SPO-14-07,SPO-14,7,Odprawa graniczna i kontrola dokumentow,R_KGSG,Komenda Glowna Strazy Granicznej,Straz Graniczna,240,Protokol odprawy,1
+SPO-14-08,SPO-14,8,Monitorowanie przemieszczania i raportowanie,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,720,Meldunek biezacy,0
+SPO-14-09,SPO-14,9,Rozliczenie pobytu i raport koncowy,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,4320,Raport koncowy,0
+SPO-15-01,SPO-15,1,Przyjecie informacji o zdarzeniu masowym i ocena skali,R_MZ,Centrum Zarzadzania Kryzysowego MZ,Ministerstwo Zdrowia,30,Meldunek o zdarzeniu,1
+SPO-15-02,SPO-15,2,Ustalenie liczby poszkodowanych i wynikow segregacji medycznej,R_MZ,Centrum Zarzadzania Kryzysowego MZ,Ministerstwo Zdrowia,60,Zestawienie triage,1
+SPO-15-03,SPO-15,3,Identyfikacja szpitali docelowych i wolnych miejsc specjalistycznych,R_MZ,Centrum Zarzadzania Kryzysowego MZ,Ministerstwo Zdrowia,90,Wykaz miejsc szpitalnych,1
+SPO-15-04,SPO-15,4,Uruchomienie sil LPR i lotnictwa transportowego SZ RP,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,120,Zapotrzebowanie na statki powietrzne,1
+SPO-15-05,SPO-15,5,Wyznaczenie lotnisk i ladowisk operacyjnych,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,120,Plan lotnisk,1
+SPO-15-06,SPO-15,6,Koordynacja przestrzeni powietrznej i priorytetow lotow,R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,60,Uzgodnienie z ATM,1
+SPO-15-07,SPO-15,7,Organizacja transportu naziemnego na obu koncach mostu,R_WOJ,Wojewoda / WCZK,Urzad Wojewodzki,120,Plan transportu naziemnego,0
+SPO-15-08,SPO-15,8,Zabezpieczenie medyczne w trakcie transportu,R_MZ,Centrum Zarzadzania Kryzysowego MZ,Ministerstwo Zdrowia,60,Karta transportu medycznego,1
+SPO-15-09,SPO-15,9,Ewidencja pacjentow i informacja dla rodzin,R_MZ,Centrum Zarzadzania Kryzysowego MZ,Ministerstwo Zdrowia,240,Rejestr pacjentow,0
+SPO-15-10,SPO-15,10,Raport z realizacji i rozliczenie kosztow,R_MZ,Centrum Zarzadzania Kryzysowego MZ,Ministerstwo Zdrowia,2880,Raport koncowy,0
+SPO-16-01,SPO-16,1,Przyjecie zgloszenia incydentu i wstepna kwalifikacja,R_CSIRT,CSIRT NASK / CSIRT GOV,Zespoly reagowania na incydenty,30,Karta incydentu,1
+SPO-16-02,SPO-16,2,"Ocena, czy incydent spelnia kryteria incydentu krytycznego",R_ABW,Agencja Bezpieczenstwa Wewnetrznego,ABW,60,Ocena kwalifikacyjna,1
+SPO-16-03,SPO-16,3,Zwolanie Zespolu do spraw Incydentow Krytycznych,R_ABW,Agencja Bezpieczenstwa Wewnetrznego,ABW,60,Zawiadomienie o posiedzeniu,1
+SPO-16-04,SPO-16,4,Przygotowanie materialu sytuacyjnego o incydencie,R_CSIRT,CSIRT NASK / CSIRT GOV,Zespoly reagowania na incydenty,120,Raport techniczny,1
+SPO-16-05,SPO-16,5,Uzgodnienie rekomendacji dotyczacych stopni alarmowych,R_ABW,Agencja Bezpieczenstwa Wewnetrznego,ABW,180,Rekomendacja stopni alarmowych,1
+SPO-16-06,SPO-16,6,Koordynacja dzialan z operatorami uslug kluczowych,R_OPER_IK,Operator infrastruktury krytycznej,Podmiot IK,240,Protokol koordynacji,1
+SPO-16-07,SPO-16,7,Obsluga posiedzenia i protokolowanie ustalen,R_ABW,Agencja Bezpieczenstwa Wewnetrznego,ABW,180,Protokol posiedzenia,1
+SPO-16-08,SPO-16,8,Przekazanie rekomendacji do RZZK lub Prezesa Rady Ministrow,R_SEKR_RZZK,Sekretarz RZZK,Rzadowe Centrum Bezpieczenstwa,120,Rekomendacje,0
+SPO-16-09,SPO-16,9,Komunikacja publiczna uzgodniona ze sluzbami,R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,180,Komunikat,0
+SPO-16-10,SPO-16,10,Raport po incydencie i wnioski do procedur,R_CSIRT,CSIRT NASK / CSIRT GOV,Zespoly reagowania na incydenty,4320,Raport po incydencie,0

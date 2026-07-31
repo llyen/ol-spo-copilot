@@ -1,0 +1,14 @@
+{
+  "dim_role": 22,
+  "dim_hazard": 20,
+  "dim_procedure": 16,
+  "dim_step": 155,
+  "dim_document": 49,
+  "corpus_chunks": 513,
+  "corpus_chars": 198746,
+  "fact_activation": 986,
+  "fact_step_execution": 9420,
+  "fact_decision_log": 2002,
+  "fact_assistant_query": 4200,
+  "eval_questions": 32
+}

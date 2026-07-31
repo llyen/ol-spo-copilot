@@ -1,0 +1,23 @@
+role_code,role_name,institution,level
+R_DYZ_RCB,Oficer dyzurny RCB,Rzadowe Centrum Bezpieczenstwa,krajowy
+R_DYR_RCB,Dyrektor RCB,Rzadowe Centrum Bezpieczenstwa,krajowy
+R_ANAL_RCB,Zespol analiz RCB,Rzadowe Centrum Bezpieczenstwa,krajowy
+R_SEKR_RZZK,Sekretarz RZZK,Rzadowe Centrum Bezpieczenstwa,krajowy
+R_RZECZ,Rzecznik prasowy,Rzadowe Centrum Bezpieczenstwa,krajowy
+R_MIN_WIOD,Minister wiodacy,Ministerstwo wiodace,krajowy
+R_MSWIA,Departament ZK MSWiA,Ministerstwo Spraw Wewnetrznych i Administracji,krajowy
+R_MON,Centrum Zarzadzania Kryzysowego MON,Ministerstwo Obrony Narodowej,krajowy
+R_MSZ,Sztab Kryzysowy MSZ,Ministerstwo Spraw Zagranicznych,krajowy
+R_MF,Departament Budzetu MF,Ministerstwo Finansow,krajowy
+R_MZ,Centrum Zarzadzania Kryzysowego MZ,Ministerstwo Zdrowia,krajowy
+R_KGP,Komenda Glowna Policji,Policja,krajowy
+R_KGPSP,Komenda Glowna PSP,Panstwowa Straz Pozarna,krajowy
+R_KGSG,Komenda Glowna Strazy Granicznej,Straz Graniczna,krajowy
+R_ABW,Agencja Bezpieczenstwa Wewnetrznego,ABW,krajowy
+R_CSIRT,CSIRT NASK / CSIRT GOV,Zespoly reagowania na incydenty,krajowy
+R_WOJ,Wojewoda / WCZK,Urzad Wojewodzki,wojewodzki
+R_STAR,Starosta / PCZK,Starostwo Powiatowe,powiatowy
+R_WOJT,"Wojt, burmistrz, prezydent miasta",Urzad Gminy,gminny
+R_OPER_IK,Operator infrastruktury krytycznej,Podmiot IK,operatorski
+R_RCL,Rzadowe Centrum Legislacji,RCL,krajowy
+R_KPRM,Kancelaria Prezesa Rady Ministrow,KPRM,krajowy

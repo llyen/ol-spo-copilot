@@ -1,0 +1,144 @@
+// =============================================================================
+// SPO Copilot - Eventhouse / KQL Database: tabele surowe i mapowania
+// Uruchomic w Fabric Eventhouse (KQL queryset) przed podlaczeniem Eventstreamu.
+// Dane sa w 100% syntetyczne (demo).
+// =============================================================================
+
+//------------------------------------------------------------------------------
+// 1. Tabele surowe (landing) - jeden JSON na zdarzenie
+//------------------------------------------------------------------------------
+.create-merge table step_execution_raw (payload: dynamic)
+.create-merge table decision_log_raw   (payload: dynamic)
+.create-merge table assistant_query_raw(payload: dynamic)
+.create-merge table activation_raw     (payload: dynamic)
+
+.create-or-alter table step_execution_raw ingestion json mapping "step_execution_raw_mapping"
+'[{"column":"payload","Properties":{"Path":"$"}}]'
+.create-or-alter table decision_log_raw ingestion json mapping "decision_log_raw_mapping"
+'[{"column":"payload","Properties":{"Path":"$"}}]'
+.create-or-alter table assistant_query_raw ingestion json mapping "assistant_query_raw_mapping"
+'[{"column":"payload","Properties":{"Path":"$"}}]'
+.create-or-alter table activation_raw ingestion json mapping "activation_raw_mapping"
+'[{"column":"payload","Properties":{"Path":"$"}}]'
+
+//------------------------------------------------------------------------------
+// 2. Tabele docelowe (typowane)
+//------------------------------------------------------------------------------
+.create-merge table step_execution (
+    execution_id: string,
+    activation_id: string,
+    procedure_code: string,
+    step_id: string,
+    step_no: int,
+    step_title: string,
+    role_code: string,
+    institution: string,
+    level: string,
+    voivodeship_code: string,
+    event_name: string,
+    planned_start: datetime,
+    started_at: datetime,
+    completed_at: datetime,
+    sla_minutes: int,
+    elapsed_minutes: real,
+    sla_met: bool,
+    is_critical: bool,
+    status: string,
+    blocker_reason: string,
+    output_document: string,
+    event_time: datetime
+)
+
+.create-merge table decision_log (
+    decision_id: string,
+    activation_id: string,
+    procedure_code: string,
+    step_no: int,
+    decided_at: datetime,
+    decision_type: string,
+    decided_by_role: string,
+    decided_by_name: string,
+    subject: string,
+    rationale: string,
+    classification: string,
+    event_time: datetime
+)
+
+.create-merge table assistant_query (
+    query_id: string,
+    asked_at: datetime,
+    user_role: string,
+    channel: string,
+    question: string,
+    expected_procedure: string,
+    top_procedure: string,
+    confidence: real,
+    is_correct: bool,
+    cited_chunk_ids: string,
+    latency_ms: int,
+    feedback: string,
+    event_time: datetime
+)
+
+.create-merge table activation (
+    activation_id: string,
+    procedure_code: string,
+    procedure_name: string,
+    event_name: string,
+    hazard_code: string,
+    level: string,
+    voivodeship_code: string,
+    voivodeship_name: string,
+    initiated_by_role: string,
+    initiated_by_institution: string,
+    trigger_text: string,
+    started_at: datetime,
+    closed_at: datetime,
+    duration_minutes: real,
+    steps_total: int,
+    steps_completed: int,
+    steps_blocked: int,
+    steps_sla_breached: int,
+    sla_compliance_pct: real,
+    status: string,
+    event_time: datetime
+)
+
+//------------------------------------------------------------------------------
+// 3. Tabele wymiarowe (ladowane wsadowo z Lakehouse lub jednorazowym ingestem)
+//------------------------------------------------------------------------------
+.create-merge table dim_procedure (
+    procedure_id: string, procedure_code: string, procedure_name: string,
+    owner_role: string, owner_institution: string, phase: string,
+    hazard_codes: string, legal_basis: string, step_count: int,
+    total_sla_minutes: int, critical_step_count: int, keywords: string
+)
+
+.create-merge table dim_step (
+    step_id: string, procedure_code: string, step_no: int, step_title: string,
+    role_code: string, role_name: string, institution: string,
+    sla_minutes: int, output_document: string, is_critical: bool
+)
+
+.create-merge table dim_role (role_code: string, role_name: string, institution: string, level: string)
+.create-merge table dim_hazard (hazard_code: string, hazard_name: string, risk_matrix: string)
+.create-merge table dim_document (
+    document_id: string, doc_type: string, title: string, procedure_code: string,
+    voivodeship_code: string, owner_institution: string,
+    section_count: int, chunk_count: int, char_count: int
+)
+
+// Korpus dla groundingu Data Agenta i wyszukiwania w aplikacji
+.create-merge table corpus_chunk (
+    chunk_id: string, document_id: string, doc_type: string, procedure_code: string,
+    section: string, chunk_title: string, text: string, hazard_codes: string,
+    role_codes: string, char_count: int, doc_title: string
+)
+
+//------------------------------------------------------------------------------
+// 4. Retencja i cache (demo)
+//------------------------------------------------------------------------------
+.alter table step_execution policy retention softdelete = 365d
+.alter table decision_log policy retention softdelete = 3650d   // dziennik decyzji - dlugi slad audytowy
+.alter table assistant_query policy retention softdelete = 365d
+.alter table activation policy retention softdelete = 3650d

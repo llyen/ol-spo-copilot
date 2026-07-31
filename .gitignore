@@ -1,0 +1,7 @@
+.env
+config.json
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+datasets/derived/dry_run_*.jsonl

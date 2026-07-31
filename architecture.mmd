@@ -1,0 +1,46 @@
+flowchart LR
+    subgraph ZRODLA["Zrodla wiedzy i zdarzen"]
+        A1["Korpus procedur\n16 SPO + 16 planow wojewodzkich\n+ 16 planow OL + KPZK"]
+        A2["Rejestr uruchomien\ni wykonan krokow"]
+        A3["Dziennik decyzji\nWCZK / RCB"]
+        A4["Telemetria asystenta\npytania, cytowania, oceny"]
+    end
+
+    subgraph FABRIC["Microsoft Fabric"]
+        B1["Lakehouse\nspo_copilot_lh\nwymiary + korpus"]
+        B2["Eventstream\nes-spo-copilot"]
+        B3["Eventhouse / KQL DB\nspo_copilot_kql"]
+        B4["Notebooks\n01-05 korpus, indeks,\nodpowiedzi, ewaluacja, analityka"]
+        B5["Model semantyczny\nspo_copilot_sm"]
+        B6["Raport Power BI\n6 stron"]
+        B7["Activator\n9 regul A1-A9"]
+        B8["Data Agent\nspo-copilot-agent"]
+        B9["Fabric App\nkarta odpowiedzi + checklista"]
+    end
+
+    subgraph ODBIORCY["Odbiorcy"]
+        C1["Dyzurny WCZK / RCB"]
+        C2["Wojewoda / dyrektor WBZK"]
+        C3["Analityk lessons learned"]
+    end
+
+    A1 --> B1
+    A2 --> B2
+    A3 --> B2
+    A4 --> B2
+    B2 --> B3
+    B1 --> B4
+    B3 --> B4
+    B4 -->|indeks TF-IDF, karty odpowiedzi| B1
+    B1 --> B5
+    B3 --> B5
+    B5 --> B6
+    B3 --> B7
+    B1 --> B8
+    B3 --> B8
+    B5 --> B9
+    B8 --> B9
+    B9 --> C1
+    B6 --> C2
+    B6 --> C3
+    B7 --> C1
