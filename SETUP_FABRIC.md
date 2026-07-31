@@ -222,19 +222,27 @@ w miejscu, zamiast rozsypywać układ.
 **Fabric nie waliduje definicji dashboardu przy imporcie** — `updateDefinition`
 zwraca `200` nawet dla pliku niezgodnego ze schematem, a błąd zobaczysz dopiero
 przy otwieraniu w portalu. Dlatego skrypt sam waliduje definicję wobec oficjalnego
-schematu ADX (`https://dataexplorer.azure.com/static/d/schema/52/dashboard.json`)
+schematu ADX (`https://dataexplorer.azure.com/static/d/schema/74/dashboard.json`)
 i przerywa przed wysyłką. Walidację można wyłączyć flagą `--skip-validate`.
 
-Dwie pułapki, które kosztowały najwięcej czasu:
+Trzy pułapki, które kosztowały najwięcej czasu:
 
-- Źródło danych musi mieć `kind` i `scopeId` równe **`kusto-trident`** (wariant
-  Fabric), a `database` i `workspace` to **GUID-y elementów**, nie nazwy. Wariant
-  `manual-kusto` przechodzi walidację schematu, ale portal odrzuca go komunikatem
-  *„Detected bad id format in database property"*. GUID bazy skrypt pobiera sam
-  z API, jeśli w `config.json` nie ma `kql_database_id`.
-- Parametr `duration` przyjmuje wyłącznie `months`, `weeks`, `days`, `hours`,
-  `minutes`. Wartość `years` unieważnia całą definicję parametru — stąd
+- **Wersja schematu.** Portal renderuje wg `schema_version`, które musi być
+  **liczbą** (nie łańcuchem). Na starszej wersji `52` źródło danych Fabric nie było
+  poprawnie odczytywane. Wzorcem jest `74` — tyle mają dashboardy tworzone w UI.
+  Klucza `$schema` w pliku nie ma.
+- **Źródło danych.** `kind` musi być `kusto-trident` (wariant Fabric), a `database`
+  i `databaseArtifactId` to **GUID elementu KQLDatabase**, nie jego nazwa. Wariant
+  `manual-kusto` z nazwą powoduje komunikat *„Detected bad id format in database
+  property"*. GUID skrypt pobiera sam z API, jeśli w `config.json` nie ma
+  `kql_database_id`.
+- **Parametr czasu.** `duration` przyjmuje wyłącznie `months`, `weeks`, `days`,
+  `hours`, `minutes`. Wartość `years` unieważnia całą definicję parametru — stąd
   60 miesięcy zamiast 5 lat.
+
+Jeśli w przyszłości Fabric zmieni schemat, najszybszą drogą jest wyeksportowanie
+definicji dowolnego dashboardu utworzonego w UI (`getDefinition` na elemencie
+`KQLDashboard`) i porównanie jej z wyjściem skryptu.
 
 ## 8. Activator
 
@@ -291,7 +299,7 @@ dodaje się w UI:
 | `Invalid object name` w modelu semantycznym | SQL endpoint nie zsynchronizował nowych tabel | wywołaj `sqlEndpoints/{id}/refreshMetadata` |
 | `Failed to resolve name 'SYNTAXERROR'` po imporcie modelu | wielolinijkowe wyrażenie miary w TMDL na złym poziomie wcięcia | wyrażenie musi być wcięte **głębiej** niż właściwości miary |
 | `There are ambiguous paths between ...` | dwie ścieżki filtrowania między tabelami | oznacz jedną relację jako nieaktywną (patrz rozdział 5) |
-| Dashboard: „Detected bad id format in database property" | źródło danych typu `manual-kusto` z nazwą bazy zamiast wariantu Fabric | ustaw `kind`/`scopeId` na `kusto-trident`, `database` i `workspace` jako GUID-y |
+| Dashboard: „Detected bad id format in database property" | źródło danych typu `manual-kusto` z nazwą bazy, albo stara wersja schematu | `kind: kusto-trident`, `database`/`databaseArtifactId` jako GUID elementu, `schema_version` liczbowo `74` |
 | Dashboard nie otwiera się mimo `updateDefinition: 200` | definicja niezgodna ze schematem (Fabric nie waliduje przy imporcie) | uruchom `create_dashboard.py` bez `--skip-validate`; parametr `duration` przyjmuje tylko `months/weeks/days/hours/minutes` — `years` psuje cały plik |
 | Kafelki dashboardu puste mimo danych w tabelach | parametr czasu obejmuje tylko ostatnie godziny | rozszerz `Zakres czasu` — dane historyczne sięgają 2023 roku |
 | Daty przesunięte o 2 h | strefa czasowa workspace | ustaw `Europe/Warsaw`, dane mają offset `+02:00` |

@@ -143,8 +143,7 @@ def guid(name: str) -> str:
 
 def visual_options(visual: str, title: str) -> dict:
     if visual == "stat":
-        return {"colorRulesDisabled": False, "colorStyle": "light", "colorRules": [],
-                "textSize": "auto"}
+        return {"colorRulesDisabled": False, "colorStyle": "light", "colorRules": []}
     if visual == "table":
         return {"table__enableRenderLinks": True}
     if visual == "bar":
@@ -166,17 +165,17 @@ def build(cluster_uri: str, database: str, title: str,
           workspace_id: str, database_id: str) -> dict:
     ds_id = guid("datasource")
     dashboard = {
-        "$schema": "https://dataexplorer.azure.com/static/d/schema/52/dashboard.json",
         "id": guid("dashboard"),
-        "schema_version": "52",
+        "schema_version": SCHEMA_VERSION,
         "title": title,
-        "autoRefresh": {"enabled": True, "defaultDuration": "5m", "minimumDuration": "1m"},
+        "autoRefresh": {"enabled": True, "defaultInterval": "5m"},
         "baseQueries": [],
-        # Fabric wymaga typu "kusto-trident": database i workspace to GUID-y elementow,
-        # nie nazwy. Przy "manual-kusto" portal zglasza "bad id format in database property".
+        # Fabric wymaga typu "kusto-trident": database i databaseArtifactId to GUID
+        # elementu KQLDatabase, nie nazwa. Przy "manual-kusto" portal zglasza
+        # "Detected bad id format in database property".
         "dataSources": [{"id": ds_id, "name": database, "clusterUri": cluster_uri,
-                         "database": database_id, "workspace": workspace_id,
-                         "kind": "kusto-trident", "scopeId": "kusto-trident"}],
+                         "database": database_id, "databaseArtifactId": database_id,
+                         "workspace": workspace_id, "kind": "kusto-trident"}],
         "pages": [{"id": guid(pid), "name": name} for pid, name in PAGES],
         "parameters": [{
             "kind": "duration", "id": guid("param-time"), "displayName": "Zakres czasu",
@@ -204,12 +203,12 @@ def build(cluster_uri: str, database: str, title: str,
             "layout": {"x": x, "y": y, "width": w, "height": h},
             "queryRef": {"kind": "query", "queryId": qid},
             "visualOptions": visual_options(visual, tile_title),
-            "usedParamVariables": ["_startTime", "_endTime"],
         })
     return dashboard
 
 
-SCHEMA_BASE = "https://dataexplorer.azure.com/static/d/schema/52/"
+SCHEMA_VERSION = 74
+SCHEMA_BASE = f"https://dataexplorer.azure.com/static/d/schema/{SCHEMA_VERSION}/"
 
 
 def validate(dashboard: dict) -> None:
@@ -236,7 +235,7 @@ def validate(dashboard: dict) -> None:
             raw = urllib.request.urlopen(SCHEMA_BASE + fname, timeout=30).read().decode("utf-8")
             r = Resource(contents=json.loads(raw), specification=DRAFT202012)
             res[fname] = r
-            res[f"/static/d/schema/52/{fname}"] = r
+            res[f"/static/d/schema/{SCHEMA_VERSION}/{fname}"] = r
             todo += [m.split("/")[-1] for m in re.findall(r'"\$ref"\s*:\s*"([^"#]+)', raw)
                      if m.endswith(".json")]
     except Exception as exc:
