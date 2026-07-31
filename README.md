@@ -102,7 +102,7 @@ Szczegóły: [`ARCHITECTURE.md`](ARCHITECTURE.md) i [`architecture.mmd`](archite
 | `notebooks/01`–`05` | ładowanie korpusu, budowa indeksu, karty odpowiedzi, ewaluacja, analityka |
 | `notebooks/06_semantic_prep.py` | warstwa semantyczna w Lakehouse (kolumny czasu, kolumny wyliczane, `dim_date`) — tylko Fabric |
 | `kql/01`–`06` | tabele, zasady aktualizacji, zapytania dashboardu, alerty, wyszukiwanie w korpusie, ingest historii |
-| `deploy_fabric.py`, `fabric/` | automatyczne wdrożenie w Fabric (OneLake, notatniki, KQL, model semantyczny, raport) |
+| `deploy_fabric.py`, `fabric/` | automatyczne wdrożenie w Fabric (OneLake, notatniki, KQL, model semantyczny, raport, dashboard) |
 | `semantic-model/` | opis modelu gwiazdy i 28 miar DAX |
 | `report/REPORT_SPEC.md` | specyfikacja raportu (6 stron) |
 | `fabric-app/` | specyfikacja aplikacji + prompt do generatora UI |

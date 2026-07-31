@@ -190,7 +190,36 @@ Pułapki formatu PBIR:
 - `themeCollection.customTheme` wymaga pola `reportVersionAtImport`;
 - `settings` nie akceptuje `useNewFilterPaneExperience`.
 
-## 7. Activator
+## 7. Real-Time Dashboard
+
+Dashboard `OL_SPO_Dashboard` to warstwa operacyjna „tu i teraz" — działa bezpośrednio
+na bazie KQL, bez pośrednictwa modelu semantycznego:
+
+```powershell
+python fabric\create_dashboard.py
+```
+
+14 kafelków wg [`kql/03_dashboard_queries.kql`](kql/03_dashboard_queries.kql), rozłożonych
+na trzy strony, żeby żadna nie była przeładowana:
+
+| Strona | Zawartość |
+|---|---|
+| Przebieg operacyjny | 4 kafelki KPI, postęp kroków w czasie, SLA wg procedury, checklista ostatniego uruchomienia, województwa |
+| Wąskie gardła i blokady | kroki najczęściej po terminie, powtarzające się blokady, dziennik decyzji |
+| Asystent i scenariusz osiowy | wolumen i trafność asystenta, najczęstsze pytania, przebieg POWODZI WRZESIEŃ |
+
+Parametr `Zakres czasu` (`_startTime`/`_endTime`) obowiązuje na wszystkich stronach;
+domyślnie 5 lat, bo dane historyczne sięgają 2023 roku. Przy demo na żywo zawęź go
+do godzin, żeby widzieć napływ zdarzeń z symulatora.
+
+Kafelek „Checklista ostatniego uruchomienia" sam wybiera najświeższą aktywację
+(`toscalar` + funkcja `ActivationProgress`) — nie wymaga parametru tekstowego.
+
+Uwaga do formatu: identyfikatory kafelków, zapytań i stron są generowane
+deterministycznie (`uuid5`), więc ponowne uruchomienie skryptu aktualizuje dashboard
+w miejscu, zamiast rozsypywać układ.
+
+## 8. Activator
 
 Element `OL_SPO_Activator` jest tworzony jako pusty (schemat `ReflexEntities.json`
 nie jest udokumentowany — reguł nie da się dziś wiarygodnie wygenerować przez API).
@@ -200,7 +229,7 @@ zgodnie z [`activator/RULES.md`](activator/RULES.md).
 Na demo wystarczą **A1** (krok krytyczny po terminie) i **A4** (zdarzenie złożone
 w województwie) — pozostałe reguły generują szum przy przyspieszonej symulacji.
 
-## 8. Data Agent
+## 9. Data Agent
 
 Element `OL_SPO_DataAgent` również powstaje pusty; źródła danych i instrukcję systemową
 dodaje się w UI:
@@ -210,7 +239,7 @@ dodaje się w UI:
 3. Przetestuj 24 pytania akceptacyjne — przed demo muszą przechodzić co najmniej
    te trzy z Aktu 5 scenariusza pokazu.
 
-## 9. Fabric App
+## 10. Fabric App
 
 1. Utwórz aplikację wg [`fabric-app/APP_SPEC.md`](fabric-app/APP_SPEC.md).
 2. Jeśli korzystasz z generatora UI, użyj promptu z
@@ -227,6 +256,7 @@ dodaje się w UI:
 - [ ] Zapytania z `kql/03` zwracają dane (nie pustki)
 - [ ] Model semantyczny: wszystkie 28 miar liczy się bez błędu
 - [ ] Raport otwiera się w mniej niż 5 sekund
+- [ ] Dashboard: wszystkie 14 kafelków renderuje dane przy parametrze „ostatnie 5 lat"
 - [ ] Activator: co najmniej jeden alert wygenerowany w trakcie próbnego ingest
 - [ ] Data Agent odpowiada na 3 pytania z Aktu 5
 - [ ] Fabric App: pytanie o wał przeciwpowodziowy zwraca SPO-3
@@ -244,5 +274,6 @@ dodaje się w UI:
 | `Invalid object name` w modelu semantycznym | SQL endpoint nie zsynchronizował nowych tabel | wywołaj `sqlEndpoints/{id}/refreshMetadata` |
 | `Failed to resolve name 'SYNTAXERROR'` po imporcie modelu | wielolinijkowe wyrażenie miary w TMDL na złym poziomie wcięcia | wyrażenie musi być wcięte **głębiej** niż właściwości miary |
 | `There are ambiguous paths between ...` | dwie ścieżki filtrowania między tabelami | oznacz jedną relację jako nieaktywną (patrz rozdział 5) |
+| Kafelki dashboardu puste mimo danych w tabelach | parametr czasu obejmuje tylko ostatnie godziny | rozszerz `Zakres czasu` — dane historyczne sięgają 2023 roku |
 | Daty przesunięte o 2 h | strefa czasowa workspace | ustaw `Europe/Warsaw`, dane mają offset `+02:00` |
 | Krzaczki w polskich tekstach | kodowanie przy uploadzie | wymuś UTF-8; korpus celowo nie zawiera znaków diakrytycznych |

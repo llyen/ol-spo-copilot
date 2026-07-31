@@ -11,6 +11,7 @@ wzorzec znajduje się w `config.example.json`.
 | [`get_schemas.py`](get_schemas.py) | odczytuje schematy tabel Delta z dziennika transakcji i zapisuje `lakehouse_schemas.json` |
 | [`create_semantic_model.py`](create_semantic_model.py) | model semantyczny Direct Lake (TMDL): 13 tabel, relacje, 28 miar |
 | [`create_report.py`](create_report.py) | raport Power BI (PBIR): 6 stron, ciemny motyw operacyjny |
+| [`create_dashboard.py`](create_dashboard.py) | Real-Time Dashboard na Eventhouse: 14 kafelków na 3 stronach |
 
 Kolejność uruchomienia:
 
@@ -21,6 +22,7 @@ python fabric\get_schemas.py
 python fabric\create_semantic_model.py
 # uzupelnij semantic_model_id w config.json
 python fabric\create_report.py
+python fabric\create_dashboard.py
 ```
 
 Skrypty są idempotentne: jeśli element o danej nazwie istnieje, wywołują

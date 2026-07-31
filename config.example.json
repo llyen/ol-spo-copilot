@@ -15,7 +15,8 @@
     "sql_endpoint": "<id>.datawarehouse.fabric.microsoft.com",
     "sql_endpoint_id": "00000000-0000-0000-0000-000000000000",
     "semantic_model_id": "00000000-0000-0000-0000-000000000000",
-    "report": "OL_SPO_Raport"
+    "report": "OL_SPO_Raport",
+    "dashboard": "OL_SPO_Dashboard"
   },
   "eventstream": {
     "name": "es-spo-copilot",
