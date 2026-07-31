@@ -138,7 +138,12 @@ NS = uuid.UUID("6f1d6b3e-9d3a-4a1a-9f7c-1c2b3a4d5e6f")
 
 
 def guid(name: str) -> str:
-    return str(uuid.uuid5(NS, name))
+    """Deterministyczny identyfikator w ksztalcie UUID v4 - portal generuje wlasnie
+    takie i niektore walidatory sprawdzaja pole wersji, a uuid5 daje wersje 5."""
+    raw = bytearray(uuid.uuid5(NS, name).bytes)
+    raw[6] = (raw[6] & 0x0F) | 0x40
+    raw[8] = (raw[8] & 0x3F) | 0x80
+    return str(uuid.UUID(bytes=bytes(raw)))
 
 
 def visual_options(visual: str, title: str) -> dict:
@@ -161,8 +166,7 @@ def visual_options(visual: str, title: str) -> dict:
             "xColumnTitle": "", "xAxisScale": "linear", "verticalLine": ""}
 
 
-def build(cluster_uri: str, database: str, title: str,
-          workspace_id: str, database_id: str) -> dict:
+def build(cluster_uri: str, database: str, title: str, database_id: str) -> dict:
     ds_id = guid("datasource")
     dashboard = {
         "id": guid("dashboard"),
@@ -171,11 +175,12 @@ def build(cluster_uri: str, database: str, title: str,
         "autoRefresh": {"enabled": True, "defaultInterval": "5m"},
         "baseQueries": [],
         # Fabric wymaga typu "kusto-trident": database i databaseArtifactId to GUID
-        # elementu KQLDatabase, nie nazwa. Przy "manual-kusto" portal zglasza
-        # "Detected bad id format in database property".
+        # elementu KQLDatabase, nie nazwa. Pole workspace zostaje zerowe - tak
+        # wygladaja definicje eksportowane z portalu, ktory sam rozwiazuje kontekst.
         "dataSources": [{"id": ds_id, "name": database, "clusterUri": cluster_uri,
                          "database": database_id, "databaseArtifactId": database_id,
-                         "workspace": workspace_id, "kind": "kusto-trident"}],
+                         "workspace": "00000000-0000-0000-0000-000000000000",
+                         "kind": "kusto-trident"}],
         "pages": [{"id": guid(pid), "name": name} for pid, name in PAGES],
         "parameters": [{
             "kind": "duration", "id": guid("param-time"), "displayName": "Zakres czasu",
@@ -275,7 +280,7 @@ def main() -> None:
         print(f"kql_database_id: {db_id}")
 
     dashboard = build(cfg["kql_cluster_uri"], cfg["kql_database"],
-                      "SPO Copilot - obraz operacyjny", ws, db_id)
+                      "SPO Copilot - obraz operacyjny", db_id)
     if not args.skip_validate:
         validate(dashboard)
 
