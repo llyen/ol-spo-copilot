@@ -5,3 +5,5 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 datasets/derived/dry_run_*.jsonl
+sim.log
+sim.err
