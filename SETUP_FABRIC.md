@@ -116,14 +116,34 @@ Tabele `*_raw` mają jedną kolumnę `payload` typu `dynamic`, dlatego
 Uruchomienie symulacji:
 
 ```powershell
-$env:EVENTHUB_CONNECTION_STR = "<connection string custom endpointu>"
 python simulate_realtime.py --dry-run                      # plan B, bez Fabric
-python simulate_realtime.py --speed 60                     # 1 s = 60 s demo
+python simulate_realtime.py --compress-to 1                # cala historia w 1 godzine
+python simulate_realtime.py --speed 60 --shift-to-now      # 1 s = 60 s demo
 python simulate_realtime.py --stream step_execution --limit 300
 ```
 
-Connection string pobierzesz z UI Eventstreamu albo z API:
-`GET /workspaces/{ws}/eventstreams/{es}/sources/{sourceId}/connection`.
+Poświadczenia skrypt bierze w kolejności: zmienna `EVENTHUB_CONNECTION_STR`,
+klucz `eventstream.connection_string` w `config.json`, a jeśli oba są puste —
+**pobiera je sam z API** (`GET /workspaces/{ws}/eventstreams/{es}/sources/{id}/connection`).
+W praktyce nie trzeba niczego ustawiać ręcznie.
+
+**`--shift-to-now` jest kluczowe dla demo na żywo.** Bez tej flagi zdarzenia trafiają
+do Eventhouse z oryginalnymi znacznikami czasu (2023–2025), więc dashboard w oknie
+„ostatnia godzina" pozostaje pusty — wygląda to jak brak strumienia. Flaga przesuwa
+całą oś czasu tak, że pierwsze zdarzenie wypada teraz, a kolejne w tempie
+odpowiadającym kompresji; ściągane są też pola pochodne (`started_at`,
+`planned_start`, `completed_at`, `decided_at`, `asked_at`), więc czasy reakcji
+i dotrzymanie SLA pozostają spójne.
+
+`--compress-to GODZINY` dobiera kompresję automatycznie, żeby wybrany zakres zmieścił
+się w zadanym czasie, i sam włącza `--shift-to-now`. Do prezentacji trwającej godzinę:
+
+```powershell
+python simulate_realtime.py --compress-to 1
+```
+
+Skrypt wypisze wtedy przewidywane tempo (zdarzeń na minutę), co pozwala ocenić,
+czy strumień będzie widoczny gołym okiem.
 
 Zdarzenia pojawiają się w tabelach docelowych po 1–3 minutach (batch ingestion).
 
@@ -301,6 +321,7 @@ dodaje się w UI:
 | `There are ambiguous paths between ...` | dwie ścieżki filtrowania między tabelami | oznacz jedną relację jako nieaktywną (patrz rozdział 5) |
 | Dashboard: „Detected bad id format in database property" | źródło danych typu `manual-kusto` z nazwą bazy, albo stara wersja schematu | `kind: kusto-trident`, `database`/`databaseArtifactId` jako GUID elementu, `schema_version` liczbowo `74` |
 | Dashboard nie otwiera się mimo `updateDefinition: 200` | definicja niezgodna ze schematem (Fabric nie waliduje przy imporcie) | uruchom `create_dashboard.py` bez `--skip-validate`; parametr `duration` przyjmuje tylko `months/weeks/days/hours/minutes` — `years` psuje cały plik |
+| Dashboard pokazuje historię, ale nic nie „płynie" | symulator wysyła oryginalne znaczniki czasu z lat 2023–2025 | uruchom `simulate_realtime.py --compress-to 1` (włącza `--shift-to-now`) i ustaw `Zakres czasu` na ostatnią godzinę |
 | Kafelki dashboardu puste mimo danych w tabelach | parametr czasu obejmuje tylko ostatnie godziny | rozszerz `Zakres czasu` — dane historyczne sięgają 2023 roku |
 | Daty przesunięte o 2 h | strefa czasowa workspace | ustaw `Europe/Warsaw`, dane mają offset `+02:00` |
 | Krzaczki w polskich tekstach | kodowanie przy uploadzie | wymuś UTF-8; korpus celowo nie zawiera znaków diakrytycznych |
