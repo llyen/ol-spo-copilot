@@ -117,7 +117,7 @@ Uruchomienie symulacji:
 
 ```powershell
 python simulate_realtime.py --dry-run                      # plan B, bez Fabric
-python simulate_realtime.py --compress-to 1                # cala historia w 1 godzine
+python simulate_realtime.py --compress-to 1                # cala historia w 1 godzinę
 python simulate_realtime.py --speed 60 --shift-to-now      # 1 s = 60 s demo
 python simulate_realtime.py --stream step_execution --limit 300
 ```
@@ -185,9 +185,9 @@ Weryfikacja modelu (Power BI REST `executeQueries`, zasób
 | Miara | Wartość oczekiwana |
 |---|---|
 | `Uruchomienia procedur` | 986 |
-| `Wykonania krokow` | 9 420 |
+| `Wykonania kroków` | 9 420 |
 | `Dotrzymanie SLA %` | 76,1% |
-| `Dotrzymanie SLA - powodz %` | 70,5% |
+| `Dotrzymanie SLA - powódź %` | 70,5% |
 | `Trafnosc routingu %` | 93,5% |
 | `Mediana / P95 czasu odpowiedzi` | 1 443 ms / 2 142 ms |
 | `Czas do 1. kroku krytycznego (min)` | 19 |

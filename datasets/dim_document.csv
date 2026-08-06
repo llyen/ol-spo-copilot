@@ -1,50 +1,50 @@
 document_id,doc_type,title,procedure_code,voivodeship_code,owner_institution,section_count,chunk_count,char_count
-DOC-SPO-1,spo,SPO-1 Organizacja posiedzenia Rzadowego Zespolu Zarzadzania Kryzysowego,SPO-1,,Rzadowe Centrum Bezpieczenstwa,8,17,7390
-DOC-SPO-2,spo,SPO-2 Uruchomienie dodatkowych srodkow finansowych,SPO-2,,Ministerstwo Finansow,8,17,7109
-DOC-SPO-3,spo,SPO-3 Zasady informowania ludnosci o zagrozeniach - organizacja procesu komunikacji spolecznej w sytuacji kryzysowej,SPO-3,,Rzadowe Centrum Bezpieczenstwa,8,18,7797
-DOC-SPO-4,spo,SPO-4 Tymczasowe przywrocenie kontroli granicznej na granicach RP,SPO-4,,Ministerstwo Spraw Wewnetrznych i Administracji,8,17,7409
-DOC-SPO-5,spo,SPO-5 Wprowadzenie stanu kleski zywiolowej,SPO-5,,Ministerstwo Spraw Wewnetrznych i Administracji,8,17,7434
-DOC-SPO-6,spo,SPO-6 Wprowadzenie stanu wyjatkowego,SPO-6,,Ministerstwo Spraw Wewnetrznych i Administracji,8,16,6532
+DOC-SPO-1,spo,SPO-1 Organizacja posiedzenia Rządowego Zespołu Zarządzania Kryzysowego,SPO-1,,Rządowe Centrum Bezpieczeństwa,8,17,7390
+DOC-SPO-2,spo,SPO-2 Uruchomienie dodatkowych środków finansowych,SPO-2,,Ministerstwo Finansów,8,17,7109
+DOC-SPO-3,spo,SPO-3 Zasady informowania ludności o zagrożeniach - organizacja procesu komunikacji społecznej w sytuacji kryzysowej,SPO-3,,Rządowe Centrum Bezpieczeństwa,8,18,7797
+DOC-SPO-4,spo,SPO-4 Tymczasowe przywrócenie kontroli granicznej na granicach RP,SPO-4,,Ministerstwo Spraw Wewnętrznych i Administracji,8,17,7409
+DOC-SPO-5,spo,SPO-5 Wprowadzenie stanu klęski żywiołowej,SPO-5,,Ministerstwo Spraw Wewnętrznych i Administracji,8,17,7434
+DOC-SPO-6,spo,SPO-6 Wprowadzenie stanu wyjątkowego,SPO-6,,Ministerstwo Spraw Wewnętrznych i Administracji,8,16,6532
 DOC-SPO-7,spo,SPO-7 Wprowadzenie stanu wojennego,SPO-7,,Ministerstwo Obrony Narodowej,8,16,6443
-DOC-SPO-8,spo,SPO-8 Postepowanie w sytuacji uprowadzenia terrorystycznego obywatela polskiego poza obszarem RP,SPO-8,,Ministerstwo Spraw Zagranicznych,8,17,7068
-DOC-SPO-9,spo,SPO-9 Dzialania w przypadku masowego naplywu cudzoziemcow na terytorium RP,SPO-9,,Ministerstwo Spraw Wewnetrznych i Administracji,8,17,7241
-DOC-SPO-10,spo,SPO-10 Wspolpraca miedzy administracja publiczna a wlascicielami oraz posiadaczami obiektow infrastruktury krytycznej w zakresie jej ochrony,SPO-10,,Rzadowe Centrum Bezpieczenstwa,8,17,7705
+DOC-SPO-8,spo,SPO-8 Postępowanie w sytuacji uprowadzenia terrorystycznego obywatela polskiego poza obszarem RP,SPO-8,,Ministerstwo Spraw Zagranicznych,8,17,7068
+DOC-SPO-9,spo,SPO-9 Działania w przypadku masowego napływu cudzoziemców na terytorium RP,SPO-9,,Ministerstwo Spraw Wewnętrznych i Administracji,8,17,7241
+DOC-SPO-10,spo,SPO-10 Współpraca między administracja publiczna a właścicielami oraz posiadaczami obiektów infrastruktury krytycznej w zakresie jej ochrony,SPO-10,,Rządowe Centrum Bezpieczeństwa,8,17,7705
 DOC-SPO-11,spo,SPO-11 Organizacja ewakuacji obywateli polskich spoza granic kraju,SPO-11,,Ministerstwo Spraw Zagranicznych,8,17,7029
-DOC-SPO-12,spo,SPO-12 Obieg informacji pomiedzy krajowymi organami i strukturami zarzadzania kryzysowego,SPO-12,,Rzadowe Centrum Bezpieczenstwa,8,15,6116
-DOC-SPO-13,spo,SPO-13 Ostrzeganie i alarmowanie wojsk oraz ludnosci cywilnej o zagrozeniu uderzeniami z powietrza,SPO-13,,Ministerstwo Obrony Narodowej,8,16,6803
+DOC-SPO-12,spo,SPO-12 Obieg informacji pomiedzy krajowymi organami i strukturami zarządzania kryzysowego,SPO-12,,Rządowe Centrum Bezpieczeństwa,8,15,6116
+DOC-SPO-13,spo,SPO-13 Ostrzeganie i alarmowanie wojsk oraz ludności cywilnej o zagrożeniu uderzeniami z powietrza,SPO-13,,Ministerstwo Obrony Narodowej,8,16,6803
 DOC-SPO-14,spo,SPO-14 Przekraczanie granic RP przez wojska sojusznicze w celu pobytu lub tranzytu,SPO-14,,Ministerstwo Obrony Narodowej,8,16,6607
-DOC-SPO-15,spo,SPO-15 Organizacja medycznego mostu powietrznego w przypadku wystapienia zdarzenia masowego,SPO-15,,Ministerstwo Zdrowia,8,17,7319
-DOC-SPO-16,spo,SPO-16 Zwolanie i obsluga posiedzenia Zespolu do spraw Incydentow Krytycznych,SPO-16,,ABW,8,17,7287
-DOC-WZK-02,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - dolnoslaskie,,02,Urzad Wojewodzki w Wroclaw,3,8,3568
-DOC-WZK-04,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - kujawsko-pomorskie,,04,Urzad Wojewodzki w Bydgoszcz,3,8,3618
-DOC-WZK-06,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - lubelskie,,06,Urzad Wojewodzki w Lublin,3,8,3543
-DOC-WZK-08,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - lubuskie,,08,Urzad Wojewodzki w Gorzow Wielkopolski,3,8,3548
-DOC-WZK-10,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - lodzkie,,10,Urzad Wojewodzki w Lodz,3,8,3525
-DOC-WZK-12,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - malopolskie,,12,Urzad Wojewodzki w Krakow,3,8,3559
-DOC-WZK-14,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - mazowieckie,,14,Urzad Wojewodzki w Warszawa,3,8,3561
-DOC-WZK-16,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - opolskie,,16,Urzad Wojewodzki w Opole,3,8,3534
-DOC-WZK-18,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - podkarpackie,,18,Urzad Wojewodzki w Rzeszow,3,8,3568
-DOC-WZK-20,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - podlaskie,,20,Urzad Wojewodzki w Bialystok,3,8,3546
-DOC-WZK-22,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - pomorskie,,22,Urzad Wojewodzki w Gdansk,3,8,3543
-DOC-WZK-24,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - slaskie,,24,Urzad Wojewodzki w Katowice,3,8,3529
-DOC-WZK-26,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - swietokrzyskie,,26,Urzad Wojewodzki w Kielce,3,8,3583
-DOC-WZK-28,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - warminsko-mazurskie,,28,Urzad Wojewodzki w Olsztyn,3,8,3624
-DOC-WZK-30,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - wielkopolskie,,30,Urzad Wojewodzki w Poznan,3,8,3575
-DOC-WZK-32,plan_wojewodzki,Wojewodzki Plan Zarzadzania Kryzysowego - zachodniopomorskie,,32,Urzad Wojewodzki w Szczecin,3,8,3617
-DOC-OL-02,plan_ol,Plan Ochrony Ludnosci - wojewodztwo dolnoslaskie,,02,Urzad Wojewodzki w Wroclaw,6,6,1300
-DOC-OL-04,plan_ol,Plan Ochrony Ludnosci - wojewodztwo kujawsko-pomorskie,,04,Urzad Wojewodzki w Bydgoszcz,6,6,1336
-DOC-OL-06,plan_ol,Plan Ochrony Ludnosci - wojewodztwo lubelskie,,06,Urzad Wojewodzki w Lublin,6,6,1282
-DOC-OL-08,plan_ol,Plan Ochrony Ludnosci - wojewodztwo lubuskie,,08,Urzad Wojewodzki w Gorzow Wielkopolski,6,6,1276
-DOC-OL-10,plan_ol,Plan Ochrony Ludnosci - wojewodztwo lodzkie,,10,Urzad Wojewodzki w Lodz,6,6,1270
-DOC-OL-12,plan_ol,Plan Ochrony Ludnosci - wojewodztwo malopolskie,,12,Urzad Wojewodzki w Krakow,6,6,1294
-DOC-OL-14,plan_ol,Plan Ochrony Ludnosci - wojewodztwo mazowieckie,,14,Urzad Wojewodzki w Warszawa,6,6,1294
-DOC-OL-16,plan_ol,Plan Ochrony Ludnosci - wojewodztwo opolskie,,16,Urzad Wojewodzki w Opole,6,6,1276
-DOC-OL-18,plan_ol,Plan Ochrony Ludnosci - wojewodztwo podkarpackie,,18,Urzad Wojewodzki w Rzeszow,6,6,1300
-DOC-OL-20,plan_ol,Plan Ochrony Ludnosci - wojewodztwo podlaskie,,20,Urzad Wojewodzki w Bialystok,6,6,1282
-DOC-OL-22,plan_ol,Plan Ochrony Ludnosci - wojewodztwo pomorskie,,22,Urzad Wojewodzki w Gdansk,6,6,1282
-DOC-OL-24,plan_ol,Plan Ochrony Ludnosci - wojewodztwo slaskie,,24,Urzad Wojewodzki w Katowice,6,6,1270
-DOC-OL-26,plan_ol,Plan Ochrony Ludnosci - wojewodztwo swietokrzyskie,,26,Urzad Wojewodzki w Kielce,6,6,1312
-DOC-OL-28,plan_ol,Plan Ochrony Ludnosci - wojewodztwo warminsko-mazurskie,,28,Urzad Wojewodzki w Olsztyn,6,6,1342
-DOC-OL-30,plan_ol,Plan Ochrony Ludnosci - wojewodztwo wielkopolskie,,30,Urzad Wojewodzki w Poznan,6,6,1306
-DOC-OL-32,plan_ol,Plan Ochrony Ludnosci - wojewodztwo zachodniopomorskie,,32,Urzad Wojewodzki w Szczecin,6,6,1336
-DOC-KPZK,kpzk,Krajowy Plan Zarzadzania Kryzysowego - karty zagrozen i siatka bezpieczenstwa,,,Rzadowe Centrum Bezpieczenstwa,22,22,7658
+DOC-SPO-15,spo,SPO-15 Organizacja medycznego mostu powietrznego w przypadku wystąpienia zdarzenia masowego,SPO-15,,Ministerstwo Zdrowia,8,17,7319
+DOC-SPO-16,spo,SPO-16 Zwołanie i obsługa posiedzenia Zespołu do spraw Incydentów Krytycznych,SPO-16,,ABW,8,17,7287
+DOC-WZK-02,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - dolnośląskie,,02,Urząd Wojewódzki w Wrocław,3,8,3568
+DOC-WZK-04,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - kujawsko-pomorskie,,04,Urząd Wojewódzki w Bydgoszcz,3,8,3618
+DOC-WZK-06,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - lubelskie,,06,Urząd Wojewódzki w Lublin,3,8,3543
+DOC-WZK-08,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - lubuskie,,08,Urząd Wojewódzki w Gorzów Wielkopolski,3,8,3548
+DOC-WZK-10,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - łódzkie,,10,Urząd Wojewódzki w Łódź,3,8,3525
+DOC-WZK-12,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - małopolskie,,12,Urząd Wojewódzki w Kraków,3,8,3559
+DOC-WZK-14,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - mazowieckie,,14,Urząd Wojewódzki w Warszawa,3,8,3561
+DOC-WZK-16,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - opolskie,,16,Urząd Wojewódzki w Opole,3,8,3534
+DOC-WZK-18,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - podkarpackie,,18,Urząd Wojewódzki w Rzeszów,3,8,3568
+DOC-WZK-20,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - podlaskie,,20,Urząd Wojewódzki w Białystok,3,8,3546
+DOC-WZK-22,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - pomorskie,,22,Urząd Wojewódzki w Gdańsk,3,8,3543
+DOC-WZK-24,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - śląskie,,24,Urząd Wojewódzki w Katowice,3,8,3529
+DOC-WZK-26,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - świętokrzyskie,,26,Urząd Wojewódzki w Kielce,3,8,3583
+DOC-WZK-28,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - warmińsko-mazurskie,,28,Urząd Wojewódzki w Olsztyn,3,8,3624
+DOC-WZK-30,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - wielkopolskie,,30,Urząd Wojewódzki w Poznań,3,8,3575
+DOC-WZK-32,plan_wojewodzki,Wojewódzki Plan Zarządzania Kryzysowego - zachodniopomorskie,,32,Urząd Wojewódzki w Szczecin,3,8,3617
+DOC-OL-02,plan_ol,Plan Ochrony Ludności - województwo dolnośląskie,,02,Urząd Wojewódzki w Wrocław,6,6,1300
+DOC-OL-04,plan_ol,Plan Ochrony Ludności - województwo kujawsko-pomorskie,,04,Urząd Wojewódzki w Bydgoszcz,6,6,1336
+DOC-OL-06,plan_ol,Plan Ochrony Ludności - województwo lubelskie,,06,Urząd Wojewódzki w Lublin,6,6,1282
+DOC-OL-08,plan_ol,Plan Ochrony Ludności - województwo lubuskie,,08,Urząd Wojewódzki w Gorzów Wielkopolski,6,6,1276
+DOC-OL-10,plan_ol,Plan Ochrony Ludności - województwo łódzkie,,10,Urząd Wojewódzki w Łódź,6,6,1270
+DOC-OL-12,plan_ol,Plan Ochrony Ludności - województwo małopolskie,,12,Urząd Wojewódzki w Kraków,6,6,1294
+DOC-OL-14,plan_ol,Plan Ochrony Ludności - województwo mazowieckie,,14,Urząd Wojewódzki w Warszawa,6,6,1294
+DOC-OL-16,plan_ol,Plan Ochrony Ludności - województwo opolskie,,16,Urząd Wojewódzki w Opole,6,6,1276
+DOC-OL-18,plan_ol,Plan Ochrony Ludności - województwo podkarpackie,,18,Urząd Wojewódzki w Rzeszów,6,6,1300
+DOC-OL-20,plan_ol,Plan Ochrony Ludności - województwo podlaskie,,20,Urząd Wojewódzki w Białystok,6,6,1282
+DOC-OL-22,plan_ol,Plan Ochrony Ludności - województwo pomorskie,,22,Urząd Wojewódzki w Gdańsk,6,6,1282
+DOC-OL-24,plan_ol,Plan Ochrony Ludności - województwo śląskie,,24,Urząd Wojewódzki w Katowice,6,6,1270
+DOC-OL-26,plan_ol,Plan Ochrony Ludności - województwo świętokrzyskie,,26,Urząd Wojewódzki w Kielce,6,6,1312
+DOC-OL-28,plan_ol,Plan Ochrony Ludności - województwo warmińsko-mazurskie,,28,Urząd Wojewódzki w Olsztyn,6,6,1342
+DOC-OL-30,plan_ol,Plan Ochrony Ludności - województwo wielkopolskie,,30,Urząd Wojewódzki w Poznań,6,6,1306
+DOC-OL-32,plan_ol,Plan Ochrony Ludności - województwo zachodniopomorskie,,32,Urząd Wojewódzki w Szczecin,6,6,1336
+DOC-KPZK,kpzk,Krajowy Plan Zarządzania Kryzysowego - karty zagrożeń i siatka bezpieczeństwa,,,Rządowe Centrum Bezpieczeństwa,22,22,7658

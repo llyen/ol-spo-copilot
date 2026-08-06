@@ -65,7 +65,7 @@ Odbiorca: właściciel rozwiązania, IT.
 | Trafność wg roli | wykres słupkowy | `fact_assistant_query[user_role]` |
 | Wolumen wg kanału | wykres warstwowy | `channel` w czasie |
 | Pytania do przeglądu | tabela | `confidence < 0,45` lub `feedback = "niepomocne"` — kolejka poprawy korpusu |
-| Pokrycie korpusu | karta | `Fragmenty korpusu`, `Pokrycie zagrozen procedurami %` |
+| Pokrycie korpusu | karta | `Fragmenty korpusu`, `Pokrycie zagrożeń procedurami %` |
 
 ## Strona 6 — „POWÓDŹ WRZESIEŃ — przebieg"
 
@@ -74,7 +74,7 @@ Odbiorca: demo, ćwiczenie sztabowe.
 | Element | Wizual | Uwagi |
 |---|---|---|
 | Oś czasu uruchomień | wykres Gantt | procedury D-3 … D+10 |
-| Porównanie SLA | karty | `Dotrzymanie SLA - powodz %` vs historia, `Roznica SLA powodz vs historia (p.p.)` |
+| Porównanie SLA | karty | `Dotrzymanie SLA - powódź %` vs historia, `Roznica SLA powódź vs historia (p.p.)` |
 | Mapa województw | mapa | `Uruchomienia procedur` wg `voivodeship_name` |
 | Zdarzenia złożone | tabela | doby, w których równolegle działały ≥4 procedury |
 

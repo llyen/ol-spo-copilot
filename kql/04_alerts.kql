@@ -4,7 +4,7 @@
 // =============================================================================
 
 // --- A1: Krok krytyczny przekroczyl czas normatywny --------------------------
-// Akcja: powiadomienie do Teams zespolu wlasciwej instytucji + wpis do dziennika.
+// Akcja: powiadomienie do Teams zespołu wlasciwej instytucji + wpis do dziennika.
 step_execution
 | where event_time > ago(1h)
 | where is_critical and not(sla_met)
@@ -22,7 +22,7 @@ step_execution
 | project event_time, activation_id, procedure_code, step_no, step_title,
           institution, blocker_reason, elapsed_minutes, sla_minutes
 
-// --- A3: Uruchomienie procedury wymagajacej decyzji szczebla rzadowego -------
+// --- A3: Uruchomienie procedury wymagajacej decyzji szczebla rządowego -------
 // Akcja: alert do sekretarza RZZK (SPO-1) i do dyzurnego RCB.
 activation
 | where event_time > ago(15m)
@@ -30,8 +30,8 @@ activation
 | project event_time, activation_id, procedure_code, procedure_name, level,
           voivodeship_name, trigger_text, initiated_by_institution
 
-// --- A4: Rownoczesne uruchomienie wielu procedur w jednym wojewodztwie -------
-// Sygnal zdarzenia zlozonego: pieciu procedur naraz nie obsluguje sie rutynowo.
+// --- A4: Rownoczesne uruchomienie wielu procedur w jednym województwie -------
+// Sygnał zdarzenia zlozonego: pieciu procedur naraz nie obsluguje się rutynowo.
 activation
 | where event_time > ago(6h)
 | summarize procedury = dcount(procedure_code), lista = make_set(procedure_code)
@@ -39,14 +39,14 @@ activation
 | where procedury >= 4
 
 // --- A5: Spadek dotrzymania czasow normatywnych ponizej progu ----------------
-// Akcja: alert do kierownictwa RCB; wskazuje przeciazenie systemu, nie pojedynczy blad.
+// Akcja: alert do kierownictwa RCB; wskazuje przeciążenie systemu, nie pojedynczy blad.
 step_execution
 | where event_time > ago(4h)
 | summarize wykonania = count(), sla_pct = round(100.0 * countif(sla_met) / count(), 1)
 | where wykonania >= 20 and sla_pct < 60
 
-// --- A6: Ta sama blokada powtarza sie w wielu procedurach --------------------
-// Akcja: zadanie systemowe (wlasciciel danych), nie alert operacyjny.
+// --- A6: Ta sama blokada powtarza się w wielu procedurach --------------------
+// Akcja: zadanie systemowe (właściciel danych), nie alert operacyjny.
 step_execution
 | where event_time > ago(30d)
 | where isnotempty(blocker_reason)
@@ -69,7 +69,7 @@ decision_log
 
 // --- A9: Procedura otwarta dluzej niz przewidziana sciezka normatywna --------
 activation
-| where status != "zamkniete"
+| where status != "zamknięte"
 | join kind=inner (dim_procedure | project procedure_code, total_sla_minutes) on procedure_code
 | extend open_minutes = datetime_diff('minute', now(), started_at)
 | where open_minutes > 1.5 * total_sla_minutes

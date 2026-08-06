@@ -26,9 +26,14 @@ STOPWORDS = {
 
 SPO_PATTERN = re.compile(r"SPO-\d+")
 
+# NFKD nie rozklada polskich liter przekreslonych - bez tej mapy "zaklocenie"
+# i "zakłócenie" daja rozne tokeny, a pytanie pisane bez ogonkow nie trafia w korpus.
+_TRANSLIT = str.maketrans({"ł": "l", "Ł": "L"})
+
 
 def normalize(text: str) -> str:
-    return unicodedata.normalize("NFKD", str(text)).encode("ascii", "ignore").decode().lower()
+    folded = str(text).translate(_TRANSLIT)
+    return unicodedata.normalize("NFKD", folded).encode("ascii", "ignore").decode().lower()
 
 
 def tokenize(text: str) -> list[str]:

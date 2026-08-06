@@ -1,7 +1,7 @@
 // =============================================================================
 // SPO Copilot - Eventhouse / KQL Database: tabele surowe i mapowania
-// Uruchomic w Fabric Eventhouse (KQL queryset) przed podlaczeniem Eventstreamu.
-// Dane sa w 100% syntetyczne (demo).
+// Uruchomić w Fabric Eventhouse (KQL queryset) przed podlaczeniem Eventstreamu.
+// Dane są w 100% syntetyczne (demo).
 // =============================================================================
 
 //------------------------------------------------------------------------------
@@ -151,7 +151,7 @@
 //------------------------------------------------------------------------------
 // 4. Retencja i cache (demo)
 //------------------------------------------------------------------------------
-// dziennik decyzji i uruchomienia - dlugi slad audytowy (10 lat); strumienie operacyjne - 1 rok
+// dziennik decyzji i uruchomienia - dlugi ślad audytowy (10 lat); strumienie operacyjne - 1 rok
 .alter table step_execution policy retention '{"SoftDeletePeriod": "365.00:00:00", "Recoverability": "Enabled"}'
 .alter table decision_log policy retention '{"SoftDeletePeriod": "3650.00:00:00", "Recoverability": "Enabled"}'
 .alter table assistant_query policy retention '{"SoftDeletePeriod": "365.00:00:00", "Recoverability": "Enabled"}'

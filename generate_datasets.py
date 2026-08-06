@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Generator danych syntetycznych dla demo "SPO Copilot" (ol-spo-copilot).
 
-Wszystkie dane sa w 100% syntetyczne i powtarzalne (seed=42).
+Wszystkie dane są w 100% syntetyczne i powtarzalne (seed=42).
 Uruchomienie:  python generate_datasets.py
 """
 
@@ -55,29 +55,29 @@ CHRONIC_BREACHES = {
     ("SPO-15", 3): 0.58,  # wykaz wolnych miejsc szpitalnych
 }
 
-IK_CONTACT_BLOCKER = "Nieaktualna lista punktow kontaktowych operatorow infrastruktury krytycznej"
+IK_CONTACT_BLOCKER = "Nieaktualna lista punktów kontaktowych operatorów infrastruktury krytycznej"
 
 # Wagi dobrane tak, by jedna przyczyna dominowala przez cale 4 lata historii -
 # to jest material na wniosek "lessons learned" w raporcie i w Data Agencie.
 BLOCKERS = [
     (IK_CONTACT_BLOCKER, 26),
     ("Brak potwierdzenia odbioru meldunku przez adresata", 14),
-    ("Oczekiwanie na decyzje ministra wiodacego", 12),
-    ("Brak wyznaczonego zastepcy osoby odpowiedzialnej", 11),
-    ("Oczekiwanie na opinie prawna", 9),
-    ("Niekompletny kosztorys we wniosku o srodki", 8),
-    ("Rozbieznosc danych miedzy WCZK a sluzba", 7),
-    ("Brak dostepu do lacznosci niejawnej w lokalizacji zapasowej", 5),
-    ("Brak tlumacza jezyka obcego o wymaganej specjalnosci", 4),
-    ("Przeciazenie infolinii i kanalu zgloszeniowego", 4),
+    ("Oczekiwanie na decyzję ministra wiodącego", 12),
+    ("Brak wyznaczonego zastępcy osoby odpowiedzialnej", 11),
+    ("Oczekiwanie na opinię prawną", 9),
+    ("Niekompletny kosztorys we wniosku o środki", 8),
+    ("Rozbieżność danych między WCZK a służba", 7),
+    ("Brak dostępu do łączności niejawnej w lokalizacji zapasowej", 5),
+    ("Brak tłumacza języka obcego o wymaganej specjalności", 4),
+    ("Przeciążenie infolinii i kanału zgłoszeniowego", 4),
 ]
 BLOCKER_NAMES = [b[0] for b in BLOCKERS]
 BLOCKER_WEIGHTS = [b[1] for b in BLOCKERS]
 
 
 def pick_blocker(procedure_code: str) -> str:
-    """Procedury oparte na kontakcie z operatorami IK i na obiegu meldunkow
-    czesciej wpadaja na te sama, systemowa przeszkode."""
+    """Procedury oparte na kontakcie z operatorami IK i na obiegu meldunków
+    częściej wpadają na te sama, systemowa przeszkodę."""
     if procedure_code in ("SPO-10", "SPO-12") and rng.random() < 0.5:
         return IK_CONTACT_BLOCKER
     return random.choices(BLOCKER_NAMES, weights=BLOCKER_WEIGHTS)[0]
@@ -85,27 +85,27 @@ def pick_blocker(procedure_code: str) -> str:
 DECISION_TYPES = [
     "uruchomienie procedury",
     "eskalacja poziomu reagowania",
-    "zatwierdzenie tresci komunikatu",
-    "uruchomienie srodkow finansowych",
-    "skierowanie sil i srodkow",
-    "wprowadzenie ograniczen",
-    "odstapienie od kroku procedury",
-    "zamkniecie procedury",
+    "zatwierdzenie treści komunikatu",
+    "uruchomienie środków finansowych",
+    "skierowanie sił i środków",
+    "wprowadzenie ograniczeń",
+    "odstąpienie od kroku procedury",
+    "zamknięcie procedury",
 ]
 
-CLASSIFICATIONS = ["jawne", "zastrzezone", "poufne"]
+CLASSIFICATIONS = ["jawne", "zastrzeżone", "poufne"]
 
-LEVELS = ["gminny", "powiatowy", "wojewodzki", "krajowy"]
+LEVELS = ["gminny", "powiatowy", "wojewódzki", "krajowy"]
 
 USER_ROLES = [
-    "Oficer dyzurny WCZK",
-    "Oficer dyzurny RCB",
-    "Dyzurny PCZK",
+    "Oficer dyżurny WCZK",
+    "Oficer dyżurny RCB",
+    "Dyżurny PCZK",
     "Analityk RCB",
     "Rzecznik prasowy wojewody",
-    "Dyrektor wydzialu ZK",
+    "Dyrektor wydziału ZK",
     "Sekretarz RZZK",
-    "Oficer lacznikowy MON",
+    "Oficer łącznikowy MON",
 ]
 
 
@@ -219,21 +219,21 @@ def build_corpus():
         start_len = len(chunks)
 
         add_chunk(doc_id, "spo", code, "1. Cel procedury", f"{code} - cel procedury",
-                  f"{code} {proc['name']}. Cel procedury: {proc['purpose']} Procedura jest wlasciwa dla fazy "
-                  f"{proc['phase']} zarzadzania kryzysowego. Wlasciciel procedury: {owner[1]} ({owner[2]}). "
-                  f"Zagrozenia powiazane: {hz_names}.",
+                  f"{code} {proc['name']}. Cel procedury: {proc['purpose']} Procedura jest właściwa dla fazy "
+                  f"{proc['phase']} zarządzania kryzysowego. Właściciel procedury: {owner[1]} ({owner[2]}). "
+                  f"Zagrożenia powiązane: {hz_names}.",
                   proc["hazards"], [proc["owner_role"]])
 
         add_chunk(doc_id, "spo", code, "2. Podstawa prawna", f"{code} - podstawa prawna",
                   f"Podstawa prawna procedury {code}: {proc['legal_basis']}. Procedura stanowi element Krajowego "
-                  f"Planu Zarzadzania Kryzysowego i jest uruchamiana w powiazaniu z siatka bezpieczenstwa, ktora "
-                  f"wskazuje dzialy administracji rzadowej odpowiedzialne za poszczegolne moduly zadaniowe.",
+                  f"Planu Zarządzania Kryzysowego i jest uruchamiana w powiązaniu z siatka bezpieczeństwa, ktora "
+                  f"wskazuje działy administracji rządowej odpowiedzialne za poszczególne moduły zadaniowe.",
                   proc["hazards"], [proc["owner_role"]])
 
-        trig = " ".join(f"Przeslanka {i}: {t}." for i, t in enumerate(proc["triggers"], start=1))
-        add_chunk(doc_id, "spo", code, "3. Przeslanki uruchomienia", f"{code} - kiedy uruchomic",
-                  f"Procedure {code} uruchamia sie, gdy wystapi co najmniej jedna z przeslanek. {trig} "
-                  f"W razie watpliwosci o uruchomieniu decyduje {owner[1]}. Uruchomienie procedury odnotowuje sie "
+        trig = " ".join(f"Przesłanka {i}: {t}." for i, t in enumerate(proc["triggers"], start=1))
+        add_chunk(doc_id, "spo", code, "3. Przesłanki uruchomienia", f"{code} - kiedy uruchomić",
+                  f"Procedure {code} uruchamia się, gdy wystąpi co najmniej jedna z przesłanek. {trig} "
+                  f"W razie wątpliwości o uruchomieniu decyduje {owner[1]}. Uruchomienie procedury odnotowuje się "
                   f"w dzienniku decyzji wraz z uzasadnieniem i godzina.",
                   proc["hazards"], [proc["owner_role"]])
 
@@ -242,44 +242,44 @@ def build_corpus():
             f"{ROLE_BY_CODE[r][1]} ({ROLE_BY_CODE[r][2]}) - poziom {ROLE_BY_CODE[r][3]}."
             for r in participants
         )
-        add_chunk(doc_id, "spo", code, "4. Uczestnicy i odpowiedzialnosci", f"{code} - kto odpowiada",
-                  f"W realizacji procedury {code} uczestnicza: {part_txt} Koordynacje calosci prowadzi {owner[1]}. "
-                  f"Kazdy uczestnik potwierdza przyjecie zadania i raportuje wykonanie kroku.",
+        add_chunk(doc_id, "spo", code, "4. Uczestnicy i odpowiedzialności", f"{code} - kto odpowiada",
+                  f"W realizacji procedury {code} uczestniczą: {part_txt} Koordynacje całości prowadzi {owner[1]}. "
+                  f"Każdy uczestnik potwierdza przyjęcie zadania i raportuje wykonanie kroku.",
                   proc["hazards"], participants)
 
         for no, title, role_code, sla, doc, critical in proc["steps"]:
             role = ROLE_BY_CODE[role_code]
             crit = "Krok krytyczny - jego niewykonanie blokuje dalsze etapy procedury." if critical else \
-                   "Krok wspierajacy - moze byc realizowany rownolegle z innymi krokami."
-            out = f"Produkt kroku: {doc}." if doc else "Krok nie wytwarza odrebnego dokumentu; wynik odnotowuje sie w dzienniku."
+                   "Krok wspierający - może być realizowany równolegle z innymi krokami."
+            out = f"Produkt kroku: {doc}." if doc else "Krok nie wytwarza odrębnego dokumentu; wynik odnotowuje się w dzienniku."
             add_chunk(doc_id, "spo", code, "5. Przebieg - kroki", f"{code} krok {no}: {title}",
                       f"{code} krok {no}. {title}. Odpowiedzialny: {role[1]} ({role[2]}), poziom {role[3]}. "
                       f"Czas normatywny realizacji: {sla_label(sla)} od uruchomienia procedury. {out} {crit} "
-                      f"Po wykonaniu kroku odpowiedzialny wprowadza status i godzine wykonania do rejestru realizacji "
+                      f"Po wykonaniu kroku odpowiedzialny wprowadza status i godzinę wykonania do rejestru realizacji "
                       f"procedury {code}.",
                       proc["hazards"], [role_code])
 
         docs_out = [s[4] for s in proc["steps"] if s[4]]
         add_chunk(doc_id, "spo", code, "6. Dokumenty wytwarzane", f"{code} - dokumenty",
-                  f"W toku realizacji procedury {code} powstaja nastepujace dokumenty: {'; '.join(docs_out)}. "
-                  f"Dokumenty przechowuje sie w rejestrze procedury wraz z identyfikatorem uruchomienia, co zapewnia "
-                  f"slad audytowy na potrzeby pozniejszego rozliczenia i wnioskow po zdarzeniu.",
+                  f"W toku realizacji procedury {code} powstają następujące dokumenty: {'; '.join(docs_out)}. "
+                  f"Dokumenty przechowuje się w rejestrze procedury wraz z identyfikatorem uruchomienia, co zapewnia "
+                  f"ślad audytowy na potrzeby późniejszego rozliczenia i wniosków po zdarzeniu.",
                   proc["hazards"], [proc["owner_role"]])
 
         total = sum(s[3] for s in proc["steps"])
         crit_total = sum(s[3] for s in proc["steps"] if s[5])
-        add_chunk(doc_id, "spo", code, "7. Wskazniki i czasy normatywne", f"{code} - SLA i wskazniki",
-                  f"Laczny czas normatywny sciezki procedury {code} wynosi {sla_label(total)}, w tym "
-                  f"{sla_label(crit_total)} przypada na kroki krytyczne. Mierzone wskazniki: odsetek krokow wykonanych "
+        add_chunk(doc_id, "spo", code, "7. Wskaźniki i czasy normatywne", f"{code} - SLA i wskaźniki",
+                  f"Łączny czas normatywny ścieżki procedury {code} wynosi {sla_label(total)}, w tym "
+                  f"{sla_label(crit_total)} przypada na kroki krytyczne. Mierzone wskaźniki: odsetek kroków wykonanych "
                   f"w czasie normatywnym, czas do wykonania pierwszego kroku krytycznego, liczba blokad oraz liczba "
                   f"decyzji odnotowanych w dzienniku.",
                   proc["hazards"], [proc["owner_role"]])
 
         related = [p["code"] for p in PROCEDURES if p["code"] != code and set(p["hazards"]) & set(proc["hazards"])]
-        add_chunk(doc_id, "spo", code, "8. Powiazania", f"{code} - powiazania z innymi procedurami",
-                  f"Procedura {code} jest powiazana z: {', '.join(related) if related else 'brak powiazan bezposrednich'}. "
-                  f"Powiazanie oznacza, ze procedury dotycza tych samych zagrozen ({', '.join(proc['hazards'])}) i moga "
-                  f"byc uruchamiane rownolegle. Slowa kluczowe: {', '.join(proc['keywords'])}.",
+        add_chunk(doc_id, "spo", code, "8. Powiązania", f"{code} - powiązania z innymi procedurami",
+                  f"Procedura {code} jest powiązana z: {', '.join(related) if related else 'brak powiązań bezpośrednich'}. "
+                  f"Powiązanie oznacza, że procedury dotyczą tych samych zagrożeń ({', '.join(proc['hazards'])}) i mogą "
+                  f"być uruchamiane równolegle. Słowa kluczowe: {', '.join(proc['keywords'])}.",
                   proc["hazards"], [proc["owner_role"]])
 
         documents.append({
@@ -299,35 +299,35 @@ def build_corpus():
     for wc, wname, capital in VOIVODESHIPS:
         doc_id = f"DOC-WZK-{wc}"
         start_len = len(chunks)
-        add_chunk(doc_id, "plan_wojewodzki", "", "1. Charakterystyka wojewodztwa",
+        add_chunk(doc_id, "plan_wojewodzki", "", "1. Charakterystyka województwa",
                   f"WPZK {wname} - charakterystyka",
-                  f"Wojewodzki Plan Zarzadzania Kryzysowego dla wojewodztwa {wname} (kod TERYT {wc}, siedziba "
-                  f"wojewody: {capital}). Plan okresla zadania wojewody, sluzb zespolonych i jednostek samorzadu "
-                  f"terytorialnego w czterech fazach zarzadzania kryzysowego: zapobieganie, przygotowanie, reagowanie "
-                  f"i odbudowa. Plan uruchamia sie zgodnie z procedurami krajowymi SPO-1 do SPO-16.",
+                  f"Wojewódzki Plan Zarządzania Kryzysowego dla województwa {wname} (kod TERYT {wc}, siedziba "
+                  f"wojewody: {capital}). Plan określa zadania wojewody, służb zespolonych i jednostek samorządu "
+                  f"terytorialnego w czterech fazach zarządzania kryzysowego: zapobieganie, przygotowanie, reagowanie "
+                  f"i odbudowa. Plan uruchamia się zgodnie z procedurami krajowymi SPO-1 do SPO-16.",
                   top_hazards, ["R_WOJ"])
         for hz in top_hazards:
             related_spo = [p["code"] for p in PROCEDURES if hz in p["hazards"]]
-            add_chunk(doc_id, "plan_wojewodzki", "", f"2. Zagrozenie {hz}",
+            add_chunk(doc_id, "plan_wojewodzki", "", f"2. Zagrożenie {hz}",
                       f"WPZK {wname} - {HAZARD_NAME[hz]}",
-                      f"Zagrozenie {hz} {HAZARD_NAME[hz]} w wojewodztwie {wname}. Wojewoda uruchamia Wojewodzki Zespol "
-                      f"Zarzadzania Kryzysowego i WCZK w trybie calodobowym. Jesli sily i srodki powiatu sa "
-                      f"niewystarczajace, wojewoda przejmuje koordynacje, a przy wyczerpaniu wlasnych mozliwosci "
-                      f"kieruje wniosek do ministra wiodacego. Procedury krajowe wlasciwe dla tego zagrozenia: "
-                      f"{', '.join(related_spo)}. Informowanie ludnosci realizuje sie w trybie SPO-3, a wnioski "
-                      f"o srodki finansowe w trybie SPO-2.",
+                      f"Zagrożenie {hz} {HAZARD_NAME[hz]} w województwie {wname}. Wojewoda uruchamia Wojewódzki Zespół "
+                      f"Zarządzania Kryzysowego i WCZK w trybie całodobowym. Jeśli siły i środki powiatu są "
+                      f"niewystarczające, wojewoda przejmuje koordynację, a przy wyczerpaniu własnych możliwości "
+                      f"kieruje wniosek do ministra wiodącego. Procedury krajowe właściwe dla tego zagrożenia: "
+                      f"{', '.join(related_spo)}. Informowanie ludności realizuje się w trybie SPO-3, a wnioski "
+                      f"o środki finansowe w trybie SPO-2.",
                       [hz], ["R_WOJ", "R_STAR"])
-        add_chunk(doc_id, "plan_wojewodzki", "", "3. Zasady wspolpracy",
-                  f"WPZK {wname} - wspolpraca i lacznosc",
-                  f"W wojewodztwie {wname} obowiazuje calodobowy dyzur WCZK, ktory przekazuje meldunki do RCB zgodnie "
-                  f"z SPO-12. Wymiana informacji z operatorami infrastruktury krytycznej odbywa sie zgodnie z SPO-10. "
-                  f"Lista punktow kontaktowych podlega aktualizacji kwartalnej.",
+        add_chunk(doc_id, "plan_wojewodzki", "", "3. Zasady współpracy",
+                  f"WPZK {wname} - współpraca i łączność",
+                  f"W województwie {wname} obowiązuje całodobowy dyżur WCZK, ktory przekazuje meldunki do RCB zgodnie "
+                  f"z SPO-12. Wymiana informacji z operatorami infrastruktury krytycznej odbywa się zgodnie z SPO-10. "
+                  f"Lista punktów kontaktowych podlega aktualizacji kwartalnej.",
                   ["Z07", "Z12"], ["R_WOJ", "R_OPER_IK"])
         documents.append({
             "document_id": doc_id, "doc_type": "plan_wojewodzki",
-            "title": f"Wojewodzki Plan Zarzadzania Kryzysowego - {wname}",
+            "title": f"Wojewódzki Plan Zarządzania Kryzysowego - {wname}",
             "procedure_code": "", "voivodeship_code": wc,
-            "owner_institution": f"Urzad Wojewodzki w {capital}",
+            "owner_institution": f"Urząd Wojewódzki w {capital}",
             "section_count": 3, "chunk_count": len(chunks) - start_len,
             "char_count": sum(c["char_count"] for c in chunks[start_len:]),
         })
@@ -337,35 +337,35 @@ def build_corpus():
         doc_id = f"DOC-OL-{wc}"
         start_len = len(chunks)
         sections = [
-            ("1. Ewakuacja ludnosci",
-             f"Plan ochrony ludnosci wojewodztwa {wname}: zasady ewakuacji I, II i III stopnia, wyznaczenie miejsc "
-             f"zbiorki, tras i punktow przyjecia. Ewakuacja z terenow zalewowych realizowana jest we wspolpracy z PSP "
-             f"i Policja, a informowanie mieszkancow w trybie SPO-3.", ["Z02", "Z08"]),
+            ("1. Ewakuacja ludności",
+             f"Plan ochrony ludności województwa {wname}: zasady ewakuacji I, II i III stopnia, wyznaczenie miejsc "
+             f"zbiórki, tras i punktów przyjęcia. Ewakuacja z terenów zalewowych realizowana jest we współpracy z PSP "
+             f"i Policja, a informowanie mieszkańców w trybie SPO-3.", ["Z02", "Z08"]),
             ("2. Schronienie i pomoc socjalna",
-             f"Zabezpieczenie miejsc tymczasowego schronienia w wojewodztwie {wname}, wyzywienia i pomocy socjalnej dla "
-             f"osob ewakuowanych, w tym osob wrazliwych: seniorow samotnych, osob z niepelnosprawnosciami i pacjentow "
-             f"wymagajacych zasilania medycznego. Finansowanie w trybie SPO-2.", ["Z02", "Z19"]),
+             f"Zabezpieczenie miejsc tymczasowego schronienia w województwie {wname}, wyżywienia i pomocy socjalnej dla "
+             f"osób ewakuowanych, w tym osób wrażliwych: seniorów samotnych, osób z niepełnosprawnościami i pacjentów "
+             f"wymagających zasilania medycznego. Finansowanie w trybie SPO-2.", ["Z02", "Z19"]),
             ("3. Zaopatrzenie i rezerwy",
-             f"Zasady wydawania agregatow pradotworczych, wody butelkowanej i srodkow ratunkowych z zasobow wojewody "
-             f"{wname}. Uruchomienie rezerw strategicznych nastepuje na wniosek wojewody.", ["Z07", "Z09"]),
+             f"Zasady wydawania agregatów prądotwórczych, wody butelkowanej i środków ratunkowych z zasobów wojewody "
+             f"{wname}. Uruchomienie rezerw strategicznych następuje na wniosek wojewody.", ["Z07", "Z09"]),
             ("4. Ostrzeganie i alarmowanie",
-             f"System wykrywania i alarmowania w wojewodztwie {wname}: syreny, Alert RCB, RSO oraz kanaly samorzadowe. "
-             f"Alarmowanie o zagrozeniu z powietrza realizuje sie zgodnie z SPO-13, a informowanie ludnosci zgodnie "
+             f"System wykrywania i alarmowania w województwie {wname}: syreny, Alert RCB, RSO oraz kanały samorządowe. "
+             f"Alarmowanie o zagrożeniu z powietrza realizuje się zgodnie z SPO-13, a informowanie ludności zgodnie "
              f"z SPO-3.", ["Z04", "Z16"]),
-            ("5. Osoby wymagajace szczegolnego wsparcia",
-             f"Rejestr osob wymagajacych szczegolnego wsparcia w wojewodztwie {wname} prowadza gminy. Dane sa "
-             f"przetwarzane z zachowaniem minimalizacji i udostepniane wylacznie uprawnionym sluzbom.", ["Z19", "Z07"]),
-            ("6. Odbudowa i powrot do normalnosci",
-             f"Zasady szacowania strat, odtwarzania infrastruktury i wsparcia mieszkancow wojewodztwa {wname} po "
-             f"ustaniu zagrozenia, w tym rozliczenie srodkow uruchomionych w trybie SPO-2.", ["Z02"]),
+            ("5. Osoby wymagające szczególnego wsparcia",
+             f"Rejestr osób wymagających szczególnego wsparcia w województwie {wname} prowadzą gminy. Dane są "
+             f"przetwarzane z zachowaniem minimalizacji i udostępniane wyłącznie uprawnionym służbom.", ["Z19", "Z07"]),
+            ("6. Odbudowa i powrót do normalności",
+             f"Zasady szacowania strat, odtwarzania infrastruktury i wsparcia mieszkańców województwa {wname} po "
+             f"ustaniu zagrożenia, w tym rozliczenie środków uruchomionych w trybie SPO-2.", ["Z02"]),
         ]
         for sec_title, text, hz in sections:
             add_chunk(doc_id, "plan_ol", "", sec_title, f"Plan OL {wname} - {sec_title[3:]}", text, hz, ["R_WOJ", "R_WOJT"])
         documents.append({
             "document_id": doc_id, "doc_type": "plan_ol",
-            "title": f"Plan Ochrony Ludnosci - wojewodztwo {wname}",
+            "title": f"Plan Ochrony Ludności - województwo {wname}",
             "procedure_code": "", "voivodeship_code": wc,
-            "owner_institution": f"Urzad Wojewodzki w {capital}",
+            "owner_institution": f"Urząd Wojewódzki w {capital}",
             "section_count": len(sections), "chunk_count": len(chunks) - start_len,
             "char_count": sum(c["char_count"] for c in chunks[start_len:]),
         })
@@ -375,32 +375,32 @@ def build_corpus():
     start_len = len(chunks)
     for hz_code, hz_name, matrix in HAZARDS:
         related_spo = [p["code"] for p in PROCEDURES if hz_code in p["hazards"]]
-        add_chunk(doc_id, "kpzk", "", f"Karta zagrozenia {hz_code}",
+        add_chunk(doc_id, "kpzk", "", f"Karta zagrożenia {hz_code}",
                   f"KPZK - {hz_code} {hz_name}",
-                  f"Karta zagrozenia {hz_code} {hz_name} z Krajowego Planu Zarzadzania Kryzysowego. Pozycja w matrycy "
-                  f"ryzyka: {matrix}. Procedury operacyjne wlasciwe dla tego zagrozenia: "
-                  f"{', '.join(related_spo) if related_spo else 'brak dedykowanej SPO - stosuje sie SPO-12 i SPO-3'}. "
-                  f"Poziomy reagowania: gmina, powiat, wojewoda, minister wiodacy, Rzadowy Zespol Zarzadzania "
+                  f"Karta zagrożenia {hz_code} {hz_name} z Krajowego Planu Zarządzania Kryzysowego. Pozycja w matrycy "
+                  f"ryzyka: {matrix}. Procedury operacyjne właściwe dla tego zagrożenia: "
+                  f"{', '.join(related_spo) if related_spo else 'brak dedykowanej SPO - stosuje się SPO-12 i SPO-3'}. "
+                  f"Poziomy reagowania: gmina, powiat, wojewoda, minister wiodący, Rządowy Zespół Zarządzania "
                   f"Kryzysowego.",
                   [hz_code], ["R_DYR_RCB"])
-    add_chunk(doc_id, "kpzk", "", "Siatka bezpieczenstwa",
-              "KPZK - siatka bezpieczenstwa",
-              "Siatka bezpieczenstwa przypisuje kazdemu z 20 zagrozen dzialy administracji rzadowej odpowiedzialne za "
-              "moduly zadaniowe w fazie reagowania (R) i odbudowy (O). Minister wiodacy koordynuje realizacje zadan, a "
-              "przy zaangazowaniu kilku ministrow lub wyczerpaniu sil i srodkow sprawa trafia na posiedzenie RZZK "
+    add_chunk(doc_id, "kpzk", "", "Siatka bezpieczeństwa",
+              "KPZK - siatka bezpieczeństwa",
+              "Siatka bezpieczeństwa przypisuje każdemu z 20 zagrożeń działy administracji rządowej odpowiedzialne za "
+              "moduły zadaniowe w fazie reagowania (R) i odbudowy (O). Minister wiodący koordynuje realizację zadań, a "
+              "przy zaangażowaniu kilku ministrów lub wyczerpaniu sił i środków sprawa trafia na posiedzenie RZZK "
               "w trybie SPO-1.", [h[0] for h in HAZARDS], ["R_DYR_RCB"])
     add_chunk(doc_id, "kpzk", "", "Poziomy reagowania",
               "KPZK - poziomy reagowania i eskalacja",
-              "Eskalacja przebiega w kolejnosci: gmina, powiat, wojewoda, minister wiodacy, Rzadowy Zespol Zarzadzania "
-              "Kryzysowego. Wojewoda przejmuje koordynacje, gdy brakuje sil i srodkow w powiecie. RZZK zwoluje sie, gdy "
-              "w dzialania zaangazowanych jest kilku ministrow albo minister wiodacy wyczerpal wlasne mozliwosci. "
-              "Obieg informacji miedzy poziomami reguluje SPO-12.",
+              "Eskalacja przebiega w kolejności: gmina, powiat, wojewoda, minister wiodący, Rządowy Zespół Zarządzania "
+              "Kryzysowego. Wojewoda przejmuje koordynację, gdy brakuje sił i środków w powiecie. RZZK zwołuje się, gdy "
+              "w działania zaangażowanych jest kilku ministrów albo minister wiodący wyczerpał własne możliwości. "
+              "Obieg informacji między poziomami reguluje SPO-12.",
               [h[0] for h in HAZARDS], ["R_DYR_RCB", "R_WOJ"])
     documents.append({
         "document_id": doc_id, "doc_type": "kpzk",
-        "title": "Krajowy Plan Zarzadzania Kryzysowego - karty zagrozen i siatka bezpieczenstwa",
+        "title": "Krajowy Plan Zarządzania Kryzysowego - karty zagrożeń i siatka bezpieczeństwa",
         "procedure_code": "", "voivodeship_code": "",
-        "owner_institution": "Rzadowe Centrum Bezpieczenstwa",
+        "owner_institution": "Rządowe Centrum Bezpieczeństwa",
         "section_count": len(HAZARDS) + 2, "chunk_count": len(chunks) - start_len,
         "char_count": sum(c["char_count"] for c in chunks[start_len:]),
     })
@@ -436,7 +436,7 @@ def build_activations():
     seq = {"a": 0, "e": 0, "d": 0}
 
     def run_activation(proc, started_at, level, wc, wname, event_name, stress):
-        """stress 0..1 - im wyzszy, tym wieksza presja czasowa i ryzyko blokad."""
+        """stress 0..1 - im wyższy, tym większa presja czasowa i ryzyko blokad."""
         seq["a"] += 1
         act_id = f"ACT-{seq['a']:05d}"
         trigger = random.choice(proc["triggers"])
@@ -462,7 +462,7 @@ def build_activations():
             status = "wykonany"
             blocker = ""
             if rng.random() < 0.025 + 0.06 * stress:
-                status = "zablokowany" if critical else "pominiety"
+                status = "zablokowany" if critical else "pominięty"
                 blocker = pick_blocker(proc["code"])
                 if status == "zablokowany":
                     duration *= 1.9
@@ -472,7 +472,7 @@ def build_activations():
             sla_met = int(elapsed <= sla and status != "zablokowany")
             if not sla_met:
                 breaches += 1
-            if status != "pominiety":
+            if status != "pominięty":
                 completed_steps += 1
 
             executions.append({
@@ -513,7 +513,7 @@ def build_activations():
                     "decided_by_role": role_code,
                     "decided_by_name": ROLE_BY_CODE[role_code][1],
                     "subject": f"{proc['code']} krok {no}: {title}",
-                    "rationale": f"Decyzja podjeta na podstawie ustalen kroku {no} procedury {proc['code']} "
+                    "rationale": f"Decyzja podjęta na podstawie ustaleń kroku {no} procedury {proc['code']} "
                                  f"w ramach zdarzenia {event_name}.",
                     "classification": random.choices(CLASSIFICATIONS, weights=[0.72, 0.22, 0.06])[0],
                     "event_time": iso(completed + timedelta(minutes=float(rng.integers(2, 25)))),
@@ -543,7 +543,7 @@ def build_activations():
             "steps_blocked": blocked,
             "steps_sla_breached": breaches,
             "sla_compliance_pct": round(100.0 * (len(proc["steps"]) - breaches) / len(proc["steps"]), 1),
-            "status": "zamkniete",
+            "status": "zamknięte",
             "event_time": iso(started_at),
         })
 
@@ -561,19 +561,19 @@ def build_activations():
 
     # --- Scenariusz osiowy: POWODZ WRZESIEN (D-3 .. D+10) ---
     flood_plan = [
-        ("SPO-12", -3.0, "wojewodzki", "02"), ("SPO-12", -2.6, "wojewodzki", "16"),
-        ("SPO-3", -2.2, "wojewodzki", "02"), ("SPO-10", -1.8, "krajowy", "02"),
+        ("SPO-12", -3.0, "wojewódzki", "02"), ("SPO-12", -2.6, "wojewódzki", "16"),
+        ("SPO-3", -2.2, "wojewódzki", "02"), ("SPO-10", -1.8, "krajowy", "02"),
         ("SPO-12", -1.2, "krajowy", "14"), ("SPO-3", -0.6, "krajowy", "14"),
         ("SPO-1", 0.1, "krajowy", "14"), ("SPO-3", 0.3, "krajowy", "14"),
         ("SPO-10", 0.5, "krajowy", "02"), ("SPO-2", 0.8, "krajowy", "14"),
-        ("SPO-5", 1.1, "krajowy", "14"), ("SPO-15", 1.4, "wojewodzki", "16"),
+        ("SPO-5", 1.1, "krajowy", "14"), ("SPO-15", 1.4, "wojewódzki", "16"),
         ("SPO-12", 1.6, "krajowy", "14"), ("SPO-3", 2.0, "krajowy", "14"),
-        ("SPO-2", 2.4, "wojewodzki", "16"), ("SPO-10", 2.8, "wojewodzki", "24"),
+        ("SPO-2", 2.4, "wojewódzki", "16"), ("SPO-10", 2.8, "wojewódzki", "24"),
         ("SPO-16", 3.2, "krajowy", "14"), ("SPO-1", 3.6, "krajowy", "14"),
-        ("SPO-9", 4.1, "wojewodzki", "08"), ("SPO-3", 4.5, "krajowy", "14"),
+        ("SPO-9", 4.1, "wojewódzki", "08"), ("SPO-3", 4.5, "krajowy", "14"),
         ("SPO-2", 5.2, "krajowy", "14"), ("SPO-12", 6.0, "krajowy", "14"),
-        ("SPO-10", 6.6, "wojewodzki", "32"), ("SPO-3", 7.2, "krajowy", "14"),
-        ("SPO-2", 8.4, "wojewodzki", "02"), ("SPO-12", 9.5, "krajowy", "14"),
+        ("SPO-10", 6.6, "wojewódzki", "32"), ("SPO-3", 7.2, "krajowy", "14"),
+        ("SPO-2", 8.4, "wojewódzki", "02"), ("SPO-12", 9.5, "krajowy", "14"),
     ]
     voiv_by_code = {v[0]: v for v in VOIVODESHIPS}
     for code, day_offset, level, wc in flood_plan:

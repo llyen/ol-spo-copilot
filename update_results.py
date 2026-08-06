@@ -35,9 +35,9 @@ def pct(x):
     return f"{round(float(x) * 100, 1)}%" if x is not None else "n/d"
 
 
-block = f"""- Korpus: {counts.get('dim_procedure.csv')} procedur SPO, {counts.get('dim_step.csv')} krokow, {counts.get('dim_document.csv')} dokumentow, {counts.get('corpus_chunks.jsonl')} fragmentow ({idx.get('corpus_chars')} znakow), slownik indeksu {idx.get('vocabulary_terms')} termow.
-- Wymiary: {counts.get('dim_role.csv')} rol, {counts.get('dim_hazard.csv')} zagrozen, {counts.get('eval_questions.csv')} pytan kontrolnych.
-- Zdarzenia: {counts.get('fact_activation.jsonl')} uruchomien procedur, {counts.get('fact_step_execution.jsonl')} wykonan krokow, {counts.get('fact_decision_log.jsonl')} wpisow w dzienniku decyzji, {counts.get('fact_assistant_query.jsonl')} zapytan do asystenta.
+block = f"""- Korpus: {counts.get('dim_procedure.csv')} procedur SPO, {counts.get('dim_step.csv')} kroków, {counts.get('dim_document.csv')} dokumentów, {counts.get('corpus_chunks.jsonl')} fragmentow ({idx.get('corpus_chars')} znakow), slownik indeksu {idx.get('vocabulary_terms')} termow.
+- Wymiary: {counts.get('dim_role.csv')} rol, {counts.get('dim_hazard.csv')} zagrożeń, {counts.get('eval_questions.csv')} pytan kontrolnych.
+- Zdarzenia: {counts.get('fact_activation.jsonl')} uruchomien procedur, {counts.get('fact_step_execution.jsonl')} wykonan kroków, {counts.get('fact_decision_log.jsonl')} wpisow w dzienniku decyzji, {counts.get('fact_assistant_query.jsonl')} zapytan do asystenta.
 - Trafnosc routingu: top-1 {pct(ev.get('top1_accuracy'))}, top-3 {pct(ev.get('top3_accuracy'))}, MRR {ev.get('mrr')} na {ev.get('questions')} pytaniach ({len(ev.get('misses', []))} pudla).
 - Telemetria asystenta: trafnosc {pct(usage.get('accuracy'))}, p50 {usage.get('p50_latency_ms')} ms, p95 {usage.get('p95_latency_ms')} ms, ocen "pomocne" {pct(usage.get('helpful_share'))}.
 - Czasy normatywne: dotrzymanie {an.get('overall_sla_compliance_pct')}% ogolem, {an.get('flood_sla_compliance_pct')}% w scenariuszu powodziowym; najgorsza procedura {an.get('worst_procedure')} ({an.get('worst_procedure_sla_pct')}%).

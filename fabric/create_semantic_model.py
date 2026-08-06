@@ -37,9 +37,9 @@ MEASURES = {
          'CALCULATE ( [Uruchomienia procedur], fact_activation[event_name] = "POWODZ WRZESIEN" )', "#,0"),
     ],
     "fact_step_execution": [
-        ("Wykonania krokow", "COUNTROWS ( fact_step_execution )", "#,0"),
-        ("Kroki w normie", "CALCULATE ( [Wykonania krokow], fact_step_execution[sla_met] = 1 )", "#,0"),
-        ("Dotrzymanie SLA %", "DIVIDE ( [Kroki w normie], [Wykonania krokow] )", "0.0%"),
+        ("Wykonania kroków", "COUNTROWS ( fact_step_execution )", "#,0"),
+        ("Kroki w normie", "CALCULATE ( [Wykonania kroków], fact_step_execution[sla_met] = 1 )", "#,0"),
+        ("Dotrzymanie SLA %", "DIVIDE ( [Kroki w normie], [Wykonania kroków] )", "0.0%"),
         ("Przekroczenia SLA %", "1 - [Dotrzymanie SLA %]", "0.0%"),
         ("Mediana przekroczenia (min)",
          "MEDIANX ( FILTER ( fact_step_execution, fact_step_execution[overdue_minutes] > 0 ), "
@@ -47,11 +47,11 @@ MEASURES = {
         ("Stosunek czasu do normy",
          "DIVIDE ( MEDIANX ( fact_step_execution, fact_step_execution[elapsed_minutes] ), "
          "MEDIANX ( fact_step_execution, fact_step_execution[sla_minutes] ) )", "#,0.00"),
-        ("Dotrzymanie SLA krokow krytycznych %",
+        ("Dotrzymanie SLA kroków krytycznych %",
          "CALCULATE ( [Dotrzymanie SLA %], fact_step_execution[is_critical] = 1 )", "0.0%"),
         ("Kroki zablokowane",
-         'CALCULATE ( [Wykonania krokow], fact_step_execution[status] = "zablokowany" )', "#,0"),
-        ("Udzial blokad %", "DIVIDE ( [Kroki zablokowane], [Wykonania krokow] )", "0.0%"),
+         'CALCULATE ( [Wykonania kroków], fact_step_execution[status] = "zablokowany" )', "#,0"),
+        ("Udzial blokad %", "DIVIDE ( [Kroki zablokowane], [Wykonania kroków] )", "0.0%"),
         ("Lata wystepowania blokady",
          'CALCULATE ( DISTINCTCOUNT ( dim_date[year] ), FILTER ( fact_step_execution, '
          'fact_step_execution[blocker_reason] <> "" ) )', "#,0"),
@@ -78,10 +78,10 @@ MEASURES = {
          '        )\n'
          '    )\n'
          'RETURN MEDIANX ( ZeStartem, [Reakcja] )', "#,0.0"),
-        ("Dotrzymanie SLA - powodz %",
+        ("Dotrzymanie SLA - powódź %",
          'CALCULATE ( [Dotrzymanie SLA %], fact_step_execution[event_name] = "POWODZ WRZESIEN" )', "0.0%"),
-        ("Roznica SLA powodz vs historia (p.p.)",
-         '( [Dotrzymanie SLA - powodz %] - CALCULATE ( [Dotrzymanie SLA %], '
+        ("Roznica SLA powódź vs historia (p.p.)",
+         '( [Dotrzymanie SLA - powódź %] - CALCULATE ( [Dotrzymanie SLA %], '
          'fact_step_execution[event_name] <> "POWODZ WRZESIEN" ) ) * 100', "#,0.0"),
     ],
     "fact_decision_log": [
@@ -113,7 +113,7 @@ MEASURES = {
          'CALCULATE ( COUNTROWS ( dim_step ), dim_step[output_document] = "" )', "#,0"),
     ],
     "dim_hazard": [
-        ("Pokrycie zagrozen procedurami %",
+        ("Pokrycie zagrożeń procedurami %",
          "DIVIDE ( CALCULATE ( DISTINCTCOUNT ( bridge_procedure_hazard[hazard_code] ), "
          "ALL ( bridge_procedure_hazard ) ), DISTINCTCOUNT ( dim_hazard[hazard_code] ) )", "0.0%"),
     ],

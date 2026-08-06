@@ -63,7 +63,7 @@ przekrojowej używamy mostka `bridge_procedure_hazard` generowanego w notatniku
 
 ## Etykiety wrażliwości
 
-- `fact_decision_log` zawiera kolumnę `classification` (`jawne`, `zastrzezone`, `poufne`).
+- `fact_decision_log` zawiera kolumnę `classification` (`jawne`, `zastrzeżone`, `poufne`).
   W raporcie stosujemy RLS: role `Analityk` widzi wyłącznie `jawne`, rola `RCB` — wszystko.
 - W realnym wdrożeniu tabela dziennika decyzji powinna mieć etykietę wrażliwości Purview
   i pełny audyt dostępu; treść uzasadnień decyzji jest materiałem archiwalnym.

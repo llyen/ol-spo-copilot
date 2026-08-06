@@ -111,10 +111,10 @@ lines = [
     "",
     f"**Pytanie:** {demo['question']}",
     "",
-    f"**Wlasciwa procedura:** {demo['procedure_code']} - {demo['procedure_name']}",
-    f"**Wlasciciel:** {demo['owner']} | **Faza:** {demo['phase']} | **Pewnosc routingu:** {demo['confidence']}",
+    f"**Właściwa procedura:** {demo['procedure_code']} - {demo['procedure_name']}",
+    f"**Właściciel:** {demo['owner']} | **Faza:** {demo['phase']} | **Pewnosc routingu:** {demo['confidence']}",
     f"**Podstawa prawna:** {demo['legal_basis']}",
-    f"**Zagrozenia:** {', '.join(demo['hazards'])}",
+    f"**Zagrożenia:** {', '.join(demo['hazards'])}",
     "",
     f"**Pierwszy krok krytyczny:** {demo['first_critical_step']['title']} "
     f"(czas normatywny {demo['first_critical_step']['sla']})",
@@ -132,9 +132,9 @@ for s in demo["checklist"]:
 lines += ["", "## Lista kontaktowa", "", "| Rola | Instytucja | Poziom |", "|---|---|---|"]
 for c in demo["contact_list"]:
     lines.append(f"| {c['role_name']} | {c['institution']} | {c['level']} |")
-lines += ["", "## Zrodla (cytowania)", ""]
+lines += ["", "## Źródła (cytowania)", ""]
 for c in demo["citations"]:
     lines.append(f"- `{c['chunk_id']}` {c['title']} (dopasowanie {c['score']:.3f})")
-lines += ["", "> Dane syntetyczne. Odpowiedz wygenerowana wylacznie z korpusu procedur demo."]
+lines += ["", "> Dane syntetyczne. Odpowiedz wygenerowana wyłącznie z korpusu procedur demo."]
 (OUT / "answer_card_example.md").write_text("\n".join(lines), encoding="utf-8")
 print("\n".join(lines[:18]))

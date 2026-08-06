@@ -8,7 +8,7 @@
 ```dax
 Uruchomienia procedur = DISTINCTCOUNT ( fact_activation[activation_id] )
 
-Wykonania krokow = COUNTROWS ( fact_step_execution )
+Wykonania kroków = COUNTROWS ( fact_step_execution )
 
 Decyzje w dzienniku = COUNTROWS ( fact_decision_log )
 
@@ -19,10 +19,10 @@ MEDIANX ( fact_activation, fact_activation[duration_minutes] ) / 60
 ## 2. Dotrzymanie czasów normatywnych (SLA)
 
 ```dax
-Kroki w normie = CALCULATE ( [Wykonania krokow], fact_step_execution[sla_met] = TRUE () )
+Kroki w normie = CALCULATE ( [Wykonania kroków], fact_step_execution[sla_met] = TRUE () )
 
 Dotrzymanie SLA % =
-DIVIDE ( [Kroki w normie], [Wykonania krokow] )
+DIVIDE ( [Kroki w normie], [Wykonania kroków] )
 
 Przekroczenia SLA % = 1 - [Dotrzymanie SLA %]
 
@@ -65,16 +65,16 @@ VAR ZeStartem =
 RETURN
     MEDIANX ( ZeStartem, [Reakcja] )
 
-Dotrzymanie SLA krokow krytycznych % =
+Dotrzymanie SLA kroków krytycznych % =
 CALCULATE ( [Dotrzymanie SLA %], fact_step_execution[is_critical] = TRUE () )
 ```
 
 ## 4. Blokady i wnioski systemowe
 
 ```dax
-Kroki zablokowane = CALCULATE ( [Wykonania krokow], fact_step_execution[status] = "zablokowany" )
+Kroki zablokowane = CALCULATE ( [Wykonania kroków], fact_step_execution[status] = "zablokowany" )
 
-Udzial blokad % = DIVIDE ( [Kroki zablokowane], [Wykonania krokow] )
+Udzial blokad % = DIVIDE ( [Kroki zablokowane], [Wykonania kroków] )
 
 Lata wystepowania blokady =
 CALCULATE (
@@ -83,9 +83,9 @@ CALCULATE (
 )
 
 Blokada powtarzalna =
-VAR Wystapienia = [Kroki zablokowane]
+VAR Wystąpienia = [Kroki zablokowane]
 VAR Lata = [Lata wystepowania blokady]
-RETURN IF ( Wystapienia >= 10 && Lata >= 3, "wniosek systemowy", "incydentalna" )
+RETURN IF ( Wystąpienia >= 10 && Lata >= 3, "wniosek systemowy", "incydentalna" )
 ```
 
 ## 5. Jakość asystenta
@@ -125,7 +125,7 @@ Fragmenty korpusu = COUNTROWS ( corpus_chunk )
 Kroki bez dokumentu wyjsciowego =
 CALCULATE ( COUNTROWS ( dim_step ), dim_step[output_document] = "" )
 
-Pokrycie zagrozen procedurami % =
+Pokrycie zagrożeń procedurami % =
 DIVIDE (
     CALCULATE ( DISTINCTCOUNT ( bridge_procedure_hazard[hazard_code] ) ),
     DISTINCTCOUNT ( dim_hazard[hazard_code] )
@@ -138,10 +138,10 @@ DIVIDE (
 Uruchomienia POWODZ WRZESIEN =
 CALCULATE ( [Uruchomienia procedur], fact_activation[event_name] = "POWODZ WRZESIEN" )
 
-Dotrzymanie SLA - powodz % =
+Dotrzymanie SLA - powódź % =
 CALCULATE ( [Dotrzymanie SLA %], fact_step_execution[event_name] = "POWODZ WRZESIEN" )
 
-Roznica SLA powodz vs historia (p.p.) =
-( [Dotrzymanie SLA - powodz %]
+Roznica SLA powódź vs historia (p.p.) =
+( [Dotrzymanie SLA - powódź %]
   - CALCULATE ( [Dotrzymanie SLA %], fact_step_execution[event_name] <> "POWODZ WRZESIEN" ) ) * 100
 ```

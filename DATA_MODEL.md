@@ -36,9 +36,9 @@ scenariusz osiowy **POWÓDŹ WRZESIEŃ**, D-3 … D+10 wokół `D0 = 2026-09-15 
 | Kolumna | Typ | Opis |
 |---|---|---|
 | `role_code` | string | klucz główny, np. `R_DYZ_RCB` |
-| `role_name` | string | nazwa roli, np. „Oficer dyzurny RCB" |
+| `role_name` | string | nazwa roli, np. „Oficer dyżurny RCB" |
 | `institution` | string | instytucja, w której rola występuje |
-| `level` | string | `krajowy`, `wojewodzki`, `powiatowy`, `gminny`, `operatorski` |
+| `level` | string | `krajowy`, `wojewódzki`, `powiatowy`, `gminny`, `operatorski` |
 
 ## 2. `dim_hazard.csv`
 
@@ -130,7 +130,7 @@ Struktura sekcji dokumentu SPO: `1. Cel`, `2. Podstawa prawna`, `3. Przesłanki 
 | `duration_minutes` | float | czas trwania |
 | `steps_total`, `steps_completed`, `steps_blocked`, `steps_sla_breached` | int | przebieg |
 | `sla_compliance_pct` | float | odsetek kroków w czasie normatywnym |
-| `status` | string | `zamkniete` |
+| `status` | string | `zamknięte` |
 | `event_time` | datetime | znacznik dla Eventstream (= `started_at`) |
 
 ## 8. `fact_step_execution.jsonl` (strumień główny)
@@ -148,7 +148,7 @@ Struktura sekcji dokumentu SPO: `1. Cel`, `2. Podstawa prawna`, `3. Przesłanki 
 | `elapsed_minutes` | float | `completed_at - planned_start` |
 | `sla_met` | int (0/1) | `elapsed_minutes <= sla_minutes` i krok nie jest zablokowany |
 | `is_critical` | int (0/1) | z `dim_step` |
-| `status` | string | `wykonany`, `zablokowany`, `pominiety` |
+| `status` | string | `wykonany`, `zablokowany`, `pominięty` |
 | `blocker_reason` | string | przyczyna blokady (pusty, gdy brak) |
 | `output_document` | string | wytworzony dokument |
 | `event_time` | datetime | znacznik dla Eventstream (= `completed_at`) |
@@ -172,7 +172,7 @@ Struktura sekcji dokumentu SPO: `1. Cel`, `2. Podstawa prawna`, `3. Przesłanki 
 | `decided_by_role`, `decided_by_name` | string | decydent |
 | `subject` | string | przedmiot decyzji |
 | `rationale` | string | uzasadnienie (pole obowiązkowe w aplikacji) |
-| `classification` | string | `jawne` (≈72%), `zastrzezone`, `poufne` |
+| `classification` | string | `jawne` (≈72%), `zastrzeżone`, `poufne` |
 | `event_time` | datetime | znacznik dla Eventstream |
 
 ## 10. `fact_assistant_query.jsonl`

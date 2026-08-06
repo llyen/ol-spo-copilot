@@ -5,9 +5,9 @@
 // Dane trafiaja do tabel surowych; zasady aktualizacji z 02_update_policies.kql
 // automatycznie wypelniaja tabele typowane.
 //
-// Podmien identyfikatory workspace i lakehouse na wlasne (patrz config.json).
+// Podmien identyfikatory workspace i lakehouse na własne (patrz config.json).
 // Skrypt uruchamia takze deploy_fabric.py --step history.
-// Dane sa w 100% syntetyczne (demo).
+// Dane są w 100% syntetyczne (demo).
 // =============================================================================
 
 //------------------------------------------------------------------------------

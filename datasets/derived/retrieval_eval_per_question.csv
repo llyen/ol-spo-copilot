@@ -1,33 +1,33 @@
 question_id,question,expected_procedure,predicted_procedure,rank_of_expected,top1,top3,reciprocal_rank,top_score
-EVQ-001,Mamy skazenie chemiczne w porcie i wielu poszkodowanych. Co robimy?,SPO-15,SPO-15,1,1,1,1.0,0.8247
-EVQ-002,Ilu poszkodowanych mozemy przetransportowac lotniczo do szpitali oparzeniowych?,SPO-15,SPO-15,1,1,1,1.0,1.0661
-EVQ-003,Kto zwoluje posiedzenie Rzadowego Zespolu Zarzadzania Kryzysowego?,SPO-1,SPO-1,1,1,1,1.0,1.4971
-EVQ-004,W jakim trybie mozna zwolac RZZK poza posiedzeniem stacjonarnym?,SPO-1,SPO-1,1,1,1,1.0,1.1702
-EVQ-005,Wojewoda potrzebuje pieniedzy na usuwanie skutkow powodzi. Jaka procedura?,SPO-2,SPO-2,1,1,1,1.0,0.8775
-EVQ-006,Skad wziac srodki na zakup lozek polowych dla ewakuowanych?,SPO-2,SPO-2,1,1,1,1.0,0.4233
-EVQ-007,Jak szybko musimy wyemitowac komunikat ostrzegawczy dla ludnosci?,SPO-3,SPO-3,1,1,1,1.0,0.7659
-EVQ-008,Kto zatwierdza tresc komunikatu Alert RCB?,SPO-3,SPO-3,1,1,1,1.0,1.2861
-EVQ-009,"W sieci krazy informacja, ze pekla tama. Jak reagujemy?",SPO-3,SPO-15,8,0,0,0.125,0.3243
-EVQ-010,Czy mozemy tymczasowo przywrocic kontrole na granicy z powodu zagrozenia?,SPO-4,SPO-4,1,1,1,1.0,1.9182
-EVQ-011,Kogo trzeba notyfikowac przed przywroceniem kontroli granicznej?,SPO-4,SPO-4,1,1,1,1.0,2.5113
-EVQ-012,Kiedy wprowadza sie stan kleski zywiolowej i kto go oglasza?,SPO-5,SPO-5,1,1,1,1.0,2.2963
-EVQ-013,Sily wojewody sa niewystarczajace przy powodzi. Jaki stan nadzwyczajny?,SPO-5,SPO-1,5,0,0,0.2,0.6002
-EVQ-014,Jaka procedura dotyczy zagrozenia konstytucyjnego ustroju panstwa?,SPO-6,SPO-6,1,1,1,1.0,1.0501
-EVQ-015,Kto wydaje rozporzadzenie o stanie wojennym?,SPO-7,SPO-7,1,1,1,1.0,0.9794
-EVQ-016,Obywatel RP zostal uprowadzony za granica przez organizacje terrorystyczna. Co robimy?,SPO-8,SPO-8,1,1,1,1.0,1.2984
+EVQ-001,Mamy skażenie chemiczne w porcie i wielu poszkodowanych. Co robimy?,SPO-15,SPO-15,1,1,1,1.0,0.8247
+EVQ-002,Ilu poszkodowanych możemy przetransportować lotniczo do szpitali oparzeniowych?,SPO-15,SPO-15,1,1,1,1.0,1.0661
+EVQ-003,Kto zwołuje posiedzenie Rządowego Zespołu Zarządzania Kryzysowego?,SPO-1,SPO-1,1,1,1,1.0,1.4971
+EVQ-004,W jakim trybie można zwołać RZZK poza posiedzeniem stacjonarnym?,SPO-1,SPO-1,1,1,1,1.0,1.1702
+EVQ-005,Wojewoda potrzebuje pieniędzy na usuwanie skutków powodzi. Jaka procedura?,SPO-2,SPO-2,1,1,1,1.0,0.8775
+EVQ-006,Skad wziąć środki na zakup łóżek polowych dla ewakuowanych?,SPO-2,SPO-2,1,1,1,1.0,0.4233
+EVQ-007,Jak szybko musimy wyemitować komunikat ostrzegawczy dla ludności?,SPO-3,SPO-3,1,1,1,1.0,0.7659
+EVQ-008,Kto zatwierdza treść komunikatu Alert RCB?,SPO-3,SPO-3,1,1,1,1.0,1.2861
+EVQ-009,"W sieci krąży informacja, że pękła tama. Jak reagujemy?",SPO-3,SPO-15,8,0,0,0.125,0.3243
+EVQ-010,Czy możemy tymczasowo przywrócić kontrolę na granicy z powodu zagrożenia?,SPO-4,SPO-4,1,1,1,1.0,1.9182
+EVQ-011,Kogo trzeba notyfikować przed przywróceniem kontroli granicznej?,SPO-4,SPO-4,1,1,1,1.0,2.5113
+EVQ-012,Kiedy wprowadza się stan klęski żywiołowej i kto go ogłasza?,SPO-5,SPO-5,1,1,1,1.0,2.2963
+EVQ-013,Siły wojewody są niewystarczające przy powodzi. Jaki stan nadzwyczajny?,SPO-5,SPO-1,5,0,0,0.2,0.6002
+EVQ-014,Jaka procedura dotyczy zagrożenia konstytucyjnego ustroju państwa?,SPO-6,SPO-6,1,1,1,1.0,1.0501
+EVQ-015,Kto wydaje rozporządzenie o stanie wojennym?,SPO-7,SPO-7,1,1,1,1.0,0.9794
+EVQ-016,Obywatel RP został uprowadzony za granica przez organizację terrorystyczną. Co robimy?,SPO-8,SPO-8,1,1,1,1.0,1.2984
 EVQ-017,Kto prowadzi sztab kryzysowy przy uprowadzeniu obywatela poza granicami kraju?,SPO-8,SPO-8,1,1,1,1.0,1.5901
-EVQ-018,Gwaltownie rosnie liczba cudzoziemcow na granicy. Jaka procedura?,SPO-9,SPO-9,1,1,1,1.0,1.0048
-EVQ-019,Gdzie uruchomic punkty recepcyjne przy masowym naplywie osob?,SPO-9,SPO-9,1,1,1,1.0,1.1718
-EVQ-020,Awaria stacji energetycznej zagraza szpitalom i przepompowniom. Jak wspolpracowac z operatorem?,SPO-10,SPO-10,1,1,1,1.0,0.4542
-EVQ-021,Kto ustala priorytety przywracania zasilania obiektow infrastruktury krytycznej?,SPO-10,SPO-10,1,1,1,1.0,2.0587
-EVQ-022,Trzeba sprowadzic Polakow z kraju objetego konfliktem. Jaka procedura?,SPO-11,SPO-11,1,1,1,1.0,0.6042
-EVQ-023,Jak zorganizowac punkty zborne dla ewakuowanych z zagranicy?,SPO-11,SPO-11,1,1,1,1.0,0.7687
-EVQ-024,Jak ma wygladac obieg meldunkow miedzy WCZK a RCB?,SPO-12,SPO-10,2,0,1,0.5,0.7237
-EVQ-025,W jakim czasie dyzurny rejestruje meldunek z centrum wojewodzkiego?,SPO-12,SPO-12,1,1,1,1.0,0.6173
-EVQ-026,Wykryto obcy dron nad obiektem chronionym. Jak alarmujemy ludnosc?,SPO-13,SPO-13,1,1,1,1.0,0.8151
-EVQ-027,Kto uruchamia syreny przy zagrozeniu uderzeniem z powietrza?,SPO-13,SPO-13,1,1,1,1.0,1.6766
-EVQ-028,Panstwo sojusznicze chce przemiescic wojska przez terytorium RP. Co dalej?,SPO-14,SPO-14,1,1,1,1.0,2.2878
-EVQ-029,Kto odpowiada za wsparcie panstwa gospodarza dla wojsk sojuszniczych?,SPO-14,SPO-14,1,1,1,1.0,1.0476
-EVQ-030,Wystapil powazny incydent cyberbezpieczenstwa u operatora uslugi kluczowej. Kogo zwolac?,SPO-16,SPO-16,1,1,1,1.0,1.4571
-EVQ-031,Kilka niezaleznych incydentow wyglada na dzialanie skoordynowane. Jaka procedura?,SPO-16,SPO-16,1,1,1,1.0,1.4373
+EVQ-018,Gwałtownie rośnie liczba cudzoziemców na granicy. Jaka procedura?,SPO-9,SPO-9,1,1,1,1.0,1.0048
+EVQ-019,Gdzie uruchomić punkty recepcyjne przy masowym napływie osób?,SPO-9,SPO-9,1,1,1,1.0,1.1718
+EVQ-020,Awaria stacji energetycznej zagraża szpitalom i przepompowniom. Jak współpracować z operatorem?,SPO-10,SPO-10,1,1,1,1.0,0.4542
+EVQ-021,Kto ustala priorytety przywracania zasilania obiektów infrastruktury krytycznej?,SPO-10,SPO-10,1,1,1,1.0,2.0587
+EVQ-022,Trzeba sprowadzić Polaków z kraju objętego konfliktem. Jaka procedura?,SPO-11,SPO-11,1,1,1,1.0,0.6042
+EVQ-023,Jak zorganizować punkty zborne dla ewakuowanych z zagranicy?,SPO-11,SPO-11,1,1,1,1.0,0.7687
+EVQ-024,Jak ma wyglądać obieg meldunków między WCZK a RCB?,SPO-12,SPO-10,2,0,1,0.5,0.7237
+EVQ-025,W jakim czasie dyżurny rejestruje meldunek z centrum wojewódzkiego?,SPO-12,SPO-12,1,1,1,1.0,0.6173
+EVQ-026,Wykryto obcy dron nad obiektem chronionym. Jak alarmujemy ludność?,SPO-13,SPO-13,1,1,1,1.0,0.8151
+EVQ-027,Kto uruchamia syreny przy zagrożeniu uderzeniem z powietrza?,SPO-13,SPO-13,1,1,1,1.0,1.6766
+EVQ-028,Państwo sojusznicze chce przemieścić wojska przez terytorium RP. Co dalej?,SPO-14,SPO-14,1,1,1,1.0,2.2878
+EVQ-029,Kto odpowiada za wsparcie państwa gospodarza dla wojsk sojuszniczych?,SPO-14,SPO-14,1,1,1,1.0,1.0476
+EVQ-030,Wystąpił poważny incydent cyberbezpieczeństwa u operatora usługi kluczowej. Kogo zwołać?,SPO-16,SPO-16,1,1,1,1.0,1.4571
+EVQ-031,Kilka niezależnych incydentów wygląda na działanie skoordynowane. Jaka procedura?,SPO-16,SPO-16,1,1,1,1.0,1.4373
 EVQ-032,Kto rekomenduje wprowadzenie stopni alarmowych CRP?,SPO-16,SPO-16,1,1,1,1.0,1.1346

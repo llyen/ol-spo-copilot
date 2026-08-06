@@ -1,17 +1,17 @@
 procedure_code,uruchomienia,wykonania_krokow,sla_compliance,mediana_czasu_min,blokady,sla_compliance_pct,procedure_name,phase
-SPO-2,90,900,0.707,296.35,43,70.7,Uruchomienie dodatkowych srodkow finansowych,reagowanie
-SPO-3,158,1738,0.712,39.55,44,71.2,Zasady informowania ludnosci o zagrozeniach - organizacja procesu komunikacji spolecznej w sytuacji kryzysowej,reagowanie
-SPO-15,29,290,0.731,64.1,6,73.1,Organizacja medycznego mostu powietrznego w przypadku wystapienia zdarzenia masowego,reagowanie
-SPO-10,124,1240,0.733,138.35,40,73.3,Wspolpraca miedzy administracja publiczna a wlascicielami oraz posiadaczami obiektow infrastruktury krytycznej w zakresie jej ochrony,reagowanie
-SPO-9,47,470,0.749,253.15,11,74.9,Dzialania w przypadku masowego naplywu cudzoziemcow na terytorium RP,reagowanie
-SPO-5,21,210,0.762,172.25,12,76.2,Wprowadzenie stanu kleski zywiolowej,reagowanie
-SPO-6,9,81,0.765,246.7,3,76.5,Wprowadzenie stanu wyjatkowego,reagowanie
-SPO-1,78,780,0.785,68.2,20,78.5,Organizacja posiedzenia Rzadowego Zespolu Zarzadzania Kryzysowego,reagowanie
-SPO-12,260,2080,0.792,31.6,65,79.2,Obieg informacji pomiedzy krajowymi organami i strukturami zarzadzania kryzysowego,przygotowanie
-SPO-8,6,60,0.8,128.35,4,80.0,Postepowanie w sytuacji uprowadzenia terrorystycznego obywatela polskiego poza obszarem RP,reagowanie
+SPO-2,90,900,0.707,296.35,43,70.7,Uruchomienie dodatkowych środków finansowych,reagowanie
+SPO-3,158,1738,0.712,39.55,44,71.2,Zasady informowania ludności o zagrożeniach - organizacja procesu komunikacji społecznej w sytuacji kryzysowej,reagowanie
+SPO-15,29,290,0.731,64.1,6,73.1,Organizacja medycznego mostu powietrznego w przypadku wystąpienia zdarzenia masowego,reagowanie
+SPO-10,124,1240,0.733,138.35,40,73.3,Współpraca między administracja publiczna a właścicielami oraz posiadaczami obiektów infrastruktury krytycznej w zakresie jej ochrony,reagowanie
+SPO-9,47,470,0.749,253.15,11,74.9,Działania w przypadku masowego napływu cudzoziemców na terytorium RP,reagowanie
+SPO-5,21,210,0.762,172.25,12,76.2,Wprowadzenie stanu klęski żywiołowej,reagowanie
+SPO-6,9,81,0.765,246.7,3,76.5,Wprowadzenie stanu wyjątkowego,reagowanie
+SPO-1,78,780,0.785,68.2,20,78.5,Organizacja posiedzenia Rządowego Zespołu Zarządzania Kryzysowego,reagowanie
+SPO-12,260,2080,0.792,31.6,65,79.2,Obieg informacji pomiedzy krajowymi organami i strukturami zarządzania kryzysowego,przygotowanie
+SPO-8,6,60,0.8,128.35,4,80.0,Postępowanie w sytuacji uprowadzenia terrorystycznego obywatela polskiego poza obszarem RP,reagowanie
 SPO-11,13,130,0.8,323.15,1,80.0,Organizacja ewakuacji obywateli polskich spoza granic kraju,reagowanie
 SPO-7,4,36,0.806,191.8,1,80.6,Wprowadzenie stanu wojennego,reagowanie
-SPO-4,15,150,0.82,226.9,3,82.0,Tymczasowe przywrocenie kontroli granicznej na granicach RP,reagowanie
-SPO-13,46,414,0.821,7.75,16,82.1,Ostrzeganie i alarmowanie wojsk oraz ludnosci cywilnej o zagrozeniu uderzeniami z powietrza,reagowanie
-SPO-16,67,670,0.822,89.3,22,82.2,Zwolanie i obsluga posiedzenia Zespolu do spraw Incydentow Krytycznych,reagowanie
+SPO-4,15,150,0.82,226.9,3,82.0,Tymczasowe przywrócenie kontroli granicznej na granicach RP,reagowanie
+SPO-13,46,414,0.821,7.75,16,82.1,Ostrzeganie i alarmowanie wojsk oraz ludności cywilnej o zagrożeniu uderzeniami z powietrza,reagowanie
+SPO-16,67,670,0.822,89.3,22,82.2,Zwołanie i obsługa posiedzenia Zespołu do spraw Incydentów Krytycznych,reagowanie
 SPO-14,19,171,0.83,386.7,6,83.0,Przekraczanie granic RP przez wojska sojusznicze w celu pobytu lub tranzytu,przygotowanie

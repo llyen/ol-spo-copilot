@@ -1,4 +1,4 @@
-"""Wdrozenie repozytorium SPO Copilot do Microsoft Fabric.
+"""Wdrożenie repozytorium SPO Copilot do Microsoft Fabric.
 
 Uzycie:
     python deploy_fabric.py --config config.json [--step upload|notebooks|kql|all]
@@ -36,7 +36,7 @@ NOTEBOOK_REWRITES = [
 ]
 
 # dodatkowa komorka notatnika 01 - zapis tabel Delta
-DELTA_CELL = '''# zapis tabel Delta w Lakehouse (uruchamiane wylacznie w Fabric)
+DELTA_CELL = '''# zapis tabel Delta w Lakehouse (uruchamiane wyłącznie w Fabric)
 for name in CSV_TABLES:
     df = spark.read.option("header", "true").option("inferSchema", "true").csv(f"Files/raw/{name}.csv")
     df.write.mode("overwrite").option("overwriteSchema", "true").saveAsTable(name)
@@ -160,7 +160,7 @@ def step_notebooks(cfg: dict) -> None:
 # --- 3. skrypty KQL ---------------------------------------------------------
 
 def split_kql(text: str) -> list[str]:
-    """Dzieli plik KQL na polecenia (komendy zaczynaja sie od kropki na poczatku linii)."""
+    """Dzieli plik KQL na polecenia (komendy zaczynaja się od kropki na poczatku linii)."""
     commands, buf = [], []
     for line in text.splitlines():
         stripped = line.strip()

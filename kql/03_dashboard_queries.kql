@@ -1,6 +1,6 @@
 // =============================================================================
 // SPO Copilot - zapytania kafelkow Real-Time Dashboard
-// Kazdy blok = jeden kafelek. Parametr _startTime/_endTime pochodzi z dashboardu.
+// Każdy blok = jeden kafelek. Parametr _startTime/_endTime pochodzi z dashboardu.
 // =============================================================================
 
 // --- KAFELEK 1: Aktywne uruchomienia procedur (stat) --------------------------
@@ -33,7 +33,7 @@ step_execution
 | where event_time between (_startTime .. _endTime)
 | summarize wykonane = countif(status == "wykonany"),
             zablokowane = countif(status == "zablokowany"),
-            pominiete = countif(status == "pominiety")
+            pominiete = countif(status == "pominięty")
   by bin(event_time, 1h)
 | render timechart
 
@@ -45,7 +45,7 @@ step_execution
 | order by sla_pct asc
 | render barchart
 
-// --- KAFELEK 7: Kroki najczesciej przekraczajace norme (tabela) ---------------
+// --- KAFELEK 7: Kroki najczesciej przekraczające norme (tabela) ---------------
 step_execution
 | where event_time between (_startTime .. _endTime)
 | summarize wykonania = count(),
@@ -58,7 +58,7 @@ step_execution
 | order by przekroczenia_pct desc
 | take 15
 
-// --- KAFELEK 8: Powtarzajace sie blokady (tabela) -----------------------------
+// --- KAFELEK 8: Powtarzajace się blokady (tabela) -----------------------------
 step_execution
 | where event_time between (_startTime .. _endTime)
 | where isnotempty(blocker_reason)
@@ -94,7 +94,7 @@ assistant_query
 | order by pytania desc
 | take 20
 
-// --- KAFELEK 13: Uruchomienia wg wojewodztwa (mapa/bar) -----------------------
+// --- KAFELEK 13: Uruchomienia wg województwa (mapa/bar) -----------------------
 activation
 | where event_time between (_startTime .. _endTime)
 | summarize uruchomienia = count(), sredni_sla = round(avg(sla_compliance_pct), 1) by voivodeship_name

@@ -5,17 +5,17 @@
   "mrr": 0.932,
   "misses": [
     {
-      "question": "W sieci krazy informacja, ze pekla tama. Jak reagujemy?",
+      "question": "W sieci krąży informacja, że pękła tama. Jak reagujemy?",
       "expected_procedure": "SPO-3",
       "predicted_procedure": "SPO-15"
     },
     {
-      "question": "Sily wojewody sa niewystarczajace przy powodzi. Jaki stan nadzwyczajny?",
+      "question": "Siły wojewody są niewystarczające przy powodzi. Jaki stan nadzwyczajny?",
       "expected_procedure": "SPO-5",
       "predicted_procedure": "SPO-1"
     },
     {
-      "question": "Jak ma wygladac obieg meldunkow miedzy WCZK a RCB?",
+      "question": "Jak ma wyglądać obieg meldunków między WCZK a RCB?",
       "expected_procedure": "SPO-12",
       "predicted_procedure": "SPO-10"
     }

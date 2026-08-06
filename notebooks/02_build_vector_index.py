@@ -27,7 +27,7 @@ chunks[["chunk_id", "document_id", "doc_type", "procedure_code", "section", "chu
 print(f"chunkow: {len(chunks)}, terminow w slowniku: {len(retriever.vocab)}")
 
 # CELL
-demo_question = "Mamy skazenie chemiczne w porcie i wielu poszkodowanych. Co robimy?"
+demo_question = "Mamy skażenie chemiczne w porcie i wielu poszkodowanych. Co robimy?"
 hits = retriever.search(demo_question, k=5)
 routing = retriever.route(demo_question)
 print(demo_question)
@@ -45,7 +45,7 @@ summary = {
     "demo_top_chunk": str(hits.iloc[0].chunk_id),
     "demo_top_procedure": routing[0][0],
     "demo_top_score": round(float(routing[0][1]), 4),
-    "method": "TF-IDF (pelny wyraz + prefiks 5 znakow) + cosine, routing z agregacja chunk -> SPO",
+    "method": "TF-IDF (pełny wyraz + prefiks 5 znakow) + cosine, routing z agregacja chunk -> SPO",
 }
 (OUT / "vector_index_summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
 print(json.dumps(summary, ensure_ascii=True, indent=2))

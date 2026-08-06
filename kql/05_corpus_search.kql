@@ -1,10 +1,10 @@
 // =============================================================================
 // SPO Copilot - wyszukiwanie w korpusie procedur (grounding dla Data Agenta)
 // Warstwa KQL uzupelnia indeks wektorowy: daje szybkie, tanie dopasowanie
-// leksykalne i filtrowanie po metadanych (zagrozenie, rola, typ dokumentu).
+// leksykalne i filtrowanie po metadanych (zagrożenie, rola, typ dokumentu).
 // =============================================================================
 
-// --- Q1: Ktora procedura dotyczy podanego zagrozenia -------------------------
+// --- Q1: Ktora procedura dotyczy podanego zagrożenia -------------------------
 let hazard = "Z13";
 dim_procedure
 | where hazard_codes has hazard
@@ -12,7 +12,7 @@ dim_procedure
 | order by procedure_code asc
 
 // --- Q2: Wyszukiwanie fragmentow korpusu po slowach kluczowych ---------------
-let terms = dynamic(["skazenie", "poszkodowanych", "szpital"]);
+let terms = dynamic(["skażenie", "poszkodowanych", "szpital"]);
 corpus_chunk
 | extend hits = array_length(set_intersect(
       terms, extract_all(@"[a-zA-Zа-я0-9]+", tolower(text))))
@@ -47,7 +47,7 @@ step_execution
             mediana_min = round(percentile(elapsed_minutes, 50), 1),
             blokady = countif(status == "zablokowany")
 
-// --- Q6: Krok, ktory w tej procedurze najczesciej sie sypie -----------------
+// --- Q6: Krok, ktory w tej procedurze najczesciej się sypie -----------------
 let proc = "SPO-15";
 step_execution
 | where procedure_code == proc
@@ -63,7 +63,7 @@ decision_log
 | project decided_at, step_no, decision_type, decided_by_name, subject, rationale, classification
 | order by decided_at asc
 
-// --- Q8: Procedury powiazane z procedura wskazana ---------------------------
+// --- Q8: Procedury powiązane z procedura wskazana ---------------------------
 let proc = "SPO-15";
 let hz = toscalar(dim_procedure | where procedure_code == proc | project hazard_codes);
 dim_procedure

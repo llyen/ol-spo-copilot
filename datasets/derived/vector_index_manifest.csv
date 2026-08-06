@@ -1,514 +1,514 @@
 chunk_id,document_id,doc_type,procedure_code,section,chunk_title,char_count
 C00001,DOC-SPO-1,spo,SPO-1,1. Cel procedury,SPO-1 - cel procedury,578
 C00002,DOC-SPO-1,spo,SPO-1,2. Podstawa prawna,SPO-1 - podstawa prawna,314
-C00003,DOC-SPO-1,spo,SPO-1,3. Przeslanki uruchomienia,SPO-1 - kiedy uruchomic,485
-C00004,DOC-SPO-1,spo,SPO-1,4. Uczestnicy i odpowiedzialnosci,SPO-1 - kto odpowiada,488
-C00005,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 1: Przyjecie i rejestracja wniosku o zwolanie posiedzenia RZZK,443
-C00006,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 2: Weryfikacja przeslanek ustawowych i zakresu przedmiotowego posiedzenia,479
+C00003,DOC-SPO-1,spo,SPO-1,3. Przesłanki uruchomienia,SPO-1 - kiedy uruchomić,485
+C00004,DOC-SPO-1,spo,SPO-1,4. Uczestnicy i odpowiedzialności,SPO-1 - kto odpowiada,488
+C00005,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 1: Przyjęcie i rejestracja wniosku o zwołanie posiedzenia RZZK,443
+C00006,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 2: Weryfikacja przesłanek ustawowych i zakresu przedmiotowego posiedzenia,479
 C00007,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,"SPO-1 krok 3: Uzgodnienie terminu i trybu posiedzenia: stacjonarny, zdalny lub obiegowy",456
-C00008,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 4: Powiadomienie czlonkow RZZK oraz uczestnikow zaproszonych,429
-C00009,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 5: Przygotowanie raportu sytuacyjnego i projektu porzadku obrad,439
-C00010,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 6: Uzgodnienie projektow rekomendacji z ministrem wiodacym,430
-C00011,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 7: Zapewnienie warunkow organizacyjno-technicznych i lacznosci niejawnej,478
-C00012,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 8: Obsluga posiedzenia i protokolowanie przebiegu,421
-C00013,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 9: Sporzadzenie i dystrybucja ustalen oraz wykazu zadan,433
-C00014,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 10: Monitorowanie realizacji zadan i raport zwrotny do Przewodniczacego,451
+C00008,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 4: Powiadomienie członków RZZK oraz uczestników zaproszonych,429
+C00009,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 5: Przygotowanie raportu sytuacyjnego i projektu porządku obrad,439
+C00010,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 6: Uzgodnienie projektów rekomendacji z ministrem wiodącym,430
+C00011,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 7: Zapewnienie warunków organizacyjno-technicznych i łączności niejawnej,478
+C00012,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 8: Obsługa posiedzenia i protokołowanie przebiegu,421
+C00013,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 9: Sporządzenie i dystrybucja ustaleń oraz wykazu zadań,433
+C00014,DOC-SPO-1,spo,SPO-1,5. Przebieg - kroki,SPO-1 krok 10: Monitorowanie realizacji zadań i raport zwrotny do Przewodniczącego,451
 C00015,DOC-SPO-1,spo,SPO-1,6. Dokumenty wytwarzane,SPO-1 - dokumenty,436
-C00016,DOC-SPO-1,spo,SPO-1,7. Wskazniki i czasy normatywne,SPO-1 - SLA i wskazniki,285
-C00017,DOC-SPO-1,spo,SPO-1,8. Powiazania,SPO-1 - powiazania z innymi procedurami,345
+C00016,DOC-SPO-1,spo,SPO-1,7. Wskaźniki i czasy normatywne,SPO-1 - SLA i wskaźniki,285
+C00017,DOC-SPO-1,spo,SPO-1,8. Powiązania,SPO-1 - powiązania z innymi procedurami,345
 C00018,DOC-SPO-2,spo,SPO-2,1. Cel procedury,SPO-2 - cel procedury,482
 C00019,DOC-SPO-2,spo,SPO-2,2. Podstawa prawna,SPO-2 - podstawa prawna,323
-C00020,DOC-SPO-2,spo,SPO-2,3. Przeslanki uruchomienia,SPO-2 - kiedy uruchomic,492
-C00021,DOC-SPO-2,spo,SPO-2,4. Uczestnicy i odpowiedzialnosci,SPO-2 - kto odpowiada,444
-C00022,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 1: Przyjecie wniosku wojewody lub ministra o uruchomienie srodkow,432
-C00023,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 2: Weryfikacja formalna wniosku i kompletnosci kosztorysu,428
-C00024,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 3: Ocena zasadnosci merytorycznej i zwiazku wydatku ze zdarzeniem,459
-C00025,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 4: Uzgodnienie zrodla finansowania i limitu z Ministrem Finansow,471
-C00026,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 5: Przygotowanie projektu decyzji o zmianie w budzecie panstwa,439
-C00027,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,"SPO-2 krok 6: Uzyskanie opinii RZZK, jesli wymagana zakresem zdarzenia",425
-C00028,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 7: Wydanie decyzji i przekazanie jej dysponentowi czesci budzetowej,448
+C00020,DOC-SPO-2,spo,SPO-2,3. Przesłanki uruchomienia,SPO-2 - kiedy uruchomić,492
+C00021,DOC-SPO-2,spo,SPO-2,4. Uczestnicy i odpowiedzialności,SPO-2 - kto odpowiada,444
+C00022,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 1: Przyjęcie wniosku wojewody lub ministra o uruchomienie środków,432
+C00023,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 2: Weryfikacja formalna wniosku i kompletności kosztorysu,428
+C00024,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 3: Ocena zasadności merytorycznej i związku wydatku ze zdarzeniem,459
+C00025,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 4: Uzgodnienie źródła finansowania i limitu z Ministrem Finansów,471
+C00026,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 5: Przygotowanie projektu decyzji o zmianie w budżecie państwa,439
+C00027,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,"SPO-2 krok 6: Uzyskanie opinii RZZK, jeśli wymagana zakresem zdarzenia",425
+C00028,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 7: Wydanie decyzji i przekazanie jej dysponentowi części budżetowej,448
 C00029,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 8: Uruchomienie transzy i powiadomienie beneficjenta,419
-C00030,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 9: Monitoring wydatkowania i sprawozdawczosc okresowa,421
-C00031,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 10: Rozliczenie koncowe i kontrola wykorzystania srodkow,426
+C00030,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 9: Monitoring wydatkowania i sprawozdawczość okresowa,421
+C00031,DOC-SPO-2,spo,SPO-2,5. Przebieg - kroki,SPO-2 krok 10: Rozliczenie końcowe i kontrola wykorzystania środków,426
 C00032,DOC-SPO-2,spo,SPO-2,6. Dokumenty wytwarzane,SPO-2 - dokumenty,448
-C00033,DOC-SPO-2,spo,SPO-2,7. Wskazniki i czasy normatywne,SPO-2 - SLA i wskazniki,278
-C00034,DOC-SPO-2,spo,SPO-2,8. Powiazania,SPO-2 - powiazania z innymi procedurami,274
+C00033,DOC-SPO-2,spo,SPO-2,7. Wskaźniki i czasy normatywne,SPO-2 - SLA i wskaźniki,278
+C00034,DOC-SPO-2,spo,SPO-2,8. Powiązania,SPO-2 - powiązania z innymi procedurami,274
 C00035,DOC-SPO-3,spo,SPO-3,1. Cel procedury,SPO-3 - cel procedury,621
 C00036,DOC-SPO-3,spo,SPO-3,2. Podstawa prawna,SPO-3 - podstawa prawna,326
-C00037,DOC-SPO-3,spo,SPO-3,3. Przeslanki uruchomienia,SPO-3 - kiedy uruchomic,499
-C00038,DOC-SPO-3,spo,SPO-3,4. Uczestnicy i odpowiedzialnosci,SPO-3 - kto odpowiada,491
-C00039,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 1: Ocena sytuacji informacyjnej i identyfikacja grup odbiorcow,434
-C00040,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 2: Wyznaczenie rzecznika wiodacego i wdrozenie zasady jednego glosu,445
+C00037,DOC-SPO-3,spo,SPO-3,3. Przesłanki uruchomienia,SPO-3 - kiedy uruchomić,499
+C00038,DOC-SPO-3,spo,SPO-3,4. Uczestnicy i odpowiedzialności,SPO-3 - kto odpowiada,491
+C00039,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 1: Ocena sytuacji informacyjnej i identyfikacja grup odbiorców,434
+C00040,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 2: Wyznaczenie rzecznika wiodącego i wdrożenie zasady jednego głosu,445
 C00041,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 3: Przygotowanie komunikatu bazowego oraz wersji uproszczonej,437
-C00042,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 4: Przygotowanie wersji obcojezycznych i dostepnych dla osob z niepelnosprawnosciami,466
-C00043,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,"SPO-3 krok 5: Dobor kanalow: Alert RCB, RSO, media, syreny, kanaly samorzadowe",433
-C00044,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 6: Zatwierdzenie tresci przez ministra wiodacego lub Dyrektora RCB,427
-C00045,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 7: Emisja komunikatu i potwierdzenie dystrybucji w kanalach,435
+C00042,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 4: Przygotowanie wersji obcojęzycznych i dostępnych dla osób z niepełnosprawnościami,466
+C00043,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,"SPO-3 krok 5: Dobór kanałów: Alert RCB, RSO, media, syreny, kanały samorządowe",433
+C00044,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 6: Zatwierdzenie treści przez ministra wiodącego lub Dyrektora RCB,427
+C00045,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 7: Emisja komunikatu i potwierdzenie dystrybucji w kanałach,435
 C00046,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 8: Monitoring odbioru komunikatu oraz narracji dezinformacyjnych,439
-C00047,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 9: Publikacja sprostowan i aktualizacji cyklicznych,419
-C00048,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 10: Briefing prasowy lub konferencja z udzialem ministra wiodacego,441
-C00049,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 11: Archiwizacja komunikatow i ocena skutecznosci dotarcia,432
+C00047,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 9: Publikacja sprostowań i aktualizacji cyklicznych,419
+C00048,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 10: Briefing prasowy lub konferencja z udziałem ministra wiodącego,441
+C00049,DOC-SPO-3,spo,SPO-3,5. Przebieg - kroki,SPO-3 krok 11: Archiwizacja komunikatów i ocena skuteczności dotarcia,432
 C00050,DOC-SPO-3,spo,SPO-3,6. Dokumenty wytwarzane,SPO-3 - dokumenty,474
-C00051,DOC-SPO-3,spo,SPO-3,7. Wskazniki i czasy normatywne,SPO-3 - SLA i wskazniki,281
-C00052,DOC-SPO-3,spo,SPO-3,8. Powiazania,SPO-3 - powiazania z innymi procedurami,297
+C00051,DOC-SPO-3,spo,SPO-3,7. Wskaźniki i czasy normatywne,SPO-3 - SLA i wskaźniki,281
+C00052,DOC-SPO-3,spo,SPO-3,8. Powiązania,SPO-3 - powiązania z innymi procedurami,297
 C00053,DOC-SPO-4,spo,SPO-4,1. Cel procedury,SPO-4 - cel procedury,567
 C00054,DOC-SPO-4,spo,SPO-4,2. Podstawa prawna,SPO-4 - podstawa prawna,314
-C00055,DOC-SPO-4,spo,SPO-4,3. Przeslanki uruchomienia,SPO-4 - kiedy uruchomic,540
-C00056,DOC-SPO-4,spo,SPO-4,4. Uczestnicy i odpowiedzialnosci,SPO-4 - kto odpowiada,635
-C00057,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 1: Analiza przeslanek zagrozenia porzadku publicznego i bezpieczenstwa,432
-C00058,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,"SPO-4 krok 2: Ocena skutkow dla ruchu granicznego, transportu i gospodarki",453
-C00059,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,"SPO-4 krok 3: Uzgodnienie zakresu, odcinkow i czasu kontroli z KG SG",437
-C00060,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 4: Notyfikacja Komisji Europejskiej i panstw czlonkowskich,431
-C00061,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 5: Opracowanie projektu rozporzadzenia MSWiA,441
-C00062,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 6: Uzgodnienia miedzyresortowe i opinia RCL,393
-C00063,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 7: Przyjecie i publikacja rozporzadzenia,399
-C00064,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 8: Rozwiniecie przejsc granicznych i sil Strazy Granicznej,434
-C00065,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 9: Komunikacja do podroznych i przewoznikow w trybie SPO-3,438
-C00066,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 10: Cykliczna ocena zasadnosci utrzymania lub przedluzenia kontroli,453
+C00055,DOC-SPO-4,spo,SPO-4,3. Przesłanki uruchomienia,SPO-4 - kiedy uruchomić,540
+C00056,DOC-SPO-4,spo,SPO-4,4. Uczestnicy i odpowiedzialności,SPO-4 - kto odpowiada,635
+C00057,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 1: Analiza przesłanek zagrożenia porządku publicznego i bezpieczeństwa,432
+C00058,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,"SPO-4 krok 2: Ocena skutków dla ruchu granicznego, transportu i gospodarki",453
+C00059,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,"SPO-4 krok 3: Uzgodnienie zakresu, odcinków i czasu kontroli z KG SG",437
+C00060,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 4: Notyfikacja Komisji Europejskiej i państw członkowskich,431
+C00061,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 5: Opracowanie projektu rozporządzenia MSWiA,441
+C00062,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 6: Uzgodnienia międzyresortowe i opinia RCL,393
+C00063,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 7: Przyjęcie i publikacja rozporządzenia,399
+C00064,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 8: Rozwinięcie przejść granicznych i sił Straży Granicznej,434
+C00065,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 9: Komunikacja do podróżnych i przewoźników w trybie SPO-3,438
+C00066,DOC-SPO-4,spo,SPO-4,5. Przebieg - kroki,SPO-4 krok 10: Cykliczna ocena zasadności utrzymania lub przedłużenia kontroli,453
 C00067,DOC-SPO-4,spo,SPO-4,6. Dokumenty wytwarzane,SPO-4 - dokumenty,428
-C00068,DOC-SPO-4,spo,SPO-4,7. Wskazniki i czasy normatywne,SPO-4 - SLA i wskazniki,278
-C00069,DOC-SPO-4,spo,SPO-4,8. Powiazania,SPO-4 - powiazania z innymi procedurami,336
+C00068,DOC-SPO-4,spo,SPO-4,7. Wskaźniki i czasy normatywne,SPO-4 - SLA i wskaźniki,278
+C00069,DOC-SPO-4,spo,SPO-4,8. Powiązania,SPO-4 - powiązania z innymi procedurami,336
 C00070,DOC-SPO-5,spo,SPO-5,1. Cel procedury,SPO-5 - cel procedury,611
 C00071,DOC-SPO-5,spo,SPO-5,2. Podstawa prawna,SPO-5 - podstawa prawna,337
-C00072,DOC-SPO-5,spo,SPO-5,3. Przeslanki uruchomienia,SPO-5 - kiedy uruchomic,518
-C00073,DOC-SPO-5,spo,SPO-5,4. Uczestnicy i odpowiedzialnosci,SPO-5 - kto odpowiada,558
-C00074,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 1: Przyjecie wniosku wojewody lub ministra o wprowadzenie stanu,466
-C00075,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,"SPO-5 krok 2: Ocena, czy sily i srodki na nizszych poziomach sa niewystarczajace",445
-C00076,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 3: Okreslenie obszaru obowiazywania i przewidywanego czasu trwania,463
-C00077,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 4: Opracowanie projektu rozporzadzenia Rady Ministrow,453
-C00078,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 5: Okreslenie katalogu ograniczen wolnosci i praw czlowieka,414
-C00079,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 6: Rozpatrzenie projektu przez Rade Ministrow,407
-C00080,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 7: Przekazanie rozporzadzenia Sejmowi RP,410
-C00081,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 8: Publikacja i ogloszenie stanu w mediach w trybie SPO-3,429
-C00082,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 9: Wyznaczenie pelnomocnika i trybu kierowania dzialaniami,457
+C00072,DOC-SPO-5,spo,SPO-5,3. Przesłanki uruchomienia,SPO-5 - kiedy uruchomić,518
+C00073,DOC-SPO-5,spo,SPO-5,4. Uczestnicy i odpowiedzialności,SPO-5 - kto odpowiada,558
+C00074,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 1: Przyjęcie wniosku wojewody lub ministra o wprowadzenie stanu,466
+C00075,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,"SPO-5 krok 2: Ocena, czy siły i środki na niższych poziomach są niewystarczające",445
+C00076,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 3: Określenie obszaru obowiązywania i przewidywanego czasu trwania,463
+C00077,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 4: Opracowanie projektu rozporządzenia Rady Ministrów,453
+C00078,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 5: Określenie katalogu ograniczeń wolności i praw człowieka,414
+C00079,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 6: Rozpatrzenie projektu przez Rade Ministrów,407
+C00080,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 7: Przekazanie rozporządzenia Sejmowi RP,410
+C00081,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 8: Publikacja i ogłoszenie stanu w mediach w trybie SPO-3,429
+C00082,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 9: Wyznaczenie pełnomocnika i trybu kierowania działaniami,457
 C00083,DOC-SPO-5,spo,SPO-5,5. Przebieg - kroki,SPO-5 krok 10: Raportowanie okresowe i wniosek o zniesienie stanu,410
 C00084,DOC-SPO-5,spo,SPO-5,6. Dokumenty wytwarzane,SPO-5 - dokumenty,469
-C00085,DOC-SPO-5,spo,SPO-5,7. Wskazniki i czasy normatywne,SPO-5 - SLA i wskazniki,278
-C00086,DOC-SPO-5,spo,SPO-5,8. Powiazania,SPO-5 - powiazania z innymi procedurami,309
+C00085,DOC-SPO-5,spo,SPO-5,7. Wskaźniki i czasy normatywne,SPO-5 - SLA i wskaźniki,278
+C00086,DOC-SPO-5,spo,SPO-5,8. Powiązania,SPO-5 - powiązania z innymi procedurami,309
 C00087,DOC-SPO-6,spo,SPO-6,1. Cel procedury,SPO-6 - cel procedury,501
 C00088,DOC-SPO-6,spo,SPO-6,2. Podstawa prawna,SPO-6 - podstawa prawna,323
-C00089,DOC-SPO-6,spo,SPO-6,3. Przeslanki uruchomienia,SPO-6 - kiedy uruchomic,456
-C00090,DOC-SPO-6,spo,SPO-6,4. Uczestnicy i odpowiedzialnosci,SPO-6 - kto odpowiada,493
-C00091,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 1: Analiza zagrozenia i przeslanek konstytucyjnych,412
-C00092,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 2: Przygotowanie wniosku Rady Ministrow do Prezydenta RP,441
-C00093,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,"SPO-6 krok 3: Okreslenie obszaru, czasu i zakresu ograniczen",444
-C00094,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 4: Opinia RCL i uzgodnienia miedzyresortowe,392
-C00095,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 5: Rozpatrzenie wniosku przez Rade Ministrow,399
-C00096,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 6: Wydanie rozporzadzenia przez Prezydenta RP,419
-C00097,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 7: Przedstawienie rozporzadzenia Sejmowi RP,402
-C00098,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 8: Komunikacja spoleczna i informowanie ludnosci w trybie SPO-3,426
-C00099,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 9: Monitoring stosowania ograniczen i raportowanie,439
+C00089,DOC-SPO-6,spo,SPO-6,3. Przesłanki uruchomienia,SPO-6 - kiedy uruchomić,456
+C00090,DOC-SPO-6,spo,SPO-6,4. Uczestnicy i odpowiedzialności,SPO-6 - kto odpowiada,493
+C00091,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 1: Analiza zagrożenia i przesłanek konstytucyjnych,412
+C00092,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 2: Przygotowanie wniosku Rady Ministrów do Prezydenta RP,441
+C00093,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,"SPO-6 krok 3: Określenie obszaru, czasu i zakresu ograniczeń",444
+C00094,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 4: Opinia RCL i uzgodnienia międzyresortowe,392
+C00095,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 5: Rozpatrzenie wniosku przez Rade Ministrów,399
+C00096,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 6: Wydanie rozporządzenia przez Prezydenta RP,419
+C00097,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 7: Przedstawienie rozporządzenia Sejmowi RP,402
+C00098,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 8: Komunikacja społeczna i informowanie ludności w trybie SPO-3,426
+C00099,DOC-SPO-6,spo,SPO-6,5. Przebieg - kroki,SPO-6 krok 9: Monitoring stosowania ograniczeń i raportowanie,439
 C00100,DOC-SPO-6,spo,SPO-6,6. Dokumenty wytwarzane,SPO-6 - dokumenty,388
-C00101,DOC-SPO-6,spo,SPO-6,7. Wskazniki i czasy normatywne,SPO-6 - SLA i wskazniki,278
-C00102,DOC-SPO-6,spo,SPO-6,8. Powiazania,SPO-6 - powiazania z innymi procedurami,319
+C00101,DOC-SPO-6,spo,SPO-6,7. Wskaźniki i czasy normatywne,SPO-6 - SLA i wskaźniki,278
+C00102,DOC-SPO-6,spo,SPO-6,8. Powiązania,SPO-6 - powiązania z innymi procedurami,319
 C00103,DOC-SPO-7,spo,SPO-7,1. Cel procedury,SPO-7 - cel procedury,452
 C00104,DOC-SPO-7,spo,SPO-7,2. Podstawa prawna,SPO-7 - podstawa prawna,322
-C00105,DOC-SPO-7,spo,SPO-7,3. Przeslanki uruchomienia,SPO-7 - kiedy uruchomic,414
-C00106,DOC-SPO-7,spo,SPO-7,4. Uczestnicy i odpowiedzialnosci,SPO-7 - kto odpowiada,467
-C00107,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 1: Ocena zagrozenia zewnetrznego i rekomendacja MON,439
-C00108,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 2: Przygotowanie wniosku Rady Ministrow do Prezydenta RP,438
-C00109,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 3: Okreslenie obszaru objetego stanem wojennym,440
+C00105,DOC-SPO-7,spo,SPO-7,3. Przesłanki uruchomienia,SPO-7 - kiedy uruchomić,414
+C00106,DOC-SPO-7,spo,SPO-7,4. Uczestnicy i odpowiedzialności,SPO-7 - kto odpowiada,467
+C00107,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 1: Ocena zagrożenia zewnętrznego i rekomendacja MON,439
+C00108,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 2: Przygotowanie wniosku Rady Ministrów do Prezydenta RP,438
+C00109,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 3: Określenie obszaru objętego stanem wojennym,440
 C00110,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,"SPO-7 krok 4: Uzgodnienia z MSWiA, MSZ i BBN",412
-C00111,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 5: Rozpatrzenie wniosku przez Rade Ministrow,399
-C00112,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 6: Wydanie rozporzadzenia przez Prezydenta RP,418
-C00113,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 7: Przedstawienie rozporzadzenia Sejmowi RP,402
-C00114,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 8: Uruchomienie systemu kierowania obrona panstwa,445
-C00115,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 9: Informowanie ludnosci i sojusznikow,401
+C00111,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 5: Rozpatrzenie wniosku przez Rade Ministrów,399
+C00112,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 6: Wydanie rozporządzenia przez Prezydenta RP,418
+C00113,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 7: Przedstawienie rozporządzenia Sejmowi RP,402
+C00114,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 8: Uruchomienie systemu kierowania obrona państwa,445
+C00115,DOC-SPO-7,spo,SPO-7,5. Przebieg - kroki,SPO-7 krok 9: Informowanie ludności i sojuszników,401
 C00116,DOC-SPO-7,spo,SPO-7,6. Dokumenty wytwarzane,SPO-7 - dokumenty,406
-C00117,DOC-SPO-7,spo,SPO-7,7. Wskazniki i czasy normatywne,SPO-7 - SLA i wskazniki,278
-C00118,DOC-SPO-7,spo,SPO-7,8. Powiazania,SPO-7 - powiazania z innymi procedurami,310
+C00117,DOC-SPO-7,spo,SPO-7,7. Wskaźniki i czasy normatywne,SPO-7 - SLA i wskaźniki,278
+C00118,DOC-SPO-7,spo,SPO-7,8. Powiązania,SPO-7 - powiązania z innymi procedurami,310
 C00119,DOC-SPO-8,spo,SPO-8,1. Cel procedury,SPO-8 - cel procedury,474
 C00120,DOC-SPO-8,spo,SPO-8,2. Podstawa prawna,SPO-8 - podstawa prawna,310
-C00121,DOC-SPO-8,spo,SPO-8,3. Przeslanki uruchomienia,SPO-8 - kiedy uruchomic,431
-C00122,DOC-SPO-8,spo,SPO-8,4. Uczestnicy i odpowiedzialnosci,SPO-8 - kto odpowiada,452
-C00123,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 1: Weryfikacja informacji o uprowadzeniu i ustalenie tozsamosci,443
-C00124,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 2: Powiadomienie Zespolu do spraw Incydentow Krytycznych,432
-C00125,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 3: Powolanie sztabu kryzysowego MSZ i wyznaczenie koordynatora,447
-C00126,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 4: Nawiazanie wspolpracy z placowka dyplomatyczna i sluzbami panstwa pobytu,453
-C00127,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 5: Ocena wiarygodnosci zadan i analiza zagrozenia,413
-C00128,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 6: Ustalenie strategii postepowania i zasad kontaktu,433
+C00121,DOC-SPO-8,spo,SPO-8,3. Przesłanki uruchomienia,SPO-8 - kiedy uruchomić,431
+C00122,DOC-SPO-8,spo,SPO-8,4. Uczestnicy i odpowiedzialności,SPO-8 - kto odpowiada,452
+C00123,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 1: Weryfikacja informacji o uprowadzeniu i ustalenie tożsamości,443
+C00124,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 2: Powiadomienie Zespołu do spraw Incydentów Krytycznych,432
+C00125,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 3: Powołanie sztabu kryzysowego MSZ i wyznaczenie koordynatora,447
+C00126,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 4: Nawiązanie współpracy z placówka dyplomatyczna i służbami państwa pobytu,453
+C00127,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 5: Ocena wiarygodności zadań i analiza zagrożenia,413
+C00128,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 6: Ustalenie strategii postępowania i zasad kontaktu,433
 C00129,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 7: Opieka nad rodzina i zapewnienie wsparcia psychologicznego,443
-C00130,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 8: Zarzadzanie informacja publiczna i ochrona danych osoby uprowadzonej,443
+C00130,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 8: Zarządzanie informacja publiczna i ochrona danych osoby uprowadzonej,443
 C00131,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,SPO-8 krok 9: Przygotowanie i realizacja operacji uwolnienia lub przekazania,450
-C00132,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,"SPO-8 krok 10: Powrot, pomoc medyczna i psychologiczna oraz raport koncowy",435
+C00132,DOC-SPO-8,spo,SPO-8,5. Przebieg - kroki,"SPO-8 krok 10: Powrót, pomoc medyczna i psychologiczna oraz raport końcowy",435
 C00133,DOC-SPO-8,spo,SPO-8,6. Dokumenty wytwarzane,SPO-8 - dokumenty,447
-C00134,DOC-SPO-8,spo,SPO-8,7. Wskazniki i czasy normatywne,SPO-8 - SLA i wskazniki,281
-C00135,DOC-SPO-8,spo,SPO-8,8. Powiazania,SPO-8 - powiazania z innymi procedurami,281
+C00134,DOC-SPO-8,spo,SPO-8,7. Wskaźniki i czasy normatywne,SPO-8 - SLA i wskaźniki,281
+C00135,DOC-SPO-8,spo,SPO-8,8. Powiązania,SPO-8 - powiązania z innymi procedurami,281
 C00136,DOC-SPO-9,spo,SPO-9,1. Cel procedury,SPO-9 - cel procedury,526
 C00137,DOC-SPO-9,spo,SPO-9,2. Podstawa prawna,SPO-9 - podstawa prawna,324
-C00138,DOC-SPO-9,spo,SPO-9,3. Przeslanki uruchomienia,SPO-9 - kiedy uruchomic,453
-C00139,DOC-SPO-9,spo,SPO-9,4. Uczestnicy i odpowiedzialnosci,SPO-9 - kto odpowiada,573
-C00140,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 1: Monitoring i prognoza liczby osob przekraczajacych granice,432
-C00141,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 2: Uruchomienie punktow recepcyjnych i rejestracji,418
-C00142,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,"SPO-9 krok 3: Zapewnienie zakwaterowania, wyzywienia i opieki medycznej",432
-C00143,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 4: Wsparcie tlumaczy i informacji w jezykach obcych,452
-C00144,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 5: Weryfikacja tozsamosci i kontrola bezpieczenstwa,417
-C00145,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 6: Koordynacja z organizacjami pozarzadowymi i samorzadami,427
-C00146,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 7: Uruchomienie srodkow finansowych w trybie SPO-2,420
-C00147,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 8: Ochrona osob maloletnich bez opieki i osob wrazliwych,454
-C00148,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 9: Komunikacja spoleczna i przeciwdzialanie dezinformacji,422
-C00149,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 10: Raportowanie dobowe i ocena wydolnosci systemu,438
+C00138,DOC-SPO-9,spo,SPO-9,3. Przesłanki uruchomienia,SPO-9 - kiedy uruchomić,453
+C00139,DOC-SPO-9,spo,SPO-9,4. Uczestnicy i odpowiedzialności,SPO-9 - kto odpowiada,573
+C00140,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 1: Monitoring i prognoza liczby osób przekraczających granicę,432
+C00141,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 2: Uruchomienie punktów recepcyjnych i rejestracji,418
+C00142,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,"SPO-9 krok 3: Zapewnienie zakwaterowania, wyżywienia i opieki medycznej",432
+C00143,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 4: Wsparcie tłumaczy i informacji w językach obcych,452
+C00144,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 5: Weryfikacja tożsamości i kontrola bezpieczeństwa,417
+C00145,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 6: Koordynacja z organizacjami pozarządowymi i samorządami,427
+C00146,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 7: Uruchomienie środków finansowych w trybie SPO-2,420
+C00147,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 8: Ochrona osób małoletnich bez opieki i osób wrażliwych,454
+C00148,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 9: Komunikacja społeczna i przeciwdziałanie dezinformacji,422
+C00149,DOC-SPO-9,spo,SPO-9,5. Przebieg - kroki,SPO-9 krok 10: Raportowanie dobowe i ocena wydolności systemu,438
 C00150,DOC-SPO-9,spo,SPO-9,6. Dokumenty wytwarzane,SPO-9 - dokumenty,460
-C00151,DOC-SPO-9,spo,SPO-9,7. Wskazniki i czasy normatywne,SPO-9 - SLA i wskazniki,278
-C00152,DOC-SPO-9,spo,SPO-9,8. Powiazania,SPO-9 - powiazania z innymi procedurami,315
+C00151,DOC-SPO-9,spo,SPO-9,7. Wskaźniki i czasy normatywne,SPO-9 - SLA i wskaźniki,278
+C00152,DOC-SPO-9,spo,SPO-9,8. Powiązania,SPO-9 - powiązania z innymi procedurami,315
 C00153,DOC-SPO-10,spo,SPO-10,1. Cel procedury,SPO-10 - cel procedury,784
 C00154,DOC-SPO-10,spo,SPO-10,2. Podstawa prawna,SPO-10 - podstawa prawna,343
-C00155,DOC-SPO-10,spo,SPO-10,3. Przeslanki uruchomienia,SPO-10 - kiedy uruchomic,485
-C00156,DOC-SPO-10,spo,SPO-10,4. Uczestnicy i odpowiedzialnosci,SPO-10 - kto odpowiada,614
-C00157,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 1: Przyjecie zgloszenia o zagrozeniu obiektu IK i jego rejestracja,443
-C00158,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 2: Identyfikacja systemu IK i wlasciwego ministra odpowiedzialnego,442
-C00159,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 3: Nawiazanie kontaktu z operatorem i wyznaczenie punktu styku,446
-C00160,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 4: Ocena skutkow wtornych i zaleznosci miedzysystemowych,436
-C00161,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 5: Ustalenie priorytetow zasilania i przywracania funkcji,420
-C00162,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 6: Uzgodnienie wsparcia sil i srodkow administracji dla operatora,429
-C00163,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,"SPO-10 krok 7: Wprowadzenie ograniczen lub reglamentacji, jesli konieczne",433
-C00164,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 8: Monitorowanie odtwarzania funkcji i raportowanie postepu,436
-C00165,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 9: Informowanie odbiorcow uslug o przewidywanym czasie przywrocenia,448
+C00155,DOC-SPO-10,spo,SPO-10,3. Przesłanki uruchomienia,SPO-10 - kiedy uruchomić,485
+C00156,DOC-SPO-10,spo,SPO-10,4. Uczestnicy i odpowiedzialności,SPO-10 - kto odpowiada,614
+C00157,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 1: Przyjęcie zgłoszenia o zagrożeniu obiektu IK i jego rejestracja,443
+C00158,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 2: Identyfikacja systemu IK i właściwego ministra odpowiedzialnego,442
+C00159,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 3: Nawiązanie kontaktu z operatorem i wyznaczenie punktu styku,446
+C00160,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 4: Ocena skutków wtórnych i zależności międzysystemowych,436
+C00161,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 5: Ustalenie priorytetów zasilania i przywracania funkcji,420
+C00162,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 6: Uzgodnienie wsparcia sił i środków administracji dla operatora,429
+C00163,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,"SPO-10 krok 7: Wprowadzenie ograniczeń lub reglamentacji, jeśli konieczne",433
+C00164,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 8: Monitorowanie odtwarzania funkcji i raportowanie postępu,436
+C00165,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 9: Informowanie odbiorców usług o przewidywanym czasie przywrócenia,448
 C00166,DOC-SPO-10,spo,SPO-10,5. Przebieg - kroki,SPO-10 krok 10: Wnioski i aktualizacja planu ochrony IK po zdarzeniu,426
 C00167,DOC-SPO-10,spo,SPO-10,6. Dokumenty wytwarzane,SPO-10 - dokumenty,465
-C00168,DOC-SPO-10,spo,SPO-10,7. Wskazniki i czasy normatywne,SPO-10 - SLA i wskazniki,285
-C00169,DOC-SPO-10,spo,SPO-10,8. Powiazania,SPO-10 - powiazania z innymi procedurami,370
+C00168,DOC-SPO-10,spo,SPO-10,7. Wskaźniki i czasy normatywne,SPO-10 - SLA i wskaźniki,285
+C00169,DOC-SPO-10,spo,SPO-10,8. Powiązania,SPO-10 - powiązania z innymi procedurami,370
 C00170,DOC-SPO-11,spo,SPO-11,1. Cel procedury,SPO-11 - cel procedury,509
 C00171,DOC-SPO-11,spo,SPO-11,2. Podstawa prawna,SPO-11 - podstawa prawna,301
-C00172,DOC-SPO-11,spo,SPO-11,3. Przeslanki uruchomienia,SPO-11 - kiedy uruchomic,444
-C00173,DOC-SPO-11,spo,SPO-11,4. Uczestnicy i odpowiedzialnosci,SPO-11 - kto odpowiada,401
-C00174,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 1: Ocena zagrozenia w panstwie pobytu i decyzja o ewakuacji,436
+C00172,DOC-SPO-11,spo,SPO-11,3. Przesłanki uruchomienia,SPO-11 - kiedy uruchomić,444
+C00173,DOC-SPO-11,spo,SPO-11,4. Uczestnicy i odpowiedzialności,SPO-11 - kto odpowiada,401
+C00174,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 1: Ocena zagrożenia w państwie pobytu i decyzja o ewakuacji,436
 C00175,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 2: Ustalenie liczby i lokalizacji obywateli RP,430
-C00176,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 3: Uruchomienie infolinii i kanalow zgloszeniowych,430
-C00177,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 4: Wybor wariantu transportu i tras ewakuacji,434
-C00178,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 5: Uzgodnienia z panstwem pobytu i panstwami tranzytu,433
-C00179,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 6: Koordynacja z mechanizmem ochrony ludnosci UE i sojusznikami,441
-C00180,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 7: Organizacja punktow zbornych i eskorty,436
+C00176,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 3: Uruchomienie infolinii i kanałów zgłoszeniowych,430
+C00177,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 4: Wybór wariantu transportu i tras ewakuacji,434
+C00178,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 5: Uzgodnienia z państwem pobytu i państwami tranzytu,433
+C00179,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 6: Koordynacja z mechanizmem ochrony ludności UE i sojusznikami,441
+C00180,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 7: Organizacja punktów zbornych i eskorty,436
 C00181,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 8: Realizacja przerzutu i odprawa po przylocie,439
 C00182,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,"SPO-11 krok 9: Pomoc medyczna, socjalna i psychologiczna po powrocie",434
-C00183,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 10: Rozliczenie kosztow i raport koncowy,414
+C00183,DOC-SPO-11,spo,SPO-11,5. Przebieg - kroki,SPO-11 krok 10: Rozliczenie kosztów i raport końcowy,414
 C00184,DOC-SPO-11,spo,SPO-11,6. Dokumenty wytwarzane,SPO-11 - dokumenty,433
-C00185,DOC-SPO-11,spo,SPO-11,7. Wskazniki i czasy normatywne,SPO-11 - SLA i wskazniki,278
-C00186,DOC-SPO-11,spo,SPO-11,8. Powiazania,SPO-11 - powiazania z innymi procedurami,336
+C00185,DOC-SPO-11,spo,SPO-11,7. Wskaźniki i czasy normatywne,SPO-11 - SLA i wskaźniki,278
+C00186,DOC-SPO-11,spo,SPO-11,8. Powiązania,SPO-11 - powiązania z innymi procedurami,336
 C00187,DOC-SPO-12,spo,SPO-12,1. Cel procedury,SPO-12 - cel procedury,648
 C00188,DOC-SPO-12,spo,SPO-12,2. Podstawa prawna,SPO-12 - podstawa prawna,306
-C00189,DOC-SPO-12,spo,SPO-12,3. Przeslanki uruchomienia,SPO-12 - kiedy uruchomic,427
-C00190,DOC-SPO-12,spo,SPO-12,4. Uczestnicy i odpowiedzialnosci,SPO-12 - kto odpowiada,304
-C00191,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 1: Przyjecie meldunku z CZK i nadanie numeru ewidencyjnego,434
-C00192,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 2: Weryfikacja i uzupelnienie danych u zrodla,459
-C00193,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 3: Klasyfikacja zdarzenia wg katalogu zagrozen Z01-Z20,429
-C00194,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 4: Sporzadzenie raportu sytuacyjnego dla kierownictwa,427
-C00195,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 5: Dystrybucja raportu do adresatow zgodnie z lista rozdzielnika,433
+C00189,DOC-SPO-12,spo,SPO-12,3. Przesłanki uruchomienia,SPO-12 - kiedy uruchomić,427
+C00190,DOC-SPO-12,spo,SPO-12,4. Uczestnicy i odpowiedzialności,SPO-12 - kto odpowiada,304
+C00191,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 1: Przyjęcie meldunku z CZK i nadanie numeru ewidencyjnego,434
+C00192,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 2: Weryfikacja i uzupełnienie danych u źródła,459
+C00193,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 3: Klasyfikacja zdarzenia wg katalogu zagrożeń Z01-Z20,429
+C00194,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 4: Sporządzenie raportu sytuacyjnego dla kierownictwa,427
+C00195,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 5: Dystrybucja raportu do adresatów zgodnie z lista rozdzielnika,433
 C00196,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 6: Aktualizacja obrazu sytuacji i zasilenie COP,422
-C00197,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 7: Sporzadzenie raportu dobowego,402
-C00198,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 8: Archiwizacja i zapewnienie sladu audytowego,460
+C00197,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 7: Sporządzenie raportu dobowego,402
+C00198,DOC-SPO-12,spo,SPO-12,5. Przebieg - kroki,SPO-12 krok 8: Archiwizacja i zapewnienie śladu audytowego,460
 C00199,DOC-SPO-12,spo,SPO-12,6. Dokumenty wytwarzane,SPO-12 - dokumenty,344
-C00200,DOC-SPO-12,spo,SPO-12,7. Wskazniki i czasy normatywne,SPO-12 - SLA i wskazniki,284
-C00201,DOC-SPO-12,spo,SPO-12,8. Powiazania,SPO-12 - powiazania z innymi procedurami,337
+C00200,DOC-SPO-12,spo,SPO-12,7. Wskaźniki i czasy normatywne,SPO-12 - SLA i wskaźniki,284
+C00201,DOC-SPO-12,spo,SPO-12,8. Powiązania,SPO-12 - powiązania z innymi procedurami,337
 C00202,DOC-SPO-13,spo,SPO-13,1. Cel procedury,SPO-13 - cel procedury,509
 C00203,DOC-SPO-13,spo,SPO-13,2. Podstawa prawna,SPO-13 - podstawa prawna,323
-C00204,DOC-SPO-13,spo,SPO-13,3. Przeslanki uruchomienia,SPO-13 - kiedy uruchomic,475
-C00205,DOC-SPO-13,spo,SPO-13,4. Uczestnicy i odpowiedzialnosci,SPO-13 - kto odpowiada,392
-C00206,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 1: Przyjecie informacji o zagrozeniu z systemu obrony powietrznej,459
-C00207,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 2: Weryfikacja i ocena wiarygodnosci sygnalu,474
-C00208,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 3: Okreslenie obszaru zagrozonego i sposobu alarmowania,453
-C00209,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 4: Przekazanie sygnalu do wojewodzkich centrow zarzadzania kryzysowego,458
-C00210,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 5: Uruchomienie syren i systemow alarmowych na obszarze zagrozonym,436
-C00211,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 6: Emisja komunikatu do ludnosci w kanalach masowych,426
-C00212,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 7: Koordynacja z operatorami lotnisk i zarzadca przestrzeni powietrznej,467
-C00213,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 8: Odwolanie alarmu i komunikat o zakonczeniu zagrozenia,453
+C00204,DOC-SPO-13,spo,SPO-13,3. Przesłanki uruchomienia,SPO-13 - kiedy uruchomić,475
+C00205,DOC-SPO-13,spo,SPO-13,4. Uczestnicy i odpowiedzialności,SPO-13 - kto odpowiada,392
+C00206,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 1: Przyjęcie informacji o zagrożeniu z systemu obrony powietrznej,459
+C00207,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 2: Weryfikacja i ocena wiarygodności sygnału,474
+C00208,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 3: Określenie obszaru zagrożonego i sposobu alarmowania,453
+C00209,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 4: Przekazanie sygnału do wojewódzkich centrów zarządzania kryzysowego,458
+C00210,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 5: Uruchomienie syren i systemów alarmowych na obszarze zagrożonym,436
+C00211,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 6: Emisja komunikatu do ludności w kanałach masowych,426
+C00212,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 7: Koordynacja z operatorami lotnisk i zarządca przestrzeni powietrznej,467
+C00213,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 8: Odwołanie alarmu i komunikat o zakończeniu zagrożenia,453
 C00214,DOC-SPO-13,spo,SPO-13,5. Przebieg - kroki,SPO-13 krok 9: Analiza przebiegu alarmowania i wnioski,436
 C00215,DOC-SPO-13,spo,SPO-13,6. Dokumenty wytwarzane,SPO-13 - dokumenty,422
-C00216,DOC-SPO-13,spo,SPO-13,7. Wskazniki i czasy normatywne,SPO-13 - SLA i wskazniki,285
-C00217,DOC-SPO-13,spo,SPO-13,8. Powiazania,SPO-13 - powiazania z innymi procedurami,335
+C00216,DOC-SPO-13,spo,SPO-13,7. Wskaźniki i czasy normatywne,SPO-13 - SLA i wskaźniki,285
+C00217,DOC-SPO-13,spo,SPO-13,8. Powiązania,SPO-13 - powiązania z innymi procedurami,335
 C00218,DOC-SPO-14,spo,SPO-14,1. Cel procedury,SPO-14 - cel procedury,502
 C00219,DOC-SPO-14,spo,SPO-14,2. Podstawa prawna,SPO-14 - podstawa prawna,317
-C00220,DOC-SPO-14,spo,SPO-14,3. Przeslanki uruchomienia,SPO-14 - kiedy uruchomic,440
-C00221,DOC-SPO-14,spo,SPO-14,4. Uczestnicy i odpowiedzialnosci,SPO-14 - kto odpowiada,461
-C00222,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 1: Przyjecie i weryfikacja wniosku panstwa wysylajacego,444
-C00223,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 2: Uzgodnienia z MSZ i MSWiA w zakresie zgod i kontroli,434
-C00224,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 3: Przygotowanie projektu zgody wlasciwego organu,437
+C00220,DOC-SPO-14,spo,SPO-14,3. Przesłanki uruchomienia,SPO-14 - kiedy uruchomić,440
+C00221,DOC-SPO-14,spo,SPO-14,4. Uczestnicy i odpowiedzialności,SPO-14 - kto odpowiada,461
+C00222,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 1: Przyjęcie i weryfikacja wniosku państwa wysyłającego,444
+C00223,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 2: Uzgodnienia z MSZ i MSWiA w zakresie zgód i kontroli,434
+C00224,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 3: Przygotowanie projektu zgody właściwego organu,437
 C00225,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 4: Ustalenie tras przemieszczania i harmonogramu,442
-C00226,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 5: Zapewnienie wsparcia panstwa gospodarza w zakresie HNS,440
-C00227,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 6: Koordynacja z zarzadcami drog i kolei oraz Policja,419
-C00228,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 7: Odprawa graniczna i kontrola dokumentow,415
+C00226,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 5: Zapewnienie wsparcia państwa gospodarza w zakresie HNS,440
+C00227,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 6: Koordynacja z zarządcami dróg i kolei oraz Policja,419
+C00228,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 7: Odprawa graniczna i kontrola dokumentów,415
 C00229,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 8: Monitorowanie przemieszczania i raportowanie,440
-C00230,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 9: Rozliczenie pobytu i raport koncowy,425
+C00230,DOC-SPO-14,spo,SPO-14,5. Przebieg - kroki,SPO-14 krok 9: Rozliczenie pobytu i raport końcowy,425
 C00231,DOC-SPO-14,spo,SPO-14,6. Dokumenty wytwarzane,SPO-14 - dokumenty,402
-C00232,DOC-SPO-14,spo,SPO-14,7. Wskazniki i czasy normatywne,SPO-14 - SLA i wskazniki,278
-C00233,DOC-SPO-14,spo,SPO-14,8. Powiazania,SPO-14 - powiazania z innymi procedurami,311
+C00232,DOC-SPO-14,spo,SPO-14,7. Wskaźniki i czasy normatywne,SPO-14 - SLA i wskaźniki,278
+C00233,DOC-SPO-14,spo,SPO-14,8. Powiązania,SPO-14 - powiązania z innymi procedurami,311
 C00234,DOC-SPO-15,spo,SPO-15,1. Cel procedury,SPO-15 - cel procedury,604
 C00235,DOC-SPO-15,spo,SPO-15,2. Podstawa prawna,SPO-15 - podstawa prawna,327
-C00236,DOC-SPO-15,spo,SPO-15,3. Przeslanki uruchomienia,SPO-15 - kiedy uruchomic,473
-C00237,DOC-SPO-15,spo,SPO-15,4. Uczestnicy i odpowiedzialnosci,SPO-15 - kto odpowiada,399
-C00238,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 1: Przyjecie informacji o zdarzeniu masowym i ocena skali,441
-C00239,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 2: Ustalenie liczby poszkodowanych i wynikow segregacji medycznej,447
+C00236,DOC-SPO-15,spo,SPO-15,3. Przesłanki uruchomienia,SPO-15 - kiedy uruchomić,473
+C00237,DOC-SPO-15,spo,SPO-15,4. Uczestnicy i odpowiedzialności,SPO-15 - kto odpowiada,399
+C00238,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 1: Przyjęcie informacji o zdarzeniu masowym i ocena skali,441
+C00239,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 2: Ustalenie liczby poszkodowanych i wyników segregacji medycznej,447
 C00240,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 3: Identyfikacja szpitali docelowych i wolnych miejsc specjalistycznych,462
-C00241,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 4: Uruchomienie sil LPR i lotnictwa transportowego SZ RP,466
-C00242,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 5: Wyznaczenie lotnisk i ladowisk operacyjnych,432
-C00243,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 6: Koordynacja przestrzeni powietrznej i priorytetow lotow,449
-C00244,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 7: Organizacja transportu naziemnego na obu koncach mostu,429
+C00241,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 4: Uruchomienie sił LPR i lotnictwa transportowego SZ RP,466
+C00242,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 5: Wyznaczenie lotnisk i lądowisk operacyjnych,432
+C00243,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 6: Koordynacja przestrzeni powietrznej i priorytetów lotów,449
+C00244,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 7: Organizacja transportu naziemnego na obu końcach mostu,429
 C00245,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 8: Zabezpieczenie medyczne w trakcie transportu,438
-C00246,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 9: Ewidencja pacjentow i informacja dla rodzin,429
-C00247,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 10: Raport z realizacji i rozliczenie kosztow,422
+C00246,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 9: Ewidencja pacjentów i informacja dla rodzin,429
+C00247,DOC-SPO-15,spo,SPO-15,5. Przebieg - kroki,SPO-15 krok 10: Raport z realizacji i rozliczenie kosztów,422
 C00248,DOC-SPO-15,spo,SPO-15,6. Dokumenty wytwarzane,SPO-15 - dokumenty,470
-C00249,DOC-SPO-15,spo,SPO-15,7. Wskazniki i czasy normatywne,SPO-15 - SLA i wskazniki,281
-C00250,DOC-SPO-15,spo,SPO-15,8. Powiazania,SPO-15 - powiazania z innymi procedurami,350
+C00249,DOC-SPO-15,spo,SPO-15,7. Wskaźniki i czasy normatywne,SPO-15 - SLA i wskaźniki,281
+C00250,DOC-SPO-15,spo,SPO-15,8. Powiązania,SPO-15 - powiązania z innymi procedurami,350
 C00251,DOC-SPO-16,spo,SPO-16,1. Cel procedury,SPO-16 - cel procedury,545
 C00252,DOC-SPO-16,spo,SPO-16,2. Podstawa prawna,SPO-16 - podstawa prawna,341
-C00253,DOC-SPO-16,spo,SPO-16,3. Przeslanki uruchomienia,SPO-16 - kiedy uruchomic,544
-C00254,DOC-SPO-16,spo,SPO-16,4. Uczestnicy i odpowiedzialnosci,SPO-16 - kto odpowiada,521
-C00255,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 1: Przyjecie zgloszenia incydentu i wstepna kwalifikacja,434
-C00256,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,"SPO-16 krok 2: Ocena, czy incydent spelnia kryteria incydentu krytycznego",429
-C00257,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 3: Zwolanie Zespolu do spraw Incydentow Krytycznych,426
-C00258,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 4: Przygotowanie materialu sytuacyjnego o incydencie,432
-C00259,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 5: Uzgodnienie rekomendacji dotyczacych stopni alarmowych,435
-C00260,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 6: Koordynacja dzialan z operatorami uslug kluczowych,431
-C00261,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 7: Obsluga posiedzenia i protokolowanie ustalen,415
-C00262,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 8: Przekazanie rekomendacji do RZZK lub Prezesa Rady Ministrow,430
-C00263,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 9: Komunikacja publiczna uzgodniona ze sluzbami,414
+C00253,DOC-SPO-16,spo,SPO-16,3. Przesłanki uruchomienia,SPO-16 - kiedy uruchomić,544
+C00254,DOC-SPO-16,spo,SPO-16,4. Uczestnicy i odpowiedzialności,SPO-16 - kto odpowiada,521
+C00255,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 1: Przyjęcie zgłoszenia incydentu i wstępna kwalifikacja,434
+C00256,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,"SPO-16 krok 2: Ocena, czy incydent spełnia kryteria incydentu krytycznego",429
+C00257,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 3: Zwołanie Zespołu do spraw Incydentów Krytycznych,426
+C00258,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 4: Przygotowanie materiału sytuacyjnego o incydencie,432
+C00259,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 5: Uzgodnienie rekomendacji dotyczących stopni alarmowych,435
+C00260,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 6: Koordynacja działań z operatorami usług kluczowych,431
+C00261,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 7: Obsługa posiedzenia i protokołowanie ustaleń,415
+C00262,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 8: Przekazanie rekomendacji do RZZK lub Prezesa Rady Ministrów,430
+C00263,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 9: Komunikacja publiczna uzgodniona ze służbami,414
 C00264,DOC-SPO-16,spo,SPO-16,5. Przebieg - kroki,SPO-16 krok 10: Raport po incydencie i wnioski do procedur,428
 C00265,DOC-SPO-16,spo,SPO-16,6. Dokumenty wytwarzane,SPO-16 - dokumenty,449
-C00266,DOC-SPO-16,spo,SPO-16,7. Wskazniki i czasy normatywne,SPO-16 - SLA i wskazniki,285
-C00267,DOC-SPO-16,spo,SPO-16,8. Powiazania,SPO-16 - powiazania z innymi procedurami,328
-C00268,DOC-WZK-02,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK dolnoslaskie - charakterystyka,361
-C00269,DOC-WZK-02,plan_wojewodzki,,2. Zagrozenie Z02,WPZK dolnoslaskie - Powodz,480
-C00270,DOC-WZK-02,plan_wojewodzki,,2. Zagrozenie Z07,WPZK dolnoslaskie - Zaklocenie w systemie energetycznym,517
-C00271,DOC-WZK-02,plan_wojewodzki,,2. Zagrozenie Z19,WPZK dolnoslaskie - Silny mroz i intensywne opady sniegu,488
-C00272,DOC-WZK-02,plan_wojewodzki,,2. Zagrozenie Z08,WPZK dolnoslaskie - Silny wiatr,463
-C00273,DOC-WZK-02,plan_wojewodzki,,2. Zagrozenie Z01,WPZK dolnoslaskie - Epidemia,483
-C00274,DOC-WZK-02,plan_wojewodzki,,2. Zagrozenie Z12,WPZK dolnoslaskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,516
-C00275,DOC-WZK-02,plan_wojewodzki,,3. Zasady wspolpracy,WPZK dolnoslaskie - wspolpraca i lacznosc,260
-C00276,DOC-WZK-04,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK kujawsko-pomorskie - charakterystyka,369
-C00277,DOC-WZK-04,plan_wojewodzki,,2. Zagrozenie Z02,WPZK kujawsko-pomorskie - Powodz,486
-C00278,DOC-WZK-04,plan_wojewodzki,,2. Zagrozenie Z07,WPZK kujawsko-pomorskie - Zaklocenie w systemie energetycznym,523
-C00279,DOC-WZK-04,plan_wojewodzki,,2. Zagrozenie Z19,WPZK kujawsko-pomorskie - Silny mroz i intensywne opady sniegu,494
-C00280,DOC-WZK-04,plan_wojewodzki,,2. Zagrozenie Z08,WPZK kujawsko-pomorskie - Silny wiatr,469
-C00281,DOC-WZK-04,plan_wojewodzki,,2. Zagrozenie Z01,WPZK kujawsko-pomorskie - Epidemia,489
-C00282,DOC-WZK-04,plan_wojewodzki,,2. Zagrozenie Z12,WPZK kujawsko-pomorskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,522
-C00283,DOC-WZK-04,plan_wojewodzki,,3. Zasady wspolpracy,WPZK kujawsko-pomorskie - wspolpraca i lacznosc,266
-C00284,DOC-WZK-06,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK lubelskie - charakterystyka,357
-C00285,DOC-WZK-06,plan_wojewodzki,,2. Zagrozenie Z02,WPZK lubelskie - Powodz,477
-C00286,DOC-WZK-06,plan_wojewodzki,,2. Zagrozenie Z07,WPZK lubelskie - Zaklocenie w systemie energetycznym,514
-C00287,DOC-WZK-06,plan_wojewodzki,,2. Zagrozenie Z19,WPZK lubelskie - Silny mroz i intensywne opady sniegu,485
-C00288,DOC-WZK-06,plan_wojewodzki,,2. Zagrozenie Z08,WPZK lubelskie - Silny wiatr,460
-C00289,DOC-WZK-06,plan_wojewodzki,,2. Zagrozenie Z01,WPZK lubelskie - Epidemia,480
-C00290,DOC-WZK-06,plan_wojewodzki,,2. Zagrozenie Z12,WPZK lubelskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,513
-C00291,DOC-WZK-06,plan_wojewodzki,,3. Zasady wspolpracy,WPZK lubelskie - wspolpraca i lacznosc,257
-C00292,DOC-WZK-08,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK lubuskie - charakterystyka,369
-C00293,DOC-WZK-08,plan_wojewodzki,,2. Zagrozenie Z02,WPZK lubuskie - Powodz,476
-C00294,DOC-WZK-08,plan_wojewodzki,,2. Zagrozenie Z07,WPZK lubuskie - Zaklocenie w systemie energetycznym,513
-C00295,DOC-WZK-08,plan_wojewodzki,,2. Zagrozenie Z19,WPZK lubuskie - Silny mroz i intensywne opady sniegu,484
-C00296,DOC-WZK-08,plan_wojewodzki,,2. Zagrozenie Z08,WPZK lubuskie - Silny wiatr,459
-C00297,DOC-WZK-08,plan_wojewodzki,,2. Zagrozenie Z01,WPZK lubuskie - Epidemia,479
-C00298,DOC-WZK-08,plan_wojewodzki,,2. Zagrozenie Z12,WPZK lubuskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,512
-C00299,DOC-WZK-08,plan_wojewodzki,,3. Zasady wspolpracy,WPZK lubuskie - wspolpraca i lacznosc,256
-C00300,DOC-WZK-10,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK lodzkie - charakterystyka,353
-C00301,DOC-WZK-10,plan_wojewodzki,,2. Zagrozenie Z02,WPZK lodzkie - Powodz,475
-C00302,DOC-WZK-10,plan_wojewodzki,,2. Zagrozenie Z07,WPZK lodzkie - Zaklocenie w systemie energetycznym,512
-C00303,DOC-WZK-10,plan_wojewodzki,,2. Zagrozenie Z19,WPZK lodzkie - Silny mroz i intensywne opady sniegu,483
-C00304,DOC-WZK-10,plan_wojewodzki,,2. Zagrozenie Z08,WPZK lodzkie - Silny wiatr,458
-C00305,DOC-WZK-10,plan_wojewodzki,,2. Zagrozenie Z01,WPZK lodzkie - Epidemia,478
-C00306,DOC-WZK-10,plan_wojewodzki,,2. Zagrozenie Z12,WPZK lodzkie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,511
-C00307,DOC-WZK-10,plan_wojewodzki,,3. Zasady wspolpracy,WPZK lodzkie - wspolpraca i lacznosc,255
-C00308,DOC-WZK-12,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK malopolskie - charakterystyka,359
-C00309,DOC-WZK-12,plan_wojewodzki,,2. Zagrozenie Z02,WPZK malopolskie - Powodz,479
-C00310,DOC-WZK-12,plan_wojewodzki,,2. Zagrozenie Z07,WPZK malopolskie - Zaklocenie w systemie energetycznym,516
-C00311,DOC-WZK-12,plan_wojewodzki,,2. Zagrozenie Z19,WPZK malopolskie - Silny mroz i intensywne opady sniegu,487
-C00312,DOC-WZK-12,plan_wojewodzki,,2. Zagrozenie Z08,WPZK malopolskie - Silny wiatr,462
-C00313,DOC-WZK-12,plan_wojewodzki,,2. Zagrozenie Z01,WPZK malopolskie - Epidemia,482
-C00314,DOC-WZK-12,plan_wojewodzki,,2. Zagrozenie Z12,WPZK malopolskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,515
-C00315,DOC-WZK-12,plan_wojewodzki,,3. Zasady wspolpracy,WPZK malopolskie - wspolpraca i lacznosc,259
-C00316,DOC-WZK-14,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK mazowieckie - charakterystyka,361
-C00317,DOC-WZK-14,plan_wojewodzki,,2. Zagrozenie Z02,WPZK mazowieckie - Powodz,479
-C00318,DOC-WZK-14,plan_wojewodzki,,2. Zagrozenie Z07,WPZK mazowieckie - Zaklocenie w systemie energetycznym,516
-C00319,DOC-WZK-14,plan_wojewodzki,,2. Zagrozenie Z19,WPZK mazowieckie - Silny mroz i intensywne opady sniegu,487
-C00320,DOC-WZK-14,plan_wojewodzki,,2. Zagrozenie Z08,WPZK mazowieckie - Silny wiatr,462
-C00321,DOC-WZK-14,plan_wojewodzki,,2. Zagrozenie Z01,WPZK mazowieckie - Epidemia,482
-C00322,DOC-WZK-14,plan_wojewodzki,,2. Zagrozenie Z12,WPZK mazowieckie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,515
-C00323,DOC-WZK-14,plan_wojewodzki,,3. Zasady wspolpracy,WPZK mazowieckie - wspolpraca i lacznosc,259
-C00324,DOC-WZK-16,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK opolskie - charakterystyka,355
-C00325,DOC-WZK-16,plan_wojewodzki,,2. Zagrozenie Z02,WPZK opolskie - Powodz,476
-C00326,DOC-WZK-16,plan_wojewodzki,,2. Zagrozenie Z07,WPZK opolskie - Zaklocenie w systemie energetycznym,513
-C00327,DOC-WZK-16,plan_wojewodzki,,2. Zagrozenie Z19,WPZK opolskie - Silny mroz i intensywne opady sniegu,484
-C00328,DOC-WZK-16,plan_wojewodzki,,2. Zagrozenie Z08,WPZK opolskie - Silny wiatr,459
-C00329,DOC-WZK-16,plan_wojewodzki,,2. Zagrozenie Z01,WPZK opolskie - Epidemia,479
-C00330,DOC-WZK-16,plan_wojewodzki,,2. Zagrozenie Z12,WPZK opolskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,512
-C00331,DOC-WZK-16,plan_wojewodzki,,3. Zasady wspolpracy,WPZK opolskie - wspolpraca i lacznosc,256
-C00332,DOC-WZK-18,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK podkarpackie - charakterystyka,361
-C00333,DOC-WZK-18,plan_wojewodzki,,2. Zagrozenie Z02,WPZK podkarpackie - Powodz,480
-C00334,DOC-WZK-18,plan_wojewodzki,,2. Zagrozenie Z07,WPZK podkarpackie - Zaklocenie w systemie energetycznym,517
-C00335,DOC-WZK-18,plan_wojewodzki,,2. Zagrozenie Z19,WPZK podkarpackie - Silny mroz i intensywne opady sniegu,488
-C00336,DOC-WZK-18,plan_wojewodzki,,2. Zagrozenie Z08,WPZK podkarpackie - Silny wiatr,463
-C00337,DOC-WZK-18,plan_wojewodzki,,2. Zagrozenie Z01,WPZK podkarpackie - Epidemia,483
-C00338,DOC-WZK-18,plan_wojewodzki,,2. Zagrozenie Z12,WPZK podkarpackie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,516
-C00339,DOC-WZK-18,plan_wojewodzki,,3. Zasady wspolpracy,WPZK podkarpackie - wspolpraca i lacznosc,260
-C00340,DOC-WZK-20,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK podlaskie - charakterystyka,360
-C00341,DOC-WZK-20,plan_wojewodzki,,2. Zagrozenie Z02,WPZK podlaskie - Powodz,477
-C00342,DOC-WZK-20,plan_wojewodzki,,2. Zagrozenie Z07,WPZK podlaskie - Zaklocenie w systemie energetycznym,514
-C00343,DOC-WZK-20,plan_wojewodzki,,2. Zagrozenie Z19,WPZK podlaskie - Silny mroz i intensywne opady sniegu,485
-C00344,DOC-WZK-20,plan_wojewodzki,,2. Zagrozenie Z08,WPZK podlaskie - Silny wiatr,460
-C00345,DOC-WZK-20,plan_wojewodzki,,2. Zagrozenie Z01,WPZK podlaskie - Epidemia,480
-C00346,DOC-WZK-20,plan_wojewodzki,,2. Zagrozenie Z12,WPZK podlaskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,513
-C00347,DOC-WZK-20,plan_wojewodzki,,3. Zasady wspolpracy,WPZK podlaskie - wspolpraca i lacznosc,257
-C00348,DOC-WZK-22,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK pomorskie - charakterystyka,357
-C00349,DOC-WZK-22,plan_wojewodzki,,2. Zagrozenie Z02,WPZK pomorskie - Powodz,477
-C00350,DOC-WZK-22,plan_wojewodzki,,2. Zagrozenie Z07,WPZK pomorskie - Zaklocenie w systemie energetycznym,514
-C00351,DOC-WZK-22,plan_wojewodzki,,2. Zagrozenie Z19,WPZK pomorskie - Silny mroz i intensywne opady sniegu,485
-C00352,DOC-WZK-22,plan_wojewodzki,,2. Zagrozenie Z08,WPZK pomorskie - Silny wiatr,460
-C00353,DOC-WZK-22,plan_wojewodzki,,2. Zagrozenie Z01,WPZK pomorskie - Epidemia,480
-C00354,DOC-WZK-22,plan_wojewodzki,,2. Zagrozenie Z12,WPZK pomorskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,513
-C00355,DOC-WZK-22,plan_wojewodzki,,3. Zasady wspolpracy,WPZK pomorskie - wspolpraca i lacznosc,257
-C00356,DOC-WZK-24,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK slaskie - charakterystyka,357
-C00357,DOC-WZK-24,plan_wojewodzki,,2. Zagrozenie Z02,WPZK slaskie - Powodz,475
-C00358,DOC-WZK-24,plan_wojewodzki,,2. Zagrozenie Z07,WPZK slaskie - Zaklocenie w systemie energetycznym,512
-C00359,DOC-WZK-24,plan_wojewodzki,,2. Zagrozenie Z19,WPZK slaskie - Silny mroz i intensywne opady sniegu,483
-C00360,DOC-WZK-24,plan_wojewodzki,,2. Zagrozenie Z08,WPZK slaskie - Silny wiatr,458
-C00361,DOC-WZK-24,plan_wojewodzki,,2. Zagrozenie Z01,WPZK slaskie - Epidemia,478
-C00362,DOC-WZK-24,plan_wojewodzki,,2. Zagrozenie Z12,WPZK slaskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,511
-C00363,DOC-WZK-24,plan_wojewodzki,,3. Zasady wspolpracy,WPZK slaskie - wspolpraca i lacznosc,255
-C00364,DOC-WZK-26,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK swietokrzyskie - charakterystyka,362
-C00365,DOC-WZK-26,plan_wojewodzki,,2. Zagrozenie Z02,WPZK swietokrzyskie - Powodz,482
-C00366,DOC-WZK-26,plan_wojewodzki,,2. Zagrozenie Z07,WPZK swietokrzyskie - Zaklocenie w systemie energetycznym,519
-C00367,DOC-WZK-26,plan_wojewodzki,,2. Zagrozenie Z19,WPZK swietokrzyskie - Silny mroz i intensywne opady sniegu,490
-C00368,DOC-WZK-26,plan_wojewodzki,,2. Zagrozenie Z08,WPZK swietokrzyskie - Silny wiatr,465
-C00369,DOC-WZK-26,plan_wojewodzki,,2. Zagrozenie Z01,WPZK swietokrzyskie - Epidemia,485
-C00370,DOC-WZK-26,plan_wojewodzki,,2. Zagrozenie Z12,WPZK swietokrzyskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,518
-C00371,DOC-WZK-26,plan_wojewodzki,,3. Zasady wspolpracy,WPZK swietokrzyskie - wspolpraca i lacznosc,262
-C00372,DOC-WZK-28,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK warminsko-mazurskie - charakterystyka,368
-C00373,DOC-WZK-28,plan_wojewodzki,,2. Zagrozenie Z02,WPZK warminsko-mazurskie - Powodz,487
-C00374,DOC-WZK-28,plan_wojewodzki,,2. Zagrozenie Z07,WPZK warminsko-mazurskie - Zaklocenie w systemie energetycznym,524
-C00375,DOC-WZK-28,plan_wojewodzki,,2. Zagrozenie Z19,WPZK warminsko-mazurskie - Silny mroz i intensywne opady sniegu,495
-C00376,DOC-WZK-28,plan_wojewodzki,,2. Zagrozenie Z08,WPZK warminsko-mazurskie - Silny wiatr,470
-C00377,DOC-WZK-28,plan_wojewodzki,,2. Zagrozenie Z01,WPZK warminsko-mazurskie - Epidemia,490
-C00378,DOC-WZK-28,plan_wojewodzki,,2. Zagrozenie Z12,WPZK warminsko-mazurskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,523
-C00379,DOC-WZK-28,plan_wojewodzki,,3. Zasady wspolpracy,WPZK warminsko-mazurskie - wspolpraca i lacznosc,267
-C00380,DOC-WZK-30,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK wielkopolskie - charakterystyka,361
-C00381,DOC-WZK-30,plan_wojewodzki,,2. Zagrozenie Z02,WPZK wielkopolskie - Powodz,481
-C00382,DOC-WZK-30,plan_wojewodzki,,2. Zagrozenie Z07,WPZK wielkopolskie - Zaklocenie w systemie energetycznym,518
-C00383,DOC-WZK-30,plan_wojewodzki,,2. Zagrozenie Z19,WPZK wielkopolskie - Silny mroz i intensywne opady sniegu,489
-C00384,DOC-WZK-30,plan_wojewodzki,,2. Zagrozenie Z08,WPZK wielkopolskie - Silny wiatr,464
-C00385,DOC-WZK-30,plan_wojewodzki,,2. Zagrozenie Z01,WPZK wielkopolskie - Epidemia,484
-C00386,DOC-WZK-30,plan_wojewodzki,,2. Zagrozenie Z12,WPZK wielkopolskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,517
-C00387,DOC-WZK-30,plan_wojewodzki,,3. Zasady wspolpracy,WPZK wielkopolskie - wspolpraca i lacznosc,261
-C00388,DOC-WZK-32,plan_wojewodzki,,1. Charakterystyka wojewodztwa,WPZK zachodniopomorskie - charakterystyka,368
-C00389,DOC-WZK-32,plan_wojewodzki,,2. Zagrozenie Z02,WPZK zachodniopomorskie - Powodz,486
-C00390,DOC-WZK-32,plan_wojewodzki,,2. Zagrozenie Z07,WPZK zachodniopomorskie - Zaklocenie w systemie energetycznym,523
-C00391,DOC-WZK-32,plan_wojewodzki,,2. Zagrozenie Z19,WPZK zachodniopomorskie - Silny mroz i intensywne opady sniegu,494
-C00392,DOC-WZK-32,plan_wojewodzki,,2. Zagrozenie Z08,WPZK zachodniopomorskie - Silny wiatr,469
-C00393,DOC-WZK-32,plan_wojewodzki,,2. Zagrozenie Z01,WPZK zachodniopomorskie - Epidemia,489
-C00394,DOC-WZK-32,plan_wojewodzki,,2. Zagrozenie Z12,WPZK zachodniopomorskie - Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,522
-C00395,DOC-WZK-32,plan_wojewodzki,,3. Zasady wspolpracy,WPZK zachodniopomorskie - wspolpraca i lacznosc,266
-C00396,DOC-OL-02,plan_ol,,1. Ewakuacja ludnosci,Plan OL dolnoslaskie - Ewakuacja ludnosci,261
-C00397,DOC-OL-02,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL dolnoslaskie - Schronienie i pomoc socjalna,276
-C00398,DOC-OL-02,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL dolnoslaskie - Zaopatrzenie i rezerwy,181
-C00399,DOC-OL-02,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL dolnoslaskie - Ostrzeganie i alarmowanie,218
-C00400,DOC-OL-02,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL dolnoslaskie - Osoby wymagajace szczegolnego wsparcia,186
-C00401,DOC-OL-02,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL dolnoslaskie - Odbudowa i powrot do normalnosci,178
-C00402,DOC-OL-04,plan_ol,,1. Ewakuacja ludnosci,Plan OL kujawsko-pomorskie - Ewakuacja ludnosci,267
+C00266,DOC-SPO-16,spo,SPO-16,7. Wskaźniki i czasy normatywne,SPO-16 - SLA i wskaźniki,285
+C00267,DOC-SPO-16,spo,SPO-16,8. Powiązania,SPO-16 - powiązania z innymi procedurami,328
+C00268,DOC-WZK-02,plan_wojewodzki,,1. Charakterystyka województwa,WPZK dolnośląskie - charakterystyka,361
+C00269,DOC-WZK-02,plan_wojewodzki,,2. Zagrożenie Z02,WPZK dolnośląskie - Powódź,480
+C00270,DOC-WZK-02,plan_wojewodzki,,2. Zagrożenie Z07,WPZK dolnośląskie - Zakłócenie w systemie energetycznym,517
+C00271,DOC-WZK-02,plan_wojewodzki,,2. Zagrożenie Z19,WPZK dolnośląskie - Silny mróz i intensywne opady śniegu,488
+C00272,DOC-WZK-02,plan_wojewodzki,,2. Zagrożenie Z08,WPZK dolnośląskie - Silny wiatr,463
+C00273,DOC-WZK-02,plan_wojewodzki,,2. Zagrożenie Z01,WPZK dolnośląskie - Epidemia,483
+C00274,DOC-WZK-02,plan_wojewodzki,,2. Zagrożenie Z12,WPZK dolnośląskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,516
+C00275,DOC-WZK-02,plan_wojewodzki,,3. Zasady współpracy,WPZK dolnośląskie - współpraca i łączność,260
+C00276,DOC-WZK-04,plan_wojewodzki,,1. Charakterystyka województwa,WPZK kujawsko-pomorskie - charakterystyka,369
+C00277,DOC-WZK-04,plan_wojewodzki,,2. Zagrożenie Z02,WPZK kujawsko-pomorskie - Powódź,486
+C00278,DOC-WZK-04,plan_wojewodzki,,2. Zagrożenie Z07,WPZK kujawsko-pomorskie - Zakłócenie w systemie energetycznym,523
+C00279,DOC-WZK-04,plan_wojewodzki,,2. Zagrożenie Z19,WPZK kujawsko-pomorskie - Silny mróz i intensywne opady śniegu,494
+C00280,DOC-WZK-04,plan_wojewodzki,,2. Zagrożenie Z08,WPZK kujawsko-pomorskie - Silny wiatr,469
+C00281,DOC-WZK-04,plan_wojewodzki,,2. Zagrożenie Z01,WPZK kujawsko-pomorskie - Epidemia,489
+C00282,DOC-WZK-04,plan_wojewodzki,,2. Zagrożenie Z12,WPZK kujawsko-pomorskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,522
+C00283,DOC-WZK-04,plan_wojewodzki,,3. Zasady współpracy,WPZK kujawsko-pomorskie - współpraca i łączność,266
+C00284,DOC-WZK-06,plan_wojewodzki,,1. Charakterystyka województwa,WPZK lubelskie - charakterystyka,357
+C00285,DOC-WZK-06,plan_wojewodzki,,2. Zagrożenie Z02,WPZK lubelskie - Powódź,477
+C00286,DOC-WZK-06,plan_wojewodzki,,2. Zagrożenie Z07,WPZK lubelskie - Zakłócenie w systemie energetycznym,514
+C00287,DOC-WZK-06,plan_wojewodzki,,2. Zagrożenie Z19,WPZK lubelskie - Silny mróz i intensywne opady śniegu,485
+C00288,DOC-WZK-06,plan_wojewodzki,,2. Zagrożenie Z08,WPZK lubelskie - Silny wiatr,460
+C00289,DOC-WZK-06,plan_wojewodzki,,2. Zagrożenie Z01,WPZK lubelskie - Epidemia,480
+C00290,DOC-WZK-06,plan_wojewodzki,,2. Zagrożenie Z12,WPZK lubelskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,513
+C00291,DOC-WZK-06,plan_wojewodzki,,3. Zasady współpracy,WPZK lubelskie - współpraca i łączność,257
+C00292,DOC-WZK-08,plan_wojewodzki,,1. Charakterystyka województwa,WPZK lubuskie - charakterystyka,369
+C00293,DOC-WZK-08,plan_wojewodzki,,2. Zagrożenie Z02,WPZK lubuskie - Powódź,476
+C00294,DOC-WZK-08,plan_wojewodzki,,2. Zagrożenie Z07,WPZK lubuskie - Zakłócenie w systemie energetycznym,513
+C00295,DOC-WZK-08,plan_wojewodzki,,2. Zagrożenie Z19,WPZK lubuskie - Silny mróz i intensywne opady śniegu,484
+C00296,DOC-WZK-08,plan_wojewodzki,,2. Zagrożenie Z08,WPZK lubuskie - Silny wiatr,459
+C00297,DOC-WZK-08,plan_wojewodzki,,2. Zagrożenie Z01,WPZK lubuskie - Epidemia,479
+C00298,DOC-WZK-08,plan_wojewodzki,,2. Zagrożenie Z12,WPZK lubuskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,512
+C00299,DOC-WZK-08,plan_wojewodzki,,3. Zasady współpracy,WPZK lubuskie - współpraca i łączność,256
+C00300,DOC-WZK-10,plan_wojewodzki,,1. Charakterystyka województwa,WPZK łódzkie - charakterystyka,353
+C00301,DOC-WZK-10,plan_wojewodzki,,2. Zagrożenie Z02,WPZK łódzkie - Powódź,475
+C00302,DOC-WZK-10,plan_wojewodzki,,2. Zagrożenie Z07,WPZK łódzkie - Zakłócenie w systemie energetycznym,512
+C00303,DOC-WZK-10,plan_wojewodzki,,2. Zagrożenie Z19,WPZK łódzkie - Silny mróz i intensywne opady śniegu,483
+C00304,DOC-WZK-10,plan_wojewodzki,,2. Zagrożenie Z08,WPZK łódzkie - Silny wiatr,458
+C00305,DOC-WZK-10,plan_wojewodzki,,2. Zagrożenie Z01,WPZK łódzkie - Epidemia,478
+C00306,DOC-WZK-10,plan_wojewodzki,,2. Zagrożenie Z12,WPZK łódzkie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,511
+C00307,DOC-WZK-10,plan_wojewodzki,,3. Zasady współpracy,WPZK łódzkie - współpraca i łączność,255
+C00308,DOC-WZK-12,plan_wojewodzki,,1. Charakterystyka województwa,WPZK małopolskie - charakterystyka,359
+C00309,DOC-WZK-12,plan_wojewodzki,,2. Zagrożenie Z02,WPZK małopolskie - Powódź,479
+C00310,DOC-WZK-12,plan_wojewodzki,,2. Zagrożenie Z07,WPZK małopolskie - Zakłócenie w systemie energetycznym,516
+C00311,DOC-WZK-12,plan_wojewodzki,,2. Zagrożenie Z19,WPZK małopolskie - Silny mróz i intensywne opady śniegu,487
+C00312,DOC-WZK-12,plan_wojewodzki,,2. Zagrożenie Z08,WPZK małopolskie - Silny wiatr,462
+C00313,DOC-WZK-12,plan_wojewodzki,,2. Zagrożenie Z01,WPZK małopolskie - Epidemia,482
+C00314,DOC-WZK-12,plan_wojewodzki,,2. Zagrożenie Z12,WPZK małopolskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,515
+C00315,DOC-WZK-12,plan_wojewodzki,,3. Zasady współpracy,WPZK małopolskie - współpraca i łączność,259
+C00316,DOC-WZK-14,plan_wojewodzki,,1. Charakterystyka województwa,WPZK mazowieckie - charakterystyka,361
+C00317,DOC-WZK-14,plan_wojewodzki,,2. Zagrożenie Z02,WPZK mazowieckie - Powódź,479
+C00318,DOC-WZK-14,plan_wojewodzki,,2. Zagrożenie Z07,WPZK mazowieckie - Zakłócenie w systemie energetycznym,516
+C00319,DOC-WZK-14,plan_wojewodzki,,2. Zagrożenie Z19,WPZK mazowieckie - Silny mróz i intensywne opady śniegu,487
+C00320,DOC-WZK-14,plan_wojewodzki,,2. Zagrożenie Z08,WPZK mazowieckie - Silny wiatr,462
+C00321,DOC-WZK-14,plan_wojewodzki,,2. Zagrożenie Z01,WPZK mazowieckie - Epidemia,482
+C00322,DOC-WZK-14,plan_wojewodzki,,2. Zagrożenie Z12,WPZK mazowieckie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,515
+C00323,DOC-WZK-14,plan_wojewodzki,,3. Zasady współpracy,WPZK mazowieckie - współpraca i łączność,259
+C00324,DOC-WZK-16,plan_wojewodzki,,1. Charakterystyka województwa,WPZK opolskie - charakterystyka,355
+C00325,DOC-WZK-16,plan_wojewodzki,,2. Zagrożenie Z02,WPZK opolskie - Powódź,476
+C00326,DOC-WZK-16,plan_wojewodzki,,2. Zagrożenie Z07,WPZK opolskie - Zakłócenie w systemie energetycznym,513
+C00327,DOC-WZK-16,plan_wojewodzki,,2. Zagrożenie Z19,WPZK opolskie - Silny mróz i intensywne opady śniegu,484
+C00328,DOC-WZK-16,plan_wojewodzki,,2. Zagrożenie Z08,WPZK opolskie - Silny wiatr,459
+C00329,DOC-WZK-16,plan_wojewodzki,,2. Zagrożenie Z01,WPZK opolskie - Epidemia,479
+C00330,DOC-WZK-16,plan_wojewodzki,,2. Zagrożenie Z12,WPZK opolskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,512
+C00331,DOC-WZK-16,plan_wojewodzki,,3. Zasady współpracy,WPZK opolskie - współpraca i łączność,256
+C00332,DOC-WZK-18,plan_wojewodzki,,1. Charakterystyka województwa,WPZK podkarpackie - charakterystyka,361
+C00333,DOC-WZK-18,plan_wojewodzki,,2. Zagrożenie Z02,WPZK podkarpackie - Powódź,480
+C00334,DOC-WZK-18,plan_wojewodzki,,2. Zagrożenie Z07,WPZK podkarpackie - Zakłócenie w systemie energetycznym,517
+C00335,DOC-WZK-18,plan_wojewodzki,,2. Zagrożenie Z19,WPZK podkarpackie - Silny mróz i intensywne opady śniegu,488
+C00336,DOC-WZK-18,plan_wojewodzki,,2. Zagrożenie Z08,WPZK podkarpackie - Silny wiatr,463
+C00337,DOC-WZK-18,plan_wojewodzki,,2. Zagrożenie Z01,WPZK podkarpackie - Epidemia,483
+C00338,DOC-WZK-18,plan_wojewodzki,,2. Zagrożenie Z12,WPZK podkarpackie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,516
+C00339,DOC-WZK-18,plan_wojewodzki,,3. Zasady współpracy,WPZK podkarpackie - współpraca i łączność,260
+C00340,DOC-WZK-20,plan_wojewodzki,,1. Charakterystyka województwa,WPZK podlaskie - charakterystyka,360
+C00341,DOC-WZK-20,plan_wojewodzki,,2. Zagrożenie Z02,WPZK podlaskie - Powódź,477
+C00342,DOC-WZK-20,plan_wojewodzki,,2. Zagrożenie Z07,WPZK podlaskie - Zakłócenie w systemie energetycznym,514
+C00343,DOC-WZK-20,plan_wojewodzki,,2. Zagrożenie Z19,WPZK podlaskie - Silny mróz i intensywne opady śniegu,485
+C00344,DOC-WZK-20,plan_wojewodzki,,2. Zagrożenie Z08,WPZK podlaskie - Silny wiatr,460
+C00345,DOC-WZK-20,plan_wojewodzki,,2. Zagrożenie Z01,WPZK podlaskie - Epidemia,480
+C00346,DOC-WZK-20,plan_wojewodzki,,2. Zagrożenie Z12,WPZK podlaskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,513
+C00347,DOC-WZK-20,plan_wojewodzki,,3. Zasady współpracy,WPZK podlaskie - współpraca i łączność,257
+C00348,DOC-WZK-22,plan_wojewodzki,,1. Charakterystyka województwa,WPZK pomorskie - charakterystyka,357
+C00349,DOC-WZK-22,plan_wojewodzki,,2. Zagrożenie Z02,WPZK pomorskie - Powódź,477
+C00350,DOC-WZK-22,plan_wojewodzki,,2. Zagrożenie Z07,WPZK pomorskie - Zakłócenie w systemie energetycznym,514
+C00351,DOC-WZK-22,plan_wojewodzki,,2. Zagrożenie Z19,WPZK pomorskie - Silny mróz i intensywne opady śniegu,485
+C00352,DOC-WZK-22,plan_wojewodzki,,2. Zagrożenie Z08,WPZK pomorskie - Silny wiatr,460
+C00353,DOC-WZK-22,plan_wojewodzki,,2. Zagrożenie Z01,WPZK pomorskie - Epidemia,480
+C00354,DOC-WZK-22,plan_wojewodzki,,2. Zagrożenie Z12,WPZK pomorskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,513
+C00355,DOC-WZK-22,plan_wojewodzki,,3. Zasady współpracy,WPZK pomorskie - współpraca i łączność,257
+C00356,DOC-WZK-24,plan_wojewodzki,,1. Charakterystyka województwa,WPZK śląskie - charakterystyka,357
+C00357,DOC-WZK-24,plan_wojewodzki,,2. Zagrożenie Z02,WPZK śląskie - Powódź,475
+C00358,DOC-WZK-24,plan_wojewodzki,,2. Zagrożenie Z07,WPZK śląskie - Zakłócenie w systemie energetycznym,512
+C00359,DOC-WZK-24,plan_wojewodzki,,2. Zagrożenie Z19,WPZK śląskie - Silny mróz i intensywne opady śniegu,483
+C00360,DOC-WZK-24,plan_wojewodzki,,2. Zagrożenie Z08,WPZK śląskie - Silny wiatr,458
+C00361,DOC-WZK-24,plan_wojewodzki,,2. Zagrożenie Z01,WPZK śląskie - Epidemia,478
+C00362,DOC-WZK-24,plan_wojewodzki,,2. Zagrożenie Z12,WPZK śląskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,511
+C00363,DOC-WZK-24,plan_wojewodzki,,3. Zasady współpracy,WPZK śląskie - współpraca i łączność,255
+C00364,DOC-WZK-26,plan_wojewodzki,,1. Charakterystyka województwa,WPZK świętokrzyskie - charakterystyka,362
+C00365,DOC-WZK-26,plan_wojewodzki,,2. Zagrożenie Z02,WPZK świętokrzyskie - Powódź,482
+C00366,DOC-WZK-26,plan_wojewodzki,,2. Zagrożenie Z07,WPZK świętokrzyskie - Zakłócenie w systemie energetycznym,519
+C00367,DOC-WZK-26,plan_wojewodzki,,2. Zagrożenie Z19,WPZK świętokrzyskie - Silny mróz i intensywne opady śniegu,490
+C00368,DOC-WZK-26,plan_wojewodzki,,2. Zagrożenie Z08,WPZK świętokrzyskie - Silny wiatr,465
+C00369,DOC-WZK-26,plan_wojewodzki,,2. Zagrożenie Z01,WPZK świętokrzyskie - Epidemia,485
+C00370,DOC-WZK-26,plan_wojewodzki,,2. Zagrożenie Z12,WPZK świętokrzyskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,518
+C00371,DOC-WZK-26,plan_wojewodzki,,3. Zasady współpracy,WPZK świętokrzyskie - współpraca i łączność,262
+C00372,DOC-WZK-28,plan_wojewodzki,,1. Charakterystyka województwa,WPZK warmińsko-mazurskie - charakterystyka,368
+C00373,DOC-WZK-28,plan_wojewodzki,,2. Zagrożenie Z02,WPZK warmińsko-mazurskie - Powódź,487
+C00374,DOC-WZK-28,plan_wojewodzki,,2. Zagrożenie Z07,WPZK warmińsko-mazurskie - Zakłócenie w systemie energetycznym,524
+C00375,DOC-WZK-28,plan_wojewodzki,,2. Zagrożenie Z19,WPZK warmińsko-mazurskie - Silny mróz i intensywne opady śniegu,495
+C00376,DOC-WZK-28,plan_wojewodzki,,2. Zagrożenie Z08,WPZK warmińsko-mazurskie - Silny wiatr,470
+C00377,DOC-WZK-28,plan_wojewodzki,,2. Zagrożenie Z01,WPZK warmińsko-mazurskie - Epidemia,490
+C00378,DOC-WZK-28,plan_wojewodzki,,2. Zagrożenie Z12,WPZK warmińsko-mazurskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,523
+C00379,DOC-WZK-28,plan_wojewodzki,,3. Zasady współpracy,WPZK warmińsko-mazurskie - współpraca i łączność,267
+C00380,DOC-WZK-30,plan_wojewodzki,,1. Charakterystyka województwa,WPZK wielkopolskie - charakterystyka,361
+C00381,DOC-WZK-30,plan_wojewodzki,,2. Zagrożenie Z02,WPZK wielkopolskie - Powódź,481
+C00382,DOC-WZK-30,plan_wojewodzki,,2. Zagrożenie Z07,WPZK wielkopolskie - Zakłócenie w systemie energetycznym,518
+C00383,DOC-WZK-30,plan_wojewodzki,,2. Zagrożenie Z19,WPZK wielkopolskie - Silny mróz i intensywne opady śniegu,489
+C00384,DOC-WZK-30,plan_wojewodzki,,2. Zagrożenie Z08,WPZK wielkopolskie - Silny wiatr,464
+C00385,DOC-WZK-30,plan_wojewodzki,,2. Zagrożenie Z01,WPZK wielkopolskie - Epidemia,484
+C00386,DOC-WZK-30,plan_wojewodzki,,2. Zagrożenie Z12,WPZK wielkopolskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,517
+C00387,DOC-WZK-30,plan_wojewodzki,,3. Zasady współpracy,WPZK wielkopolskie - współpraca i łączność,261
+C00388,DOC-WZK-32,plan_wojewodzki,,1. Charakterystyka województwa,WPZK zachodniopomorskie - charakterystyka,368
+C00389,DOC-WZK-32,plan_wojewodzki,,2. Zagrożenie Z02,WPZK zachodniopomorskie - Powódź,486
+C00390,DOC-WZK-32,plan_wojewodzki,,2. Zagrożenie Z07,WPZK zachodniopomorskie - Zakłócenie w systemie energetycznym,523
+C00391,DOC-WZK-32,plan_wojewodzki,,2. Zagrożenie Z19,WPZK zachodniopomorskie - Silny mróz i intensywne opady śniegu,494
+C00392,DOC-WZK-32,plan_wojewodzki,,2. Zagrożenie Z08,WPZK zachodniopomorskie - Silny wiatr,469
+C00393,DOC-WZK-32,plan_wojewodzki,,2. Zagrożenie Z01,WPZK zachodniopomorskie - Epidemia,489
+C00394,DOC-WZK-32,plan_wojewodzki,,2. Zagrożenie Z12,WPZK zachodniopomorskie - Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,522
+C00395,DOC-WZK-32,plan_wojewodzki,,3. Zasady współpracy,WPZK zachodniopomorskie - współpraca i łączność,266
+C00396,DOC-OL-02,plan_ol,,1. Ewakuacja ludności,Plan OL dolnośląskie - Ewakuacja ludności,261
+C00397,DOC-OL-02,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL dolnośląskie - Schronienie i pomoc socjalna,276
+C00398,DOC-OL-02,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL dolnośląskie - Zaopatrzenie i rezerwy,181
+C00399,DOC-OL-02,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL dolnośląskie - Ostrzeganie i alarmowanie,218
+C00400,DOC-OL-02,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL dolnośląskie - Osoby wymagające szczególnego wsparcia,186
+C00401,DOC-OL-02,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL dolnośląskie - Odbudowa i powrót do normalności,178
+C00402,DOC-OL-04,plan_ol,,1. Ewakuacja ludności,Plan OL kujawsko-pomorskie - Ewakuacja ludności,267
 C00403,DOC-OL-04,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL kujawsko-pomorskie - Schronienie i pomoc socjalna,282
 C00404,DOC-OL-04,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL kujawsko-pomorskie - Zaopatrzenie i rezerwy,187
 C00405,DOC-OL-04,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL kujawsko-pomorskie - Ostrzeganie i alarmowanie,224
-C00406,DOC-OL-04,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL kujawsko-pomorskie - Osoby wymagajace szczegolnego wsparcia,192
-C00407,DOC-OL-04,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL kujawsko-pomorskie - Odbudowa i powrot do normalnosci,184
-C00408,DOC-OL-06,plan_ol,,1. Ewakuacja ludnosci,Plan OL lubelskie - Ewakuacja ludnosci,258
+C00406,DOC-OL-04,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL kujawsko-pomorskie - Osoby wymagające szczególnego wsparcia,192
+C00407,DOC-OL-04,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL kujawsko-pomorskie - Odbudowa i powrót do normalności,184
+C00408,DOC-OL-06,plan_ol,,1. Ewakuacja ludności,Plan OL lubelskie - Ewakuacja ludności,258
 C00409,DOC-OL-06,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL lubelskie - Schronienie i pomoc socjalna,273
 C00410,DOC-OL-06,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL lubelskie - Zaopatrzenie i rezerwy,178
 C00411,DOC-OL-06,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL lubelskie - Ostrzeganie i alarmowanie,215
-C00412,DOC-OL-06,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL lubelskie - Osoby wymagajace szczegolnego wsparcia,183
-C00413,DOC-OL-06,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL lubelskie - Odbudowa i powrot do normalnosci,175
-C00414,DOC-OL-08,plan_ol,,1. Ewakuacja ludnosci,Plan OL lubuskie - Ewakuacja ludnosci,257
+C00412,DOC-OL-06,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL lubelskie - Osoby wymagające szczególnego wsparcia,183
+C00413,DOC-OL-06,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL lubelskie - Odbudowa i powrót do normalności,175
+C00414,DOC-OL-08,plan_ol,,1. Ewakuacja ludności,Plan OL lubuskie - Ewakuacja ludności,257
 C00415,DOC-OL-08,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL lubuskie - Schronienie i pomoc socjalna,272
 C00416,DOC-OL-08,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL lubuskie - Zaopatrzenie i rezerwy,177
 C00417,DOC-OL-08,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL lubuskie - Ostrzeganie i alarmowanie,214
-C00418,DOC-OL-08,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL lubuskie - Osoby wymagajace szczegolnego wsparcia,182
-C00419,DOC-OL-08,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL lubuskie - Odbudowa i powrot do normalnosci,174
-C00420,DOC-OL-10,plan_ol,,1. Ewakuacja ludnosci,Plan OL lodzkie - Ewakuacja ludnosci,256
-C00421,DOC-OL-10,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL lodzkie - Schronienie i pomoc socjalna,271
-C00422,DOC-OL-10,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL lodzkie - Zaopatrzenie i rezerwy,176
-C00423,DOC-OL-10,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL lodzkie - Ostrzeganie i alarmowanie,213
-C00424,DOC-OL-10,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL lodzkie - Osoby wymagajace szczegolnego wsparcia,181
-C00425,DOC-OL-10,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL lodzkie - Odbudowa i powrot do normalnosci,173
-C00426,DOC-OL-12,plan_ol,,1. Ewakuacja ludnosci,Plan OL malopolskie - Ewakuacja ludnosci,260
-C00427,DOC-OL-12,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL malopolskie - Schronienie i pomoc socjalna,275
-C00428,DOC-OL-12,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL malopolskie - Zaopatrzenie i rezerwy,180
-C00429,DOC-OL-12,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL malopolskie - Ostrzeganie i alarmowanie,217
-C00430,DOC-OL-12,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL malopolskie - Osoby wymagajace szczegolnego wsparcia,185
-C00431,DOC-OL-12,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL malopolskie - Odbudowa i powrot do normalnosci,177
-C00432,DOC-OL-14,plan_ol,,1. Ewakuacja ludnosci,Plan OL mazowieckie - Ewakuacja ludnosci,260
+C00418,DOC-OL-08,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL lubuskie - Osoby wymagające szczególnego wsparcia,182
+C00419,DOC-OL-08,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL lubuskie - Odbudowa i powrót do normalności,174
+C00420,DOC-OL-10,plan_ol,,1. Ewakuacja ludności,Plan OL łódzkie - Ewakuacja ludności,256
+C00421,DOC-OL-10,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL łódzkie - Schronienie i pomoc socjalna,271
+C00422,DOC-OL-10,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL łódzkie - Zaopatrzenie i rezerwy,176
+C00423,DOC-OL-10,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL łódzkie - Ostrzeganie i alarmowanie,213
+C00424,DOC-OL-10,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL łódzkie - Osoby wymagające szczególnego wsparcia,181
+C00425,DOC-OL-10,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL łódzkie - Odbudowa i powrót do normalności,173
+C00426,DOC-OL-12,plan_ol,,1. Ewakuacja ludności,Plan OL małopolskie - Ewakuacja ludności,260
+C00427,DOC-OL-12,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL małopolskie - Schronienie i pomoc socjalna,275
+C00428,DOC-OL-12,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL małopolskie - Zaopatrzenie i rezerwy,180
+C00429,DOC-OL-12,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL małopolskie - Ostrzeganie i alarmowanie,217
+C00430,DOC-OL-12,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL małopolskie - Osoby wymagające szczególnego wsparcia,185
+C00431,DOC-OL-12,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL małopolskie - Odbudowa i powrót do normalności,177
+C00432,DOC-OL-14,plan_ol,,1. Ewakuacja ludności,Plan OL mazowieckie - Ewakuacja ludności,260
 C00433,DOC-OL-14,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL mazowieckie - Schronienie i pomoc socjalna,275
 C00434,DOC-OL-14,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL mazowieckie - Zaopatrzenie i rezerwy,180
 C00435,DOC-OL-14,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL mazowieckie - Ostrzeganie i alarmowanie,217
-C00436,DOC-OL-14,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL mazowieckie - Osoby wymagajace szczegolnego wsparcia,185
-C00437,DOC-OL-14,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL mazowieckie - Odbudowa i powrot do normalnosci,177
-C00438,DOC-OL-16,plan_ol,,1. Ewakuacja ludnosci,Plan OL opolskie - Ewakuacja ludnosci,257
+C00436,DOC-OL-14,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL mazowieckie - Osoby wymagające szczególnego wsparcia,185
+C00437,DOC-OL-14,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL mazowieckie - Odbudowa i powrót do normalności,177
+C00438,DOC-OL-16,plan_ol,,1. Ewakuacja ludności,Plan OL opolskie - Ewakuacja ludności,257
 C00439,DOC-OL-16,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL opolskie - Schronienie i pomoc socjalna,272
 C00440,DOC-OL-16,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL opolskie - Zaopatrzenie i rezerwy,177
 C00441,DOC-OL-16,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL opolskie - Ostrzeganie i alarmowanie,214
-C00442,DOC-OL-16,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL opolskie - Osoby wymagajace szczegolnego wsparcia,182
-C00443,DOC-OL-16,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL opolskie - Odbudowa i powrot do normalnosci,174
-C00444,DOC-OL-18,plan_ol,,1. Ewakuacja ludnosci,Plan OL podkarpackie - Ewakuacja ludnosci,261
+C00442,DOC-OL-16,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL opolskie - Osoby wymagające szczególnego wsparcia,182
+C00443,DOC-OL-16,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL opolskie - Odbudowa i powrót do normalności,174
+C00444,DOC-OL-18,plan_ol,,1. Ewakuacja ludności,Plan OL podkarpackie - Ewakuacja ludności,261
 C00445,DOC-OL-18,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL podkarpackie - Schronienie i pomoc socjalna,276
 C00446,DOC-OL-18,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL podkarpackie - Zaopatrzenie i rezerwy,181
 C00447,DOC-OL-18,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL podkarpackie - Ostrzeganie i alarmowanie,218
-C00448,DOC-OL-18,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL podkarpackie - Osoby wymagajace szczegolnego wsparcia,186
-C00449,DOC-OL-18,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL podkarpackie - Odbudowa i powrot do normalnosci,178
-C00450,DOC-OL-20,plan_ol,,1. Ewakuacja ludnosci,Plan OL podlaskie - Ewakuacja ludnosci,258
+C00448,DOC-OL-18,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL podkarpackie - Osoby wymagające szczególnego wsparcia,186
+C00449,DOC-OL-18,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL podkarpackie - Odbudowa i powrót do normalności,178
+C00450,DOC-OL-20,plan_ol,,1. Ewakuacja ludności,Plan OL podlaskie - Ewakuacja ludności,258
 C00451,DOC-OL-20,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL podlaskie - Schronienie i pomoc socjalna,273
 C00452,DOC-OL-20,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL podlaskie - Zaopatrzenie i rezerwy,178
 C00453,DOC-OL-20,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL podlaskie - Ostrzeganie i alarmowanie,215
-C00454,DOC-OL-20,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL podlaskie - Osoby wymagajace szczegolnego wsparcia,183
-C00455,DOC-OL-20,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL podlaskie - Odbudowa i powrot do normalnosci,175
-C00456,DOC-OL-22,plan_ol,,1. Ewakuacja ludnosci,Plan OL pomorskie - Ewakuacja ludnosci,258
+C00454,DOC-OL-20,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL podlaskie - Osoby wymagające szczególnego wsparcia,183
+C00455,DOC-OL-20,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL podlaskie - Odbudowa i powrót do normalności,175
+C00456,DOC-OL-22,plan_ol,,1. Ewakuacja ludności,Plan OL pomorskie - Ewakuacja ludności,258
 C00457,DOC-OL-22,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL pomorskie - Schronienie i pomoc socjalna,273
 C00458,DOC-OL-22,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL pomorskie - Zaopatrzenie i rezerwy,178
 C00459,DOC-OL-22,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL pomorskie - Ostrzeganie i alarmowanie,215
-C00460,DOC-OL-22,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL pomorskie - Osoby wymagajace szczegolnego wsparcia,183
-C00461,DOC-OL-22,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL pomorskie - Odbudowa i powrot do normalnosci,175
-C00462,DOC-OL-24,plan_ol,,1. Ewakuacja ludnosci,Plan OL slaskie - Ewakuacja ludnosci,256
-C00463,DOC-OL-24,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL slaskie - Schronienie i pomoc socjalna,271
-C00464,DOC-OL-24,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL slaskie - Zaopatrzenie i rezerwy,176
-C00465,DOC-OL-24,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL slaskie - Ostrzeganie i alarmowanie,213
-C00466,DOC-OL-24,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL slaskie - Osoby wymagajace szczegolnego wsparcia,181
-C00467,DOC-OL-24,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL slaskie - Odbudowa i powrot do normalnosci,173
-C00468,DOC-OL-26,plan_ol,,1. Ewakuacja ludnosci,Plan OL swietokrzyskie - Ewakuacja ludnosci,263
-C00469,DOC-OL-26,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL swietokrzyskie - Schronienie i pomoc socjalna,278
-C00470,DOC-OL-26,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL swietokrzyskie - Zaopatrzenie i rezerwy,183
-C00471,DOC-OL-26,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL swietokrzyskie - Ostrzeganie i alarmowanie,220
-C00472,DOC-OL-26,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL swietokrzyskie - Osoby wymagajace szczegolnego wsparcia,188
-C00473,DOC-OL-26,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL swietokrzyskie - Odbudowa i powrot do normalnosci,180
-C00474,DOC-OL-28,plan_ol,,1. Ewakuacja ludnosci,Plan OL warminsko-mazurskie - Ewakuacja ludnosci,268
-C00475,DOC-OL-28,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL warminsko-mazurskie - Schronienie i pomoc socjalna,283
-C00476,DOC-OL-28,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL warminsko-mazurskie - Zaopatrzenie i rezerwy,188
-C00477,DOC-OL-28,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL warminsko-mazurskie - Ostrzeganie i alarmowanie,225
-C00478,DOC-OL-28,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL warminsko-mazurskie - Osoby wymagajace szczegolnego wsparcia,193
-C00479,DOC-OL-28,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL warminsko-mazurskie - Odbudowa i powrot do normalnosci,185
-C00480,DOC-OL-30,plan_ol,,1. Ewakuacja ludnosci,Plan OL wielkopolskie - Ewakuacja ludnosci,262
+C00460,DOC-OL-22,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL pomorskie - Osoby wymagające szczególnego wsparcia,183
+C00461,DOC-OL-22,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL pomorskie - Odbudowa i powrót do normalności,175
+C00462,DOC-OL-24,plan_ol,,1. Ewakuacja ludności,Plan OL śląskie - Ewakuacja ludności,256
+C00463,DOC-OL-24,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL śląskie - Schronienie i pomoc socjalna,271
+C00464,DOC-OL-24,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL śląskie - Zaopatrzenie i rezerwy,176
+C00465,DOC-OL-24,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL śląskie - Ostrzeganie i alarmowanie,213
+C00466,DOC-OL-24,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL śląskie - Osoby wymagające szczególnego wsparcia,181
+C00467,DOC-OL-24,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL śląskie - Odbudowa i powrót do normalności,173
+C00468,DOC-OL-26,plan_ol,,1. Ewakuacja ludności,Plan OL świętokrzyskie - Ewakuacja ludności,263
+C00469,DOC-OL-26,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL świętokrzyskie - Schronienie i pomoc socjalna,278
+C00470,DOC-OL-26,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL świętokrzyskie - Zaopatrzenie i rezerwy,183
+C00471,DOC-OL-26,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL świętokrzyskie - Ostrzeganie i alarmowanie,220
+C00472,DOC-OL-26,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL świętokrzyskie - Osoby wymagające szczególnego wsparcia,188
+C00473,DOC-OL-26,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL świętokrzyskie - Odbudowa i powrót do normalności,180
+C00474,DOC-OL-28,plan_ol,,1. Ewakuacja ludności,Plan OL warmińsko-mazurskie - Ewakuacja ludności,268
+C00475,DOC-OL-28,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL warmińsko-mazurskie - Schronienie i pomoc socjalna,283
+C00476,DOC-OL-28,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL warmińsko-mazurskie - Zaopatrzenie i rezerwy,188
+C00477,DOC-OL-28,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL warmińsko-mazurskie - Ostrzeganie i alarmowanie,225
+C00478,DOC-OL-28,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL warmińsko-mazurskie - Osoby wymagające szczególnego wsparcia,193
+C00479,DOC-OL-28,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL warmińsko-mazurskie - Odbudowa i powrót do normalności,185
+C00480,DOC-OL-30,plan_ol,,1. Ewakuacja ludności,Plan OL wielkopolskie - Ewakuacja ludności,262
 C00481,DOC-OL-30,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL wielkopolskie - Schronienie i pomoc socjalna,277
 C00482,DOC-OL-30,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL wielkopolskie - Zaopatrzenie i rezerwy,182
 C00483,DOC-OL-30,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL wielkopolskie - Ostrzeganie i alarmowanie,219
-C00484,DOC-OL-30,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL wielkopolskie - Osoby wymagajace szczegolnego wsparcia,187
-C00485,DOC-OL-30,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL wielkopolskie - Odbudowa i powrot do normalnosci,179
-C00486,DOC-OL-32,plan_ol,,1. Ewakuacja ludnosci,Plan OL zachodniopomorskie - Ewakuacja ludnosci,267
+C00484,DOC-OL-30,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL wielkopolskie - Osoby wymagające szczególnego wsparcia,187
+C00485,DOC-OL-30,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL wielkopolskie - Odbudowa i powrót do normalności,179
+C00486,DOC-OL-32,plan_ol,,1. Ewakuacja ludności,Plan OL zachodniopomorskie - Ewakuacja ludności,267
 C00487,DOC-OL-32,plan_ol,,2. Schronienie i pomoc socjalna,Plan OL zachodniopomorskie - Schronienie i pomoc socjalna,282
 C00488,DOC-OL-32,plan_ol,,3. Zaopatrzenie i rezerwy,Plan OL zachodniopomorskie - Zaopatrzenie i rezerwy,187
 C00489,DOC-OL-32,plan_ol,,4. Ostrzeganie i alarmowanie,Plan OL zachodniopomorskie - Ostrzeganie i alarmowanie,224
-C00490,DOC-OL-32,plan_ol,,5. Osoby wymagajace szczegolnego wsparcia,Plan OL zachodniopomorskie - Osoby wymagajace szczegolnego wsparcia,192
-C00491,DOC-OL-32,plan_ol,,6. Odbudowa i powrot do normalnosci,Plan OL zachodniopomorskie - Odbudowa i powrot do normalnosci,184
-C00492,DOC-KPZK,kpzk,,Karta zagrozenia Z01,KPZK - Z01 Epidemia,341
-C00493,DOC-KPZK,kpzk,,Karta zagrozenia Z02,KPZK - Z02 Powodz,335
-C00494,DOC-KPZK,kpzk,,Karta zagrozenia Z03,KPZK - Z03 Zaklocenie funkcjonowania systemow i sieci teleinformatycznych,373
-C00495,DOC-KPZK,kpzk,,Karta zagrozenia Z04,KPZK - Z04 Dzialania hybrydowe,389
-C00496,DOC-KPZK,kpzk,,Karta zagrozenia Z05,KPZK - Z05 Susza i upal,359
-C00497,DOC-KPZK,kpzk,,Karta zagrozenia Z06,KPZK - Z06 Epizootia,356
-C00498,DOC-KPZK,kpzk,,Karta zagrozenia Z07,KPZK - Z07 Zaklocenie w systemie energetycznym,375
-C00499,DOC-KPZK,kpzk,,Karta zagrozenia Z08,KPZK - Z08 Silny wiatr,321
-C00500,DOC-KPZK,kpzk,,Karta zagrozenia Z09,KPZK - Z09 Zaklocenie w systemie paliwowym,328
-C00501,DOC-KPZK,kpzk,,Karta zagrozenia Z10,KPZK - Z10 Pozar wielkopowierzchniowy,331
-C00502,DOC-KPZK,kpzk,,Karta zagrozenia Z11,KPZK - Z11 Epifitoza,350
-C00503,DOC-KPZK,kpzk,,Karta zagrozenia Z12,KPZK - Z12 Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,368
-C00504,DOC-KPZK,kpzk,,Karta zagrozenia Z13,KPZK - Z13 Skazenie chemiczne na ladzie,330
-C00505,DOC-KPZK,kpzk,,Karta zagrozenia Z14,KPZK - Z14 Zaklocenie w systemie gazowym,327
-C00506,DOC-KPZK,kpzk,,Karta zagrozenia Z15,KPZK - Z15 Katastrofa morska,323
-C00507,DOC-KPZK,kpzk,,Karta zagrozenia Z16,KPZK - Z16 Zdarzenie o charakterze terrorystycznym,409
-C00508,DOC-KPZK,kpzk,,Karta zagrozenia Z17,KPZK - Z17 Skazenie promieniotworcze,341
-C00509,DOC-KPZK,kpzk,,Karta zagrozenia Z18,KPZK - Z18 Zbiorowe zaklocenie porzadku publicznego,354
-C00510,DOC-KPZK,kpzk,,Karta zagrozenia Z19,KPZK - Z19 Silny mroz i intensywne opady sniegu,337
-C00511,DOC-KPZK,kpzk,,Karta zagrozenia Z20,KPZK - Z20 Dezinformacja,332
-C00512,DOC-KPZK,kpzk,,Siatka bezpieczenstwa,KPZK - siatka bezpieczenstwa,321
+C00490,DOC-OL-32,plan_ol,,5. Osoby wymagające szczególnego wsparcia,Plan OL zachodniopomorskie - Osoby wymagające szczególnego wsparcia,192
+C00491,DOC-OL-32,plan_ol,,6. Odbudowa i powrót do normalności,Plan OL zachodniopomorskie - Odbudowa i powrót do normalności,184
+C00492,DOC-KPZK,kpzk,,Karta zagrożenia Z01,KPZK - Z01 Epidemia,341
+C00493,DOC-KPZK,kpzk,,Karta zagrożenia Z02,KPZK - Z02 Powódź,335
+C00494,DOC-KPZK,kpzk,,Karta zagrożenia Z03,KPZK - Z03 Zakłócenie funkcjonowania systemów i sieci teleinformatycznych,373
+C00495,DOC-KPZK,kpzk,,Karta zagrożenia Z04,KPZK - Z04 Działania hybrydowe,389
+C00496,DOC-KPZK,kpzk,,Karta zagrożenia Z05,KPZK - Z05 Susza i upał,359
+C00497,DOC-KPZK,kpzk,,Karta zagrożenia Z06,KPZK - Z06 Epizootia,356
+C00498,DOC-KPZK,kpzk,,Karta zagrożenia Z07,KPZK - Z07 Zakłócenie w systemie energetycznym,375
+C00499,DOC-KPZK,kpzk,,Karta zagrożenia Z08,KPZK - Z08 Silny wiatr,321
+C00500,DOC-KPZK,kpzk,,Karta zagrożenia Z09,KPZK - Z09 Zakłócenie w systemie paliwowym,328
+C00501,DOC-KPZK,kpzk,,Karta zagrożenia Z10,KPZK - Z10 Pożar wielkopowierzchniowy,331
+C00502,DOC-KPZK,kpzk,,Karta zagrożenia Z11,KPZK - Z11 Epifitoza,350
+C00503,DOC-KPZK,kpzk,,Karta zagrożenia Z12,KPZK - Z12 Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,368
+C00504,DOC-KPZK,kpzk,,Karta zagrożenia Z13,KPZK - Z13 Skażenie chemiczne na lądzie,330
+C00505,DOC-KPZK,kpzk,,Karta zagrożenia Z14,KPZK - Z14 Zakłócenie w systemie gazowym,327
+C00506,DOC-KPZK,kpzk,,Karta zagrożenia Z15,KPZK - Z15 Katastrofa morska,323
+C00507,DOC-KPZK,kpzk,,Karta zagrożenia Z16,KPZK - Z16 Zdarzenie o charakterze terrorystycznym,409
+C00508,DOC-KPZK,kpzk,,Karta zagrożenia Z17,KPZK - Z17 Skażenie promieniotwórcze,341
+C00509,DOC-KPZK,kpzk,,Karta zagrożenia Z18,KPZK - Z18 Zbiorowe zakłócenie porządku publicznego,354
+C00510,DOC-KPZK,kpzk,,Karta zagrożenia Z19,KPZK - Z19 Silny mróz i intensywne opady śniegu,337
+C00511,DOC-KPZK,kpzk,,Karta zagrożenia Z20,KPZK - Z20 Dezinformacja,332
+C00512,DOC-KPZK,kpzk,,Siatka bezpieczeństwa,KPZK - siatka bezpieczeństwa,321
 C00513,DOC-KPZK,kpzk,,Poziomy reagowania,KPZK - poziomy reagowania i eskalacja,358

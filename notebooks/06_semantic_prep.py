@@ -1,6 +1,6 @@
-"""Przygotowanie warstwy semantycznej w Lakehouse (notatnik uruchamiany wylacznie w Fabric).
+"""Przygotowanie warstwy semantycznej w Lakehouse (notatnik uruchamiany wyłącznie w Fabric).
 
-Model semantyczny dziala w trybie Direct Lake, ktory nie obsluguje kolumn wyliczanych DAX.
+Model semantyczny działa w trybie Direct Lake, ktory nie obsluguje kolumn wyliczanych DAX.
 Wszystkie kolumny opisane w semantic-model/MODEL.md jako "kolumny wyliczane" materializujemy
 tutaj w tabelach Delta. Dodatkowo budujemy wymiar czasu dim_date.
 """

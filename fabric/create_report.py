@@ -127,7 +127,7 @@ page("s1", "1 | Gotowosc proceduralna", [
            {"Rows": [c("dim_hazard", "hazard_name")],
             "Columns": [c("dim_procedure", "procedure_code")],
             "Values": [m(FA, "Uruchomienia procedur")]},
-           "Mapa cieplna: zagrozenie x procedura"),
+           "Mapa cieplna: zagrożenie x procedura"),
     visual("slicer", 960, 498, 304, 206, {"Values": [c("dim_date", "year_month")]}, "Miesiac"),
 ])
 
@@ -146,8 +146,8 @@ page("s2", "2 | Anatomia procedury", [
            "Czas / norma"),
     visual("clusteredColumnChart", 16, 176, 972, 250,
            {"Category": [c("dim_step", "step_no")],
-            "Y": [m(FS, "Wykonania krokow"), m(FS, "Kroki zablokowane")]},
-           "Sciezka krokow procedury"),
+            "Y": [m(FS, "Wykonania kroków"), m(FS, "Kroki zablokowane")]},
+           "Sciezka kroków procedury"),
     visual("tableEx", 16, 438, 640, 266,
            {"Values": [c("dim_step", "step_title"), c("dim_step", "role_name"),
                        c("dim_step", "sla_minutes"), m(FS, "Przekroczenia SLA %"),
@@ -161,7 +161,7 @@ page("s2", "2 | Anatomia procedury", [
 # --- 3. Waskie gardla i lessons learned --------------------------------------
 page("s3", "3 | Waskie gardla i lessons learned", [
     textbox(16, 12, 1248, 44, [("Waskie gardla i lessons learned", 20, FG, True),
-                               ("  co powtarza sie od lat", 11, "#9AA0A6", False)]),
+                               ("  co powtarza się od lat", 11, "#9AA0A6", False)]),
     visual("tableEx", 16, 64, 620, 300,
            {"Values": [c("dim_step", "step_title"), c("dim_procedure", "procedure_code"),
                        m(FS, "Przekroczenia SLA %"), m(FS, "Stosunek czasu do normy"),
@@ -171,7 +171,7 @@ page("s3", "3 | Waskie gardla i lessons learned", [
     visual("tableEx", 648, 64, 616, 300,
            {"Values": [c(FS, "blocker_reason"), m(FS, "Kroki zablokowane"),
                        m(FS, "Lata wystepowania blokady"), m(FS, "Blokada powtarzalna")]},
-           "Powtarzajace sie blokady",
+           "Powtarzajace się blokady",
            sort=sort_by(FS, "Kroki zablokowane", "Descending")),
     visual("columnChart", 16, 376, 620, 240,
            {"Category": [c("dim_date", "year")], "Y": [m(FS, "Kroki zablokowane")]},
@@ -186,9 +186,9 @@ page("s3", "3 | Waskie gardla i lessons learned", [
          "Usuniecie problemu dotyka SPO-10 i SPO-12.", 11, FG, False)]),
     textbox(16, 628, 1248, 76, [
         ("Rekomendacja", 12, GREEN, True),
-        ("Wyznaczyc wlasciciela rejestru operatorow IK i udostepnic go jako produkt danych; "
+        ("Wyznaczyc wlasciciela rejestru operatorów IK i udostepnic go jako produkt danych; "
          "koszt \u2014 jedna integracja, efekt \u2014 skrocenie mediany reakcji o kilkanascie minut "
-         "w kazdym uruchomieniu z udzialem IK.", 11, FG, False)]),
+         "w kazdym uruchomieniu z udziałem IK.", 11, FG, False)]),
 ])
 
 # --- 4. Dziennik decyzji ------------------------------------------------------
@@ -226,11 +226,11 @@ page("s5", "5 | Asystent w liczbach", [
     visual("areaChart", 488, 176, 460, 260,
            {"Category": [c("dim_date", "year_month")], "Y": [m(FQ, "Zapytania do asystenta")],
             "Series": [c(FQ, "channel")]},
-           "Wolumen wg kanalu"),
+           "Wolumen wg kanału"),
     visual("card", 960, 176, 304, 125, {"Values": [m("corpus_chunks", "Fragmenty korpusu")]},
            "Fragmenty korpusu"),
-    visual("card", 960, 311, 304, 125, {"Values": [m("dim_hazard", "Pokrycie zagrozen procedurami %")]},
-           "Pokrycie zagrozen"),
+    visual("card", 960, 311, 304, 125, {"Values": [m("dim_hazard", "Pokrycie zagrożeń procedurami %")]},
+           "Pokrycie zagrożeń"),
     visual("tableEx", 16, 448, 932, 256,
            {"Values": [c(FQ, "question"), c(FQ, "top_procedure"), c(FQ, "expected_procedure"),
                        c(FQ, "confidence"), c(FQ, "feedback")]},
@@ -246,21 +246,21 @@ page("s6", "6 | POWODZ WRZESIEN \u2014 przebieg", [
                                ("  scenariusz osiowy programu", 11, "#9AA0A6", False)]),
     visual("card", 16, 64, 300, 100, {"Values": [m(FA, "Uruchomienia POWODZ WRZESIEN")]},
            "Uruchomienia w scenariuszu"),
-    visual("card", 328, 64, 300, 100, {"Values": [m(FS, "Dotrzymanie SLA - powodz %")]},
-           "SLA \u2014 powodz"),
+    visual("card", 328, 64, 300, 100, {"Values": [m(FS, "Dotrzymanie SLA - powódź %")]},
+           "SLA \u2014 powódź"),
     visual("card", 640, 64, 300, 100, {"Values": [m(FS, "Dotrzymanie SLA %")]}, "SLA \u2014 historia"),
     visual("card", 952, 64, 312, 100,
-           {"Values": [m(FS, "Roznica SLA powodz vs historia (p.p.)")]}, "Roznica (p.p.)"),
+           {"Values": [m(FS, "Roznica SLA powódź vs historia (p.p.)")]}, "Roznica (p.p.)"),
     visual("columnChart", 16, 176, 620, 270,
-           {"Category": [c("dim_date", "date")], "Y": [m(FS, "Wykonania krokow")],
+           {"Category": [c("dim_date", "date")], "Y": [m(FS, "Wykonania kroków")],
             "Series": [c(FS, "procedure_code")]},
            "Przebieg dobowy \u2014 kroki wg procedury"),
     visual("map", 648, 176, 616, 270,
            {"Category": [c(FA, "voivodeship_name")], "Size": [m(FA, "Uruchomienia procedur")]},
-           "Uruchomienia wg wojewodztwa"),
+           "Uruchomienia wg województwa"),
     visual("tableEx", 16, 458, 1248, 246,
            {"Values": [c("dim_date", "date"), m(FA, "Uruchomienia procedur"),
-                       m(FS, "Wykonania krokow"), m(FS, "Kroki zablokowane"),
+                       m(FS, "Wykonania kroków"), m(FS, "Kroki zablokowane"),
                        m(FS, "Dotrzymanie SLA %")]},
            "Doby o najwiekszym obciazeniu",
            sort=sort_by(FA, "Uruchomienia procedur", "Descending")),

@@ -139,7 +139,7 @@
       by bin(event_time, 1d), procedure_code
 }
 
-// Statystyka blokad - podstawa wnioskow "lessons learned"
+// Statystyka blokad - podstawa wniosków "lessons learned"
 .create-or-alter materialized-view BlockerStats on table step_execution
 {
     step_execution
@@ -150,7 +150,7 @@
 }
 
 // Jakosc asystenta w ujeciu godzinowym.
-// Uwaga: na pojemnosci demo (F8) dostepne sa 3 sloty materializacji widokow, zajete przez
+// Uwaga: na pojemnosci demo (F8) dostepne są 3 sloty materializacji widokow, zajete przez
 // widoki nad step_execution. Telemetria asystenta jest wolumenowo najmniejsza, wiec zostaje
 // wystawiona jako funkcja - wynik identyczny, bez kosztu materializacji.
 // Na pojemnosci produkcyjnej wystarczy zamienic naglowek na:

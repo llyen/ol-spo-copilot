@@ -30,7 +30,7 @@ def parse_time(value: str | None):
 
 
 def shift_event(event: dict, offset: timedelta, speed: float, anchor: datetime) -> None:
-    """Przesuwa znaczniki czasu zdarzenia na biezacy czas, sciskajac os o `speed`.
+    """Przesuwa znaczniki czasu zdarzenia na bieżący czas, sciskajac os o `speed`.
     Dzieki temu zdarzenie trafia do Eventhouse ze znacznikiem odpowiadajacym
     momentowi wyslania, a dashboard w oknie 'ostatnia godzina' zyje na oczach."""
     for field in TIME_FIELDS:
@@ -93,17 +93,17 @@ def main() -> None:
         description="Wysylka strumieni realizacji procedur SPO do Fabric Eventstream / Event Hub."
     )
     parser.add_argument("--stream", action="append", choices=STREAM_FILES.keys(),
-                        help="Nazwa strumienia, mozna podac wielokrotnie. Domyslnie: wszystkie.")
+                        help="Nazwa strumienia, można podac wielokrotnie. Domyslnie: wszystkie.")
     parser.add_argument("--speed", type=float, default=120.0, help="Mnoznik przyspieszenia symulacji.")
     parser.add_argument("--from", dest="from_time", help="Filtr czasu ISO od.")
     parser.add_argument("--to", dest="to_time", help="Filtr czasu ISO do.")
     parser.add_argument("--limit", type=int, help="Maksymalna liczba zdarzen do wyslania.")
-    parser.add_argument("--dry-run", action="store_true", help="Tryb offline, bez zaleznosci i poswiadczen.")
+    parser.add_argument("--dry-run", action="store_true", help="Tryb offline, bez zależności i poswiadczen.")
     parser.add_argument("--shift-to-now", action="store_true",
                         help="Przesuwa znaczniki czasu na biezaca chwile - wymagane, "
-                             "zeby dashboard pokazywal naplyw danych w oknie ostatnich godzin.")
+                             "zeby dashboard pokazywal napływ danych w oknie ostatnich godzin.")
     parser.add_argument("--compress-to", type=float, metavar="GODZINY",
-                        help="Dobiera --speed tak, zeby caly wybrany zakres zmiescil sie "
+                        help="Dobiera --speed tak, zeby caly wybrany zakres zmiescil się "
                              "w podanej liczbie godzin. Wlacza --shift-to-now.")
     args = parser.parse_args()
 

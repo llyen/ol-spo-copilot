@@ -43,12 +43,12 @@ step_execution
 | extend ttfc = datetime_diff('minute', completed_at, started_at)
 | summarize ["Czas do 1. kroku krytycznego (min)"] = percentile(ttfc, 50)
 """),
-    ("t05", "p1", "Postep realizacji krokow w czasie", "timechart", 0, 4, 12, 8, """
+    ("t05", "p1", "Postep realizacji kroków w czasie", "timechart", 0, 4, 12, 8, """
 step_execution
 | where event_time between (_startTime .. _endTime)
 | summarize wykonane = countif(status == "wykonany"),
             zablokowane = countif(status == "zablokowany"),
-            pominiete = countif(status == "pominiety")
+            pominiete = countif(status == "pominięty")
   by bin(event_time, 1d)
 """),
     ("t06", "p1", "Dotrzymanie SLA wg procedury", "bar", 12, 4, 12, 8, """
@@ -68,14 +68,14 @@ let ostatnie = toscalar(
     | project activation_id);
 ActivationProgress(ostatnie)
 """),
-    ("t13", "p1", "Uruchomienia wg wojewodztwa", "table", 12, 12, 12, 8, """
+    ("t13", "p1", "Uruchomienia wg województwa", "table", 12, 12, 12, 8, """
 activation
 | where event_time between (_startTime .. _endTime)
 | summarize uruchomienia = count(), sredni_sla = round(avg(sla_compliance_pct), 1)
   by voivodeship_name
 | order by uruchomienia desc
 """),
-    ("t07", "p2", "Kroki najczesciej przekraczajace norme", "table", 0, 0, 24, 9, """
+    ("t07", "p2", "Kroki najczesciej przekraczające norme", "table", 0, 0, 24, 9, """
 step_execution
 | where event_time between (_startTime .. _endTime)
 | summarize wykonania = count(),
@@ -88,7 +88,7 @@ step_execution
 | order by przekroczenia_pct desc
 | take 15
 """),
-    ("t08", "p2", "Powtarzajace sie blokady", "table", 0, 9, 12, 8, """
+    ("t08", "p2", "Powtarzajace się blokady", "table", 0, 9, 12, 8, """
 step_execution
 | where event_time between (_startTime .. _endTime)
 | where isnotempty(blocker_reason)
@@ -219,7 +219,7 @@ SCHEMA_BASE = f"https://dataexplorer.azure.com/static/d/schema/{SCHEMA_VERSION}/
 def validate(dashboard: dict) -> None:
     """Waliduje definicje wzgledem oficjalnego schematu ADX. Fabric przyjmuje
     niepoprawny plik bez bledu i dopiero UI nie otwiera dashboardu, wiec lepiej
-    zlapac to lokalnie. Pomijane, gdy brak jsonschema albo dostepu do sieci."""
+    zlapac to lokalnie. Pomijane, gdy brak jsonschema albo dostępu do sieci."""
     try:
         import re
         import urllib.request

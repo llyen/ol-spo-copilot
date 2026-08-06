@@ -1,21 +1,21 @@
 hazard_code,hazard_name,risk_matrix
-Z01,Epidemia,prawdopodobienstwo: mozliwe; skutki: katastrofalne
-Z02,Powodz,prawdopodobienstwo: prawdopodobne; skutki: duze
-Z03,Zaklocenie funkcjonowania systemow i sieci teleinformatycznych,prawdopodobienstwo: mozliwe; skutki: duze
-Z04,Dzialania hybrydowe,prawdopodobienstwo: mozliwe; skutki: duze
-Z05,Susza i upal,prawdopodobienstwo: prawdopodobne; skutki: srednie
-Z06,Epizootia,prawdopodobienstwo: prawdopodobne; skutki: srednie
-Z07,Zaklocenie w systemie energetycznym,prawdopodobienstwo: prawdopodobne; skutki: srednie
-Z08,Silny wiatr,prawdopodobienstwo: prawdopodobne; skutki: srednie
-Z09,Zaklocenie w systemie paliwowym,prawdopodobienstwo: mozliwe; skutki: srednie
-Z10,Pozar wielkopowierzchniowy,prawdopodobienstwo: mozliwe; skutki: srednie
-Z11,Epifitoza,prawdopodobienstwo: mozliwe; skutki: srednie
-Z12,Zaklocenie funkcjonowania systemow i uslug telekomunikacyjnych,prawdopodobienstwo: mozliwe; skutki: srednie
-Z13,Skazenie chemiczne na ladzie,prawdopodobienstwo: rzadkie; skutki: male
-Z14,Zaklocenie w systemie gazowym,prawdopodobienstwo: rzadkie; skutki: srednie
-Z15,Katastrofa morska,prawdopodobienstwo: rzadkie; skutki: srednie
-Z16,Zdarzenie o charakterze terrorystycznym,prawdopodobienstwo: bardzo rzadkie; skutki: duze
-Z17,Skazenie promieniotworcze,prawdopodobienstwo: bardzo rzadkie; skutki: duze
-Z18,Zbiorowe zaklocenie porzadku publicznego,prawdopodobienstwo: prawdopodobne; skutki: male
-Z19,Silny mroz i intensywne opady sniegu,prawdopodobienstwo: mozliwe; skutki: male
-Z20,Dezinformacja,prawdopodobienstwo: nieujete w matrycy; skutki: nieujete w matrycy
+Z01,Epidemia,prawdopodobieństwo: możliwe; skutki: katastrofalne
+Z02,Powódź,prawdopodobieństwo: prawdopodobne; skutki: duże
+Z03,Zakłócenie funkcjonowania systemów i sieci teleinformatycznych,prawdopodobieństwo: możliwe; skutki: duże
+Z04,Działania hybrydowe,prawdopodobieństwo: możliwe; skutki: duże
+Z05,Susza i upał,prawdopodobieństwo: prawdopodobne; skutki: średnie
+Z06,Epizootia,prawdopodobieństwo: prawdopodobne; skutki: średnie
+Z07,Zakłócenie w systemie energetycznym,prawdopodobieństwo: prawdopodobne; skutki: średnie
+Z08,Silny wiatr,prawdopodobieństwo: prawdopodobne; skutki: średnie
+Z09,Zakłócenie w systemie paliwowym,prawdopodobieństwo: możliwe; skutki: średnie
+Z10,Pożar wielkopowierzchniowy,prawdopodobieństwo: możliwe; skutki: średnie
+Z11,Epifitoza,prawdopodobieństwo: możliwe; skutki: średnie
+Z12,Zakłócenie funkcjonowania systemów i usług telekomunikacyjnych,prawdopodobieństwo: możliwe; skutki: średnie
+Z13,Skażenie chemiczne na lądzie,prawdopodobieństwo: rzadkie; skutki: małe
+Z14,Zakłócenie w systemie gazowym,prawdopodobieństwo: rzadkie; skutki: średnie
+Z15,Katastrofa morska,prawdopodobieństwo: rzadkie; skutki: średnie
+Z16,Zdarzenie o charakterze terrorystycznym,prawdopodobieństwo: bardzo rzadkie; skutki: duże
+Z17,Skażenie promieniotwórcze,prawdopodobieństwo: bardzo rzadkie; skutki: duże
+Z18,Zbiorowe zakłócenie porządku publicznego,prawdopodobieństwo: prawdopodobne; skutki: małe
+Z19,Silny mróz i intensywne opady śniegu,prawdopodobieństwo: możliwe; skutki: małe
+Z20,Dezinformacja,prawdopodobieństwo: nieujęte w matrycy; skutki: nieujęte w matrycy

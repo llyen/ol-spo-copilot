@@ -56,14 +56,14 @@ To repozytorium pokazuje, jak zbudować w Fabric asystenta, który:
 ## Wyniki z ostatniego przebiegu
 
 <!-- RESULTS_START -->
-- Korpus: 16 procedur SPO, 155 krokow, 49 dokumentow, 513 fragmentow (198746 znakow), slownik indeksu 1816 termow.
-- Wymiary: 22 rol, 20 zagrozen, 32 pytan kontrolnych.
-- Zdarzenia: 986 uruchomien procedur, 9420 wykonan krokow, 2002 wpisow w dzienniku decyzji, 4200 zapytan do asystenta.
+- Korpus: 16 procedur SPO, 155 kroków, 49 dokumentów, 513 fragmentow (198746 znakow), slownik indeksu 1816 termow.
+- Wymiary: 22 rol, 20 zagrożeń, 32 pytan kontrolnych.
+- Zdarzenia: 986 uruchomien procedur, 9420 wykonan kroków, 2002 wpisow w dzienniku decyzji, 4200 zapytan do asystenta.
 - Trafnosc routingu: top-1 90.6%, top-3 93.8%, MRR 0.932 na 32 pytaniach (3 pudla).
 - Telemetria asystenta: trafnosc 93.5%, p50 1443 ms, p95 2142 ms, ocen "pomocne" 46.3%.
 - Czasy normatywne: dotrzymanie 76.1% ogolem, 70.5% w scenariuszu powodziowym; najgorsza procedura SPO-2 (70.7%).
-- Najgorszy krok: SPO-3 krok 4 - 89.9% wykonan po czasie (Przygotowanie wersji obcojezycznych i dostepnych dla osob z niepelnosprawnosciami).
-- Najczestsza blokada: "Nieaktualna lista punktow kontaktowych operatorow infrastruktury krytycznej" - 201 wystapien w 4 lata.
+- Najgorszy krok: SPO-3 krok 4 - 89.9% wykonan po czasie (Przygotowanie wersji obcojęzycznych i dostępnych dla osób z niepełnosprawnościami).
+- Najczestsza blokada: "Nieaktualna lista punktów kontaktowych operatorów infrastruktury krytycznej" - 201 wystapien w 4 lata.
 - Przebieg: mediana czasu do pierwszego kroku krytycznego 19.3 min, mediana trwania procedury 38.9 h, decyzje niejawne 28.4%.
 <!-- RESULTS_END -->
 
@@ -84,7 +84,7 @@ flowchart LR
     B --> DA["Data Agent"]
     M --> AP["Fabric App<br/>karta odpowiedzi"]
     DA --> AP
-    AP --> U1["Dyzurny WCZK"]
+    AP --> U1["Dyżurny WCZK"]
     R --> U2["Wojewoda / analityk"]
     AC --> U1
 ```
@@ -122,7 +122,7 @@ cd C:\repos\OchronaLudnosci\ol-spo-copilot
 pip install -r requirements.txt
 
 python generate_datasets.py          # wymiary, korpus, zdarzenia
-python notebooks\01_load_corpus.py   # walidacja korpusu + mostek procedura-zagrozenie
+python notebooks\01_load_corpus.py   # walidacja korpusu + mostek procedura-zagrożenie
 python notebooks\02_build_vector_index.py
 python notebooks\03_assistant_answers.py
 python notebooks\04_retrieval_eval.py
