@@ -1,0 +1,19 @@
+{
+  "workspaceName": "OL-ZK-Demo-SPO-Copilot",
+  "workspaceId": "38200f9e-b92b-4fc4-8322-553bd9168ac4",
+  "capacityId": "75d74dac-c3ee-4861-8a22-e7017940afbb",
+  "lakehouseId": "38b50b91-a2df-4907-90c2-d090ee8267d0",
+  "sqlEndpointId": "1cf9743c-a214-4783-9787-53b53e1bf392",
+  "eventhouseId": "235d9382-d902-4a35-bb5b-ec6f6105b72c",
+  "kqlDatabaseId": "43157bf5-14f2-44bd-9162-8bcebfd98ea4",
+  "kustoQueryUri": "https://trd-rme3vr7nv38h48pfrn.z6.kusto.fabric.microsoft.com",
+  "semanticModelId": "55d5fa62-af2f-4b50-8cad-94e70acc8a8a",
+  "realtimeDashboardId": "8edda02d-a385-45c4-8950-c97af25b6be7",
+  "reportId": "173c1523-b68d-40f5-88d4-771d6a764cb4",
+  "eventstreamId": "51fa5a02-e5a7-4f27-85f5-c14fdd179b54",
+  "reflexId": "097bf9c3-892b-4717-a3ff-314c9d308b30",
+  "dataAgentId": "b0cc386e-d8d3-47ac-9310-224cb83ec758",
+  "appBackendId": "5d524e1d-852d-423e-8e54-cfabd91cd701",
+  "appHostingUrl": "https://tangy-poppy-03a3300f0e-westeurope.webapp.fabricapps.net",
+  "appDeploymentId": "deploy-20260806074626-904b945f"
+}
