@@ -18,6 +18,14 @@ Dane w całości syntetyczne. Środowisko demonstracyjne, nie produkcyjne.
 | Reflex | `097bf9c3-892b-4717-a3ff-314c9d308b30` |
 | Data Agent | `b0cc386e-d8d3-47ac-9310-224cb83ec758` |
 
+Data Agent byl pierwotnie utworzony jako pusta skorupa - bez zrodel danych i z pusta
+instrukcja systemowa. Uzupelnia go `deploy/create_data_agent.py`: podpina Lakehouse
+(11 tabel), Eventhouse (10 tabel) i model semantyczny (13 tabel), a instrukcje sklada
+z `ai/DATA_AGENT.md`, wiec zmiana specyfikacji wymaga ponownego uruchomienia skryptu.
+Funkcje KQL sa weryfikowane, ale opisane w podpowiedzi zrodla zamiast podpiete jako
+elementy - backend agenta odrzuca elementy typu `kusto.functions`. Publikacja agenta
+z wersji roboczej do produkcyjnej pozostaje krokiem w interfejsie; API jej nie udostepnia.
+
 Kolejność wdrażania warstwy danych opisuje `SETUP_FABRIC.md`.
 
 ## 2. Fabric App „Asystent SPO" — wdrożona
